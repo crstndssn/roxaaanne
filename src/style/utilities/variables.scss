@@ -1,0 +1,70 @@
+$space2: 1rem;
+
+
+$black: #000;
+$white: #fff;
+
+$red: #bb0909;
+$green: #0e680e;
+$blue: #191987;
+
+$yellow: #FBBF24;
+$verde: #35D399;
+$salmon: #F87171;
+$uva: #1D4DD8;
+$rosa: #F9A8D4;
+$unusual: #FF403D;
+$azul: #60A5FA;
+$morado: #C900CB;
+$retro: #1499B2;
+
+
+// forestando
+$eco: rgba(72, 131, 80, 0.05);
+$soft: #E8EDE9;
+$brand: #36723E;
+$organic: #FFFFFA;
+$nature: #458055;
+$ando: #7FA25B;
+$leave: #FBFAF3;
+
+
+.text-nature {
+  color: $brand;
+}
+
+.text-ando {
+  color: $ando;
+}
+
+img {
+  width: 100%;
+  height: auto;
+}
+
+.icon {
+  width: 32px;
+  height: 32px;
+  cursor: pointer;
+}
+
+
+body {
+  font-family: 'Poppins', sans-serif;
+  background-color: #000;
+  color: #fff;
+  margin: 0;
+}
+
+h1 {
+  letter-spacing: -2px;
+}
+
+a {
+  text-decoration: none;
+  color: #fff;
+}
+
+p {
+  font-size: 20px;
+}

@@ -1,0 +1,86 @@
+.projects {
+
+  display: grid;
+  grid-template-columns: 1fr;
+  margin-top: 1rem;
+
+
+  @include media("tablet"){
+    grid-template-columns: 1fr 1fr;
+  }
+
+  &__item {
+    
+    a {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+      height: 170px;
+      padding: 2rem 1rem;
+      text-align: center;
+      @include media('tablet'){
+        padding: 2rem;
+      }
+    }
+  
+    &--title {
+      font-size: 40px;
+      font-weight: 500;
+      margin: 0;
+      line-height: 40px;
+    }
+    
+    &--description {
+      display: flex;
+      p {
+        border: 1px solid $black;
+        padding: 0px 14px;
+        border-radius: 50px;
+        margin-right: 3px;
+      } 
+    }
+  }
+
+  .vision {
+    background-color: $yellow;
+  }
+
+  .gradi {
+    background-color: $verde;
+  }
+
+  .my-bleen {
+    background-color: $green;
+  }
+
+  .eovolt {
+    background-color: $blue;
+  }
+
+  .luneale {
+    background-color: $rosa;
+  }
+
+  .unusual-minds {
+    background-color: $morado;
+  }
+
+  .brutalist {
+    background-color: $unusual;
+  }
+
+  .design-shock {
+    background-color: $red;
+  }
+
+  .lettering {
+    background-color: $salmon;
+  }
+
+  .retro-design {
+    background-color: $retro;
+  }
+
+
+}

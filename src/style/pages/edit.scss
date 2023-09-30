@@ -1,0 +1,35 @@
+.edit {
+
+  padding-top: 3rem;
+  margin: auto 2rem;
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1rem;
+  @include media("tablet") {
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr;
+  }
+
+  &__content-image {
+    position: relative;
+    width: 100%;
+  }
+
+  &__image {
+    aspect-ratio: 3/2;
+    object-fit: cover;
+  }
+
+  &__icon {
+    width: 30px;
+    height: 30px;
+  }
+
+  &__add {
+    border: 1px $white solid;
+  }
+
+  &__item {
+    border: 1px $white solid;
+  }
+}

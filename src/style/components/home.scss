@@ -1,0 +1,291 @@
+.home {
+
+  &__header {
+    h1 {
+      font-size: 28vw;
+      line-height: 23vw;
+      margin-top: 1rem;
+      margin-bottom: 0;
+      font-weight: 500;
+      letter-spacing: -8px;
+      width: 100%;
+      text-align: center;
+      @include media("tablet") {
+        font-size: 14vw;
+        line-height: 12vw;
+      }
+    }
+
+    h2 {
+      font-size: 1.2rem;
+      font-weight: 400;
+      padding: 0 1.8rem;
+      text-align: justify;
+      letter-spacing: -1px;
+      @include media("tablet") {
+        font-size: 1.5rem;
+      }
+    }
+  }
+
+  &__projects {
+    border-top: 1px solid black;
+    border-bottom: 1px solid black;
+    display: grid;
+    grid-template-columns: 2fr 0fr 5fr;
+    grid-template-rows: 80px 50px;
+    justify-content: space-around;
+    align-items: center;
+    margin: 0;
+    border-radius: 0px;
+    @include media("tablet") {
+      display: flex;
+      margin: 0 1.8rem;
+      border-radius: 7px;
+      border: 1px solid black;
+    }
+
+    h3 {
+      border-bottom: 1px solid black;
+    @include media("tablet") {
+      border-bottom: none;
+    }
+    }
+
+    
+
+    h3 {
+      font-size: 23px;
+      padding-left: 1rem;
+      font-weight: 500;
+    }
+
+    p:last-child {
+      padding-right: 1rem;
+    }
+
+    &--company {
+      height: fit-content;
+      padding: 0 32px 0 32px !important;
+      height: 100%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+
+    }
+
+    &--description {
+      font-size: 15px;
+      padding: 0 12px !important;
+      border-bottom: 1px solid black;
+      padding: 0 12px;
+      height: 100%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      @include media("tablet") {
+        font-size: 20px;
+        padding: 0;
+        border-bottom: none;
+      }
+    }
+
+    &--ubication {
+      height: fit-content !important;
+      padding: 0 32px 0 32px !important;
+      font-size: 15px;
+      @include media("tablet") {
+        font-size: 20px;
+        padding: 0;
+      }
+    }
+
+    &--time {
+      height: fit-content !important;
+      padding: 0 12px !important;
+      font-size: 15px;
+      @include media("tablet") {
+        font-size: 20px;
+        padding: 0;
+      }
+    }
+
+    .remote {
+      font-style: italic;
+      p {
+        padding: 0;
+      }
+    }
+
+    h3,
+    p {
+      margin: 0;
+    }
+
+
+    .line {
+      width: 1px;
+      height: 80px;
+      background-color: black;
+      @include media("tablet") {
+        height: 33px;
+      }
+    }
+
+    .line:nth-child(4) {
+      display: none;
+      @include media("tablet") {
+        display: block;
+      }
+    }
+
+    .line:nth-child(6) {
+      height: 50px;
+      @include media("tablet") {
+        height: 33px;
+      }
+    }
+  }
+
+  &__projects--personal {
+    grid-template-columns: 2fr 0fr 2fr;
+    grid-template-rows: 1fr;
+     h3 {
+      font-size: 16px;
+      border: none;
+      padding-right: 10px !important;
+      @include media("tablet") {
+        font-size: 23px;
+      }
+     }
+    .line:nth-child(4) {
+      display: none;
+      @include media("tablet") {
+        display: block;
+      }
+    }
+    .space {
+      display: none;
+      @include media("tablet") {
+        display: block;
+      }
+    }
+  }
+
+  &__cards {
+    padding: 1.8rem;
+    display: grid;
+    grid-template-columns: 1fr;
+    row-gap: 1rem;
+    @include media("tablet") {
+      grid-template-columns: 1fr 1fr 1fr;
+      column-gap: 2rem;
+    }
+
+    div {
+      border-radius: 10px;
+      height: 150px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    h3 {
+      font-weight: 400;
+      font-size: 32px;
+    }
+
+    // sltwtr
+    .mother {
+      background: #efda9a;
+      color: white;
+    }
+    .caddis {
+      background: #F48029;
+      color: white;
+    }
+    .volcom {
+      background: black;
+      color: white;
+    }
+
+    // gradiweb
+    .bleen {
+      background-color: #4FF49E;
+      color: #3127F0;
+    }
+    .eovolt {
+      background-color: #103C4D;
+      color: white;
+    }
+    .luneale {
+      background: #D2815F;
+      color: white;
+    }
+
+    // unusualminds
+    .artify {
+      background-color: #FEBC5F;
+      color: white;
+    }
+    .iconshock {
+      background-color: #F35C76;
+      color: white;
+    }
+    .bypeople {
+      background: #9B01E5;
+      color: white;
+    }
+
+    // wordspeakers
+    // .word-spekaers {
+
+    // }
+
+    // .kao-wok {
+
+    // } 
+
+    .roxanne {
+      background: black;
+      color: white;
+    }
+
+    .piedemonte {
+      background: rgb(48, 124, 160);
+      color: white;
+    }
+
+    .visionchamanica {
+      background: rgb(225, 215, 104);
+      color: black;
+    }
+
+  }
+
+  &__tags {
+
+    padding: 0 .8rem;
+    display: flex;
+    flex-flow: wrap;
+    justify-content: center;
+    margin-bottom: 2rem;
+    gap: .5rem;
+    @include media("tablet") {
+      padding: 0 1.8rem;
+    }
+
+    &--item {
+      border: 1px solid black;
+      border-radius: 100px;
+      width: fit-content;
+      padding: 5px 20px;
+
+      p {
+        margin: 0;
+      }
+    }
+  }
+
+
+}

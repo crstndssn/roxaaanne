@@ -1,0 +1,196 @@
+.forestando {
+  background-color: $organic;
+  color: $brand;
+
+
+  &__header {
+    position: relative;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 90vh;
+
+    @include media('tablet') {
+      min-height: 100vh;
+    }
+
+    &--interior {
+      display: none;
+
+      @include media('tablet') {
+        width: 100%;
+        display: flex;
+        position: absolute;
+        bottom: 0;
+        right: 0;
+        justify-content: space-between;
+        align-items: end;
+        min-height: 90vh;
+      }
+
+      img {
+        max-height: 100vh;
+        max-width: 100%;
+        width: auto;
+      }
+    }
+
+    &--orquideas {
+      display: flex;
+      position: absolute;
+      bottom: 0;
+      justify-content: space-between;
+      align-items: end;
+
+      @include media('tablet') {
+        display: none;
+      }
+
+      img {
+        max-height: 100vh;
+        max-width: 100%;
+        width: 100vh;
+        height: auto;
+      }
+    }
+
+    &--text {
+      margin: 0 auto;
+      position: relative;
+      display: flex;
+      justify-content: start;
+      align-items: center;
+      flex-direction: column;
+      text-align: center;
+
+      &-h1 {
+        font-size: 36px;
+        font-weight: 500;
+        letter-spacing: 0;
+        margin: 0;
+      }
+
+      &-p {
+        font-size: 20px;
+        margin: 0;
+      }
+
+      &-btn {
+        border: 1px solid $brand;
+        color: $brand;
+        margin-top: .8rem;
+        padding: 4px 13px;
+        border-radius: 100px;
+      }
+
+      @include media('tablet') {
+        justify-content: center;
+        top: 0;
+
+        h1 {
+          font-size: 96px;
+        }
+
+        p {
+          font-size: 30px;
+        }
+      }
+    }
+
+  }
+
+
+
+  &__blog {
+
+    background-color: $brand;
+
+    h2 {
+      color: $leave;
+      margin: 0;
+      font-weight: 500;
+      margin-left: 1rem;
+      padding-top: 1rem;
+
+      @include media('tablet') {
+        margin-left: 2rem;
+      }
+    }
+
+    &--container {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 1rem;
+      padding: 1rem;
+
+      @include media('tablet') {
+        grid-template-columns: 1fr 1fr 1fr;
+        margin-left: 2rem;
+        margin: auto 1rem;
+        padding: 1rem;
+      }
+    }
+
+    &--card {
+      background-color: $leave;
+      border-radius: 2px;
+    }
+
+    // &--container-img {
+    //   position: relative;
+    //   img {
+
+    //   }
+    // }
+    &--title {
+      margin: 0;
+      color: $black;
+      font-weight: 400;
+      font-size: 20px;
+      margin-left: 7px;
+    }
+  }
+
+
+
+
+  &__gallery {
+    background-color: $leave;
+    h2 {
+      color: $brand;
+      margin: 0;
+      font-weight: 500;
+      margin-left: 1rem;
+      padding-top: 1rem;
+      @include media('tablet') {
+        margin-left: 2rem;
+      }
+    }
+    &--container {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      padding: 0 1rem;
+      gap: .4rem;
+      margin-top: .5rem;
+      @include media('tablet') {
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+        padding: 0 2rem;
+      }
+    }
+
+    .card__content-image {
+      img {
+        aspect-ratio: 2/2;
+        object-fit: cover;
+      }
+    }
+  }
+
+  &__footer {
+    display: flex;
+    justify-content: space-between;
+    padding: 2rem 2rem 3rem 2rem;
+  }
+
+}
