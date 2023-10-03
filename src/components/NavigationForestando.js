@@ -10,7 +10,7 @@ import { LibraryIcon } from '@heroicons/react/outline'
 import { LogoutIcon } from '@heroicons/react/outline'
 import { CogIcon, PlusCircleIcon, DocumentAddIcon } from '@heroicons/react/outline'
 
-import logo from '../resources/logo.svg'
+import logo from '../resources/logo-forestando.svg'
 
 import { auth } from '../firebase';
 
@@ -18,7 +18,7 @@ function classNames(...classes) {
   return classes.filter(Boolean).join(' ')
 }
 
-const Navigation = () => {
+const NavigationForestando = () => {
 
   const history = useHistory();
   const [user, setUsuario] = useState(null)
@@ -62,12 +62,11 @@ const Navigation = () => {
   }
 
   return (
-    <div className="navigation">
-      <Link to="/" className='navigation__logo'><img src={logo}/></Link>
-      {/* <div className='test-safari'><img src={logo}/></div> */}
+    <div className="navigation-forestando">
+      <Link to="/" className='navigation-forestando__logo'><img src={logo} /></Link>
 
       {/* new navigation */}
-      <div className="navigation__links">
+      <div className="navigation-forestando__links">
         <div id="menu">
 
           <div className='menu-bar-contanier'>
@@ -98,4 +97,4 @@ const Navigation = () => {
   )
 }
 
-export default Navigation
+export default NavigationForestando

@@ -3,6 +3,8 @@ import { store } from '../../firebase'
 import { Link } from 'react-router-dom'
 import Masonry from 'react-layout-masonry';
 
+import Navigation from '../Navigation';  
+
 import Card from './Card'
 
 const Roxanne = () => {
@@ -23,31 +25,34 @@ const Roxanne = () => {
 
 
   // const imagesSlider = (post) => {
-    
+
   //   setImageSlider(post)
 
   // }
 
   return (
-    <div className='post'>
-      {
-        post.length !== 0 ? 
-        (post.map(item => (
+    <div>
+      <Navigation />
+      <div className='post'>
+        {
+          post.length !== 0 ?
+            (post.map(item => (
 
-          <div className="post__card">
-           {/* <Link to={`/roxanne/${item.id}`} key={item.id}> */}
-            <Card 
-              images={item.imageLinks} 
-              title={item.title} 
-              category={item.category 
-            } />
-            {/* </Link>  */}
-          </div>
+              <div className="post__card">
+                {/* <Link to={`/roxanne/${item.id}`} key={item.id}> */}
+                <Card
+                  images={item.imageLinks}
+                  title={item.title}
+                  category={item.category
+                  } />
+                {/* </Link>  */}
+              </div>
 
-        ))) : (<div>loading...</div>)
-      }
-
+            ))) : (<div>loading...</div>)
+        }
+      </div>
     </div>
+
   )
 }
 

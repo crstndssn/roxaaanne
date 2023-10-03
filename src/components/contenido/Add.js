@@ -7,7 +7,7 @@ const Add = () => {
 
   // data
   const [id, setId] = useState('')
-  
+
   const [imageLinks, setImageLinks] = useState([])
   const [percentage, setPercentage] = useState(0)
 
@@ -15,7 +15,7 @@ const Add = () => {
   const [category, setCategory] = useState('roxanne');
   const [title, setTitle] = useState('')
   const [description, setDescription] = useState('')
-  
+
   const text = useRef(null)
 
   // definir post
@@ -97,47 +97,54 @@ const Add = () => {
     }
   }
 
+  const progressPercentage = {
+    width: percentage + '%'
+  }
+
   return (
     <>
       <form className='add' onSubmit={addPost}>
 
+    
 
-        <div>{percentage}</div>
 
-
-        <div>
+        <div className='add__image'>
           {
             imageLinks.map((image, key) => {
               <p>{image}</p>
             })
           }
-        </div>
-        
-        {
+          {
           imageLinks === [] ? (
             <div>no hay</div>
           ) : (
-            imageLinks.map((image, key) => 
+            imageLinks.map((image, key) =>
               <div>
                 <img src={image} alt="" />
               </div>
             )
           )
-        }
+          }
+          
+        </div>
 
+        <div className='add__percentage'>
+          <div className='add__percentage--bar' style={progressPercentage}></div>
+          <span className='add__percentage--number'>{Math.round(percentage)}%</span>
+        </div>
 
         {/* imagenes */}
         <div className='add__images'>
           <label class="custom-file-upload">
             <input
-            onChange={(e) => { uploadImages(e) }}
-            name="upload-image"
-            type="file"
-          />
-          upload image
+              onChange={(e) => { uploadImages(e) }}
+              name="upload-image"
+              type="file"
+              placeholder='upload'
+            />
+            seleccionar foto
           </label>
         </div>
-
 
         {/* id */}
         <div className='add__id'>
@@ -146,36 +153,37 @@ const Add = () => {
             name="upload-image"
             type="text"
             placeholder='post id'
+            className='add__id--input'
           />
         </div>
 
-        {/* year */}
-        <select
-          className='add__year'
-          onChange={e => yearChange(e)}>
-          {
-            years.map((category, key) =>
-              <option
-                key={key}
-                value={category}>
-                {category}
-              </option>)
-          }
-        </select>
+        <div className='add__save-options'>
+          <select
+            className='add__year'
+            onChange={e => yearChange(e)}>
+            {
+              years.map((category, key) =>
+                <option
+                  key={key}
+                  value={category}>
+                  {category}
+                </option>)
+            }
+          </select>
+          <select
+            className='add__category'
+            onChange={e => categoryChange(e)}>
+            {
+              categories.map((category, key) =>
+                <option
+                  key={key}
+                  value={category}>
+                  {category}
+                </option>)
+            }
+          </select>
+        </div>
 
-        {/* category */}
-        <select
-          className='add__category'
-          onChange={e => categoryChange(e)}>
-          {
-            categories.map((category, key) =>
-              <option
-                key={key}
-                value={category}>
-                {category}
-              </option>)
-          }
-        </select>
 
         {/* text */}
         <Editor

@@ -1,0 +1,16 @@
+.admin {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  &__add {
+    padding: .5rem 2rem;
+    border: 1px solid $white;
+    border-radius: 20px;
+    transition: all ease .1s;
+  }
+  &__add:hover {
+    border: 2px solid $white;
+    font-weight: 500;
+  }
+}

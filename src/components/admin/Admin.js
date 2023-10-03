@@ -3,9 +3,9 @@ import { Link } from 'react-router-dom'
 
 const Admin = () => {
   return (
-    <div>
-      <Link to="/posts">
-        Blog
+    <div className='admin'>
+      <Link to="/add" className='admin__add'>
+        add post
       </Link>
     </div>
   )

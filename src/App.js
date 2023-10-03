@@ -28,7 +28,6 @@ export default class App extends Component {
     return <div className="container">
       <div className="w-full z-10">
         <Router>
-          <Navigation />
           <Switch>
             {/* routes users */}
 

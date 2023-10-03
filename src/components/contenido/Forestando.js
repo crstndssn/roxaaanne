@@ -11,6 +11,8 @@ import imgtest from '../../resources/sunset.jpg'
 import { Pagination } from 'swiper'
 import { Swiper, SwiperSlide } from 'swiper/react/swiper-react'
 
+import NavigationForestando from '../NavigationForestando';  
+
 import 'swiper/swiper.min.css'
 import 'swiper/modules/pagination/pagination.min.css'
 
@@ -40,6 +42,8 @@ const Forestando = () => {
   // }
 
   return (
+    <div>
+    <NavigationForestando/>
     <div className='forestando'>
 
       {/* header */}
@@ -53,7 +57,7 @@ const Forestando = () => {
         </div>
 
         <div className="forestando__header--text">
-          <h1 className="forestando__header--text-h1"><span className="text-nature">forestando</span><span className="text-ando">ando</span></h1>
+          <h1 className="forestando__header--text-h1"><span className="text-nature">forest</span><span className="text-ando">ando</span></h1>
           <p className="forestando__header--text-p">siembra vida y aprende de la naturaleza</p>
           <Link to="/blog" className="forestando__header--text-btn">Yo planto</Link>
         </div>
@@ -67,13 +71,13 @@ const Forestando = () => {
             <div className='forestando__blog--container-img'>
               <img src={imgtest} alt="" />
             </div>
-            <h3 className='forestando__blog--title'>title post</h3>
+            <h3 className='forestando__blog--title'>cap 1:title post</h3>
           </div>
           <div className='forestando__blog--card'>
             <div className='forestando__blog--container-img'>
               <img src={imgtest} alt="" />
             </div>
-            <h3 className='forestando__blog--title'>title post</h3>
+            <h3 className='forestando__blog--title'>cap 2:title post</h3>
           </div>
           <div className='forestando__blog--card'>
             <div className='forestando__blog--container-img'>
@@ -115,6 +119,7 @@ const Forestando = () => {
       </div>
 
     </div>
+  </div>
   )
 }
 
