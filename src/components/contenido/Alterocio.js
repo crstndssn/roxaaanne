@@ -3,7 +3,8 @@ import { store } from '../../firebase'
 import { Link } from 'react-router-dom'
 import Masonry from 'react-layout-masonry';
 
-import Navigation from '../Navigation';  
+import Navigation from '../Navigation';
+import Genesis from '../subscription/genesis';
 
 import Card from './Card'
 
@@ -24,33 +25,37 @@ const Roxanne = () => {
   }, [])
 
 
-  // const imagesSlider = (post) => {
-
-  //   setImageSlider(post)
-
-  // }
-
   return (
     <div>
       <Navigation />
-      <div className='post'>
-        {
-          post.length !== 0 ?
-            (post.map(item => (
 
-              <div className="post__card">
-                {/* <Link to={`/roxanne/${item.id}`} key={item.id}> */}
-                <Card
-                  images={item.imageLinks}
-                  title={item.title}
-                  category={item.category
-                  } />
-                {/* </Link>  */}
-              </div>
+      <div className='alterocio'>
+        <Genesis />
 
-            ))) : (<div>loading...</div>)
-        }
+
+
+
+        {/* <details className='alterocio__card alterocio__card--mercurio'>
+          <summary>mercúrio</summary>
+          <p>detailssss</p>
+        </details>
+        <details className='alterocio__card alterocio__card--blue'>
+          <summary>blue</summary>
+          <p>detailssss</p>
+        </details>
+        <details className='alterocio__card alterocio__card--florecer'>
+          <summary>florecer</summary>
+          <p>detailssss</p>
+        </details>
+        <details className='alterocio__card alterocio__card--semillas'>
+          <summary>semillas</summary>
+          <p>detailssss</p>
+        </details> */}
+        {/* <details className='alterocio__card alterocio__card--viento'>
+          <summary>viento</summary>
+        </details> */}
       </div>
+
     </div>
 
   )
