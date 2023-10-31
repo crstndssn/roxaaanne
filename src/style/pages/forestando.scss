@@ -29,7 +29,11 @@
       img {
         max-height: 100vh;
         max-width: 100%;
-        width: auto;
+        width: 50%;
+        @include media('tablet-l') {
+          width: 40%;
+          max-height: max-content;
+        }
       }
     }
 
