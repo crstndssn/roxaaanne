@@ -31,29 +31,26 @@ const Roxanne = () => {
 
       <div className='alterocio'>
         <Genesis />
-
-
-
-
-        {/* <details className='alterocio__card alterocio__card--mercurio'>
+        <details className='alterocio__card alterocio__card--mercurio'>
           <summary>mercúrio</summary>
-          <p>detailssss</p>
+          <p>subscribete</p>
         </details>
         <details className='alterocio__card alterocio__card--blue'>
           <summary>blue</summary>
-          <p>detailssss</p>
+          <p>subscribete</p>
         </details>
         <details className='alterocio__card alterocio__card--florecer'>
           <summary>florecer</summary>
-          <p>detailssss</p>
+          <p>subscribete</p>
         </details>
         <details className='alterocio__card alterocio__card--semillas'>
           <summary>semillas</summary>
-          <p>detailssss</p>
-        </details> */}
-        {/* <details className='alterocio__card alterocio__card--viento'>
+          <p>subscribete</p>
+        </details> 
+        <details className='alterocio__card alterocio__card--viento'>
           <summary>viento</summary>
-        </details> */}
+          <p>subscribete</p>
+        </details>
       </div>
 
     </div>

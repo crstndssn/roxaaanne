@@ -1,24 +1,32 @@
 .alterocio {
-
-  margin: 0 2rem;
+  margin: 0 1rem;
+  @include media('tablet') {
+    margin: 0 2rem;
+  }
 
   summary {
     font-size: 50px;
     font-weight: 400;
     list-style: none;
-    padding: 1rem 0;
+    padding:0;
     cursor: pointer;
-    margin-bottom: 2rem;
+    margin-bottom: 1rem;
+
+    @include media('tablet') {
+      margin-bottom: 2rem;
+      padding: 1rem 0;
+    }
   }
 
-  details[open] summary ~ * {
+  details[open] summary~* {
     animation: open 0.3s ease-in-out;
   }
-  
+
   @keyframes open {
     0% {
       opacity: 0;
     }
+
     100% {
       opacity: 1;
     }
@@ -27,29 +35,38 @@
   details summary::-webkit-details-marker {
     display: none;
   }
-  
+
   details summary:after {
     content: "+";
     position: absolute;
     font-weight: 300;
-    font-size: 70px;
-    right: 40px;
+    font-size: 90px;
+    right: 10px;
+    top: 30px;
     transform-origin: center;
     transition: 200ms linear;
+    @include media('tablet') {
+      font-size: 70px;
+      right: 40px;
+      top: auto;
+    }
   }
+
   details[open] summary:after {
     transform: rotate(45deg);
   }
-  
+
   &__card {
     display: flex;
     justify-content: center;
 
     &--genesis {
       color: #bd1616;
+
       summary {
         border-bottom: 2px solid #bb0909;
       }
+
       summary:after {
         color: #bb0909;
       }
@@ -57,9 +74,11 @@
 
     &--mercurio {
       color: rgb(142, 79, 209);
+
       summary {
         border-bottom: 2px solid rgb(142, 79, 209);
       }
+
       summary:after {
         color: rgb(142, 79, 209);
       }
@@ -67,9 +86,11 @@
 
     &--blue {
       color: rgb(59, 100, 188);
+
       summary {
         border-bottom: 2px solid rgb(59, 100, 188);
       }
+
       summary:after {
         color: rgb(59, 100, 188);
       }
@@ -77,9 +98,11 @@
 
     &--florecer {
       color: rgb(223, 189, 64);
+
       summary {
         border-bottom: 2px solid rgb(223, 189, 64);
       }
+
       summary:after {
         color: rgb(223, 189, 64);
       }
@@ -88,9 +111,11 @@
 
     &--semillas {
       color: #36723E;
+
       summary {
         border-bottom: 2px solid #36723E;
       }
+
       summary:after {
         color: #36723E;
       }
@@ -104,24 +129,42 @@
 
 
     // }
-&--header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    margin-bottom: 1rem;
-    h2 {
-      font-size: 40px;
-      color: white;
-      font-weight: 400;
-      margin: 0;
+    &--header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 1rem;
+      flex-direction: column;
+
+      h2 {
+        font-size: 80px;
+        color: white;
+        font-weight: 400;
+        margin: 0;
+        line-height: 80px;
+        margin-bottom: 1rem;
+      }
+
+      @include media('tablet') {
+        flex-direction: row;
+
+        h2 {
+          font-size: 40px;
+        }
+      }
     }
-  }
 
   }
 
   audio {
-    width: 420px;
+    width: 100%;
     height: 32px;
+
+    @include media('tablet') {
+      width: 420px;
+    }
   }
+
+
 
 }

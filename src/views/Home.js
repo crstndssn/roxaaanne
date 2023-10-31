@@ -34,7 +34,7 @@ export default class Store extends Component {
             <img src={check} />
             <h3>contenido especial</h3>
           </div>
-          <a class="pricing__button" target="_blank" href='https://www.mercadopago.com.co/subscriptions/checkout?preapproval_plan_id=2c9380848b62d285018b83055a53182f'>suscribirse</a>
+          <a class="pricing__button" target="_blank" href='https://www.mercadopago.com.co/subscriptions/checkout?preapproval_plan_id=2c9380848b62d290018b82fa82971861'>suscribirse</a>
         </div>
 
         <div className="footer">

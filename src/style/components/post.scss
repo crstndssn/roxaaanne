@@ -1,10 +1,10 @@
 .post {
   display: grid;
   grid-template-columns: 1fr;
-  margin: auto 1rem;
+  margin: auto 0rem;
 
   @include media("tablet") {
-    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
     margin: auto 0;
     column-gap: 0.4rem;
   }
