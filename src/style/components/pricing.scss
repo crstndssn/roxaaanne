@@ -22,6 +22,7 @@
 
   h3 {
     margin: 1rem 0;
+    font-weight: 400;
   }
 
   &__less {
@@ -56,12 +57,125 @@
   &__feature {
     display: flex;
     align-items: center;
+
     img {
-      width: 20px;
-      height: 20px;
-      margin-right: 5px;
-    }    
+      width: 18px;
+      height: 18px;
+      margin-right: 7px;
+      background: white;
+      border-radius: 100%;
+      padding: 1px;
+    }
+  }
+}
+
+.lock {
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1rem;
+
+  &__title {
+    color: #bd1616;
+    margin: 0;
+    font-size: 40px;
+    padding-bottom: 4px;
+
+    @include media("tablet") {
+      font-size: 50px;
+    }
   }
 
+  &__button {
+    width: fit-content;
+    height: fit-content;
+    border: 1px solid #fff;
+    border-radius: 5px;
+    padding: 3px 5px;
+    margin-top: 11px;
 
+    a {
+      display: flex;
+      align-items: center;
+      font-size: 13px;
+
+      @include media("tablet") {
+        font-size: 16px;
+      }
+    }
+
+    img {
+      width: 16px;
+      height: 16px;
+      color: #bd1616;
+      margin-left: 3px;
+      margin-bottom: 1px;
+
+      @include media("tablet") {
+        width: 18px;
+        height: 18px;
+      }
+    }
+  }
+
+}
+
+.genesis {
+  border-bottom: 2px solid $genesis;
+
+  .lock__title {
+    color: $genesis;
+  }
+}
+
+.mercurio {
+  border-bottom: 2px solid $mercurio;
+
+  .lock__title {
+    color: $mercurio;
+  }
+}
+
+.blue {
+  border-bottom: 2px solid $blue;
+
+  .lock__title {
+    color: $blue;
+  }
+}
+
+.semillas {
+  border-bottom: 2px solid $semillas;
+
+  .lock__title {
+    color: $semillas;
+  }
+}
+
+.florecer {
+  border-bottom: 2px solid $florecer;
+
+  .lock__title {
+    color: $florecer;
+  }
+}
+
+.viento {
+  border-bottom: 2px solid $viento;
+
+  .lock__title {
+    color: $viento;
+  }
+}
+
+.lock-forestando {
+  display: flex;
+  opacity: 0.6;
+
+  img {
+    width: 30px;
+    height: 30px;
+    margin-left: 5px;
+  }
 }

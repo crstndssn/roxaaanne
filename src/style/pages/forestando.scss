@@ -158,6 +158,7 @@
     &--card {
       background-color: $leave;
       border-radius: 2px;
+      border-radius: 10px;
     }
 
     // &--container-img {
@@ -171,14 +172,11 @@
       color: $black;
       font-weight: 400;
       font-size: 20px;
+      margin-top: 0;
       margin-left: 7px;
       margin-bottom: .5rem;
     }
-   
   }
-
-
-
 
   &__gallery {
     background-color: $leave;

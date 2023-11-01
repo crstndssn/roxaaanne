@@ -71,43 +71,30 @@ const Forestando = () => {
             <div className='forestando__blog--container-img'>
               <img src={imgtest} alt="" />
             </div>
-            <h3 className='forestando__blog--title'>cap 1:title post</h3>
+            <h3 className='forestando__blog--title'>sol</h3>
           </div>
           <div className='forestando__blog--card'>
             <div className='forestando__blog--container-img'>
               <img src={imgtest} alt="" />
             </div>
-            <h3 className='forestando__blog--title'>cap 2:title post</h3>
+            <h3 className='forestando__blog--title'>luna</h3>
           </div>
           <div className='forestando__blog--card'>
             <div className='forestando__blog--container-img'>
               <img src={imgtest} alt="test" />
             </div>
-            <h3 className='forestando__blog--title'>title post</h3>
+            <h3 className='forestando__blog--title'>agua</h3>
           </div>
         </div>
 
       </div>
 
-      {/* gallery */}
+      {/* products */}
       <div className='forestando__gallery'>
-        <h2>Gallery</h2>
-        <div className='forestando__gallery--container'>
-          {
-            post.length !== 0 ?
-              (post.map(item => (
-                <div className="post__card">
-                  <Card
-                    images={item.imageLinks}
-                    title={item.title}
-                    text={item.description}
-                    category={item.category}
-                  />
-                </div>
-              ))) : (<div>loading...</div>)
-          }
+        <h2>Productos</h2>
+        <div className='forestando__products--incoming'>
+          <p>incoming</p>
         </div>
-
       </div>
 
       {/* footer */}

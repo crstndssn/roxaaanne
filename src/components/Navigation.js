@@ -11,6 +11,7 @@ import { LogoutIcon } from '@heroicons/react/outline'
 import { CogIcon, PlusCircleIcon, DocumentAddIcon } from '@heroicons/react/outline'
 
 import logo from '../resources/logo.svg'
+import lock from '../resources/lock-forestando.svg'
 
 import { auth } from '../firebase';
 
@@ -63,7 +64,7 @@ const Navigation = () => {
 
   return (
     <div className="navigation">
-      <Link to="/" className='navigation__logo'><img src={logo}/></Link>
+      <Link to="/" className='navigation__logo'><img src={logo} /></Link>
       {/* <div className='test-safari'><img src={logo}/></div> */}
 
       {/* new navigation */}
@@ -81,9 +82,12 @@ const Navigation = () => {
           <nav class="nav" id="nav">
             <ul>
               <li><Link to="/alterocio" onClick={hideMenu} className='navigation__links--roxanne'>alterocio</Link></li>
-              <li><Link to="/forestando" onClick={hideMenu} className='navigation__links--forestando'>
-                <span class="forest">forest</span><span class="ando">ando</span></Link>
-                </li>
+              <li><Link to="#" onClick={hideMenu} className='navigation__links--forestando'>
+                <div className='lock-forestando'>
+                  <span class="forest">forest</span><span class="ando">ando</span>
+                  <div><img src={lock} /></div>
+                </div></Link>
+              </li>
               {/* <li><Link to="/projects" onClick={hideMenu} className='navigation__links--projects'>projects</Link></li> */}
             </ul>
           </nav>

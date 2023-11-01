@@ -5,6 +5,7 @@ import Masonry from 'react-layout-masonry';
 
 import Navigation from '../Navigation';
 import Genesis from '../subscription/genesis';
+import lock from '../../resources/lock.svg'
 
 import Card from './Card'
 
@@ -30,27 +31,51 @@ const Roxanne = () => {
       <Navigation />
 
       <div className='alterocio'>
-        <Genesis />
-        <details className='alterocio__card alterocio__card--mercurio'>
-          <summary>mercúrio</summary>
-          <p>subscribete</p>
-        </details>
-        <details className='alterocio__card alterocio__card--blue'>
-          <summary>blue</summary>
-          <p>subscribete</p>
-        </details>
-        <details className='alterocio__card alterocio__card--florecer'>
-          <summary>florecer</summary>
-          <p>subscribete</p>
-        </details>
-        <details className='alterocio__card alterocio__card--semillas'>
-          <summary>semillas</summary>
-          <p>subscribete</p>
-        </details> 
-        <details className='alterocio__card alterocio__card--viento'>
-          <summary>viento</summary>
-          <p>subscribete</p>
-        </details>
+
+        {/* <Genesis /> */}
+
+        <div className="lock genesis">
+          <p className="lock__title">génesis</p>
+          <div className="lock__button">
+            <a>suscribete <img src={lock}/></a>
+          </div>
+        </div>
+
+        <div className="lock mercurio">
+          <p className="lock__title">mercurio</p>
+          <div className="lock__button">
+            <a>suscribete <img src={lock}/></a>
+          </div>
+        </div>
+
+        <div className="lock blue">
+          <p className="lock__title">blue</p>
+          <div className="lock__button">
+            <a>suscribete <img src={lock}/></a>
+          </div>
+        </div>
+
+        <div className="lock semillas">
+          <p className="lock__title">semillas</p>
+          <div className="lock__button">
+            <a>suscribete <img src={lock}/></a>
+          </div>
+        </div>
+
+        <div className="lock florecer">
+          <p className="lock__title">florecer</p>
+          <div className="lock__button">
+            <a>suscribete <img src={lock}/></a>
+          </div>
+        </div>
+
+        <div className="lock viento">
+          <p className="lock__title">viento</p>
+          <div className="lock__button">
+            <a>suscribete <img src={lock}/></a>
+          </div>
+        </div>
+
       </div>
 
     </div>
