@@ -33,5 +33,40 @@ $breakpoints: (
   }
 }
 
+.card__content-image {
+  overflow-x: auto;
+  width: 100%;
+  display: flex;
 
+}
 
+body {
+  overflow-x: hidden;
+}
+
+.post {
+  overflow-x: scroll !important;
+}
+
+.jumm {
+  
+  width: 100% !important;
+  display: flex;
+  height: 420px;  max-height: 420px;
+}
+
+.card__image {
+width: 100%;
+height: auto;
+}
+
+.card__content-image {
+  min-height: 420px !important;
+    width: 100% !important;
+}
+
+.post__card  img{
+  width: auto !important;
+  height: fit-content !important;
+  max-height: 420px !important;
+}

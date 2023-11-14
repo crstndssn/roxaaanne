@@ -5,6 +5,7 @@ import Masonry from 'react-layout-masonry';
 
 import Navigation from '../Navigation';
 import Genesis from '../subscription/genesis';
+import Mercurio from '../subscription/mercurio';
 import lock from '../../resources/lock.svg'
 
 import Card from './Card'
@@ -34,19 +35,23 @@ const Roxanne = () => {
 
         {/* <Genesis /> */}
 
-        <div className="lock genesis">
+        {/* <div className="lock genesis">
           <p className="lock__title">génesis</p>
           <div className="lock__button">
             <a>suscribete <img src={lock}/></a>
           </div>
-        </div>
+        </div> */}
 
+        <Genesis/>
+{/* 
         <div className="lock mercurio">
           <p className="lock__title">mercurio</p>
           <div className="lock__button">
             <a>suscribete <img src={lock}/></a>
           </div>
-        </div>
+        </div> */}
+
+        {/* <Mercurio /> */}
 
         <div className="lock blue">
           <p className="lock__title">blue</p>

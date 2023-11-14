@@ -18,10 +18,10 @@ export default class Store extends Component {
 
         <div className="pricing">
           <div>
-            <p>$10.000</p>
-            <span>x mes</span>
+            <p>$20.000</p>
+            <span></span>
           </div>
-          <p className="pricing__less">less than 3 dollars</p>
+          <p className="pricing__less">por 3 meses</p>
           <div className='pricing__feature'>
             <img src={check} />
             <h3>acceso a todo el contenido</h3>

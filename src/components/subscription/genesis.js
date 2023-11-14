@@ -6,7 +6,16 @@ import Card from '../contenido/Card'
 
 import sulky from '../../resources/sulky.mp3'
 import centro__lamaquina from '../../resources/centro.mp3'
-import norte from '../../resources/norte.mp3'
+import norte_lj from '../../resources/norte.mp3'
+
+// Import Swiper React components
+import { Swiper, SwiperSlide } from 'swiper/react/swiper-react'
+import { FreeMode } from 'swiper';
+
+
+import "swiper/swiper.min.css";
+import 'swiper/modules/free-mode/free-mode.min.css';
+
 
 const Genesis = () => {
 
@@ -16,6 +25,8 @@ const Genesis = () => {
 
   const [imageSlider, setImageSlider] = useState([])
   const [textPost, setTextPost] = useState('')
+
+  const [thumbsSwiper, setThumbsSwiper] = useState(null);
 
   useEffect(() => {
     const sur = async () => {
@@ -41,73 +52,59 @@ const Genesis = () => {
 
   return (
     <details className='alterocio__card alterocio__card--genesis'>
+
       <summary>génesis</summary>
 
       <div className='alterocio__card--header'>
         <h2>sur</h2>
-        <audio src={sulky} controls  preload="none"></audio>
+        <audio src={sulky} controls preload="none"></audio>
       </div>
       <div className='post'>
-        {
-          sur.length !== 0 ?
-            (sur.map(item => (
 
-              <div className="post__card">
-                {/* <Link to={`/roxanne/${item.id}`} key={item.id}> */}
-                <Card
-                  images={item.imageLinks}
-                  title={item.title}
-                  category={item.category
-                  } />
-                {/* </Link>  */}
-              </div>
 
-            ))) : (<div>loading...</div>)
-        }
+        <div class="jumm">
+          {
+            sur.length !== 0 ?
+              (sur.map(item => (
+
+                <div className="post__card">
+                  {/* <Link to={`/roxanne/${item.id}`} key={item.id}> */}
+                  <Card
+                    images={item.imageLinks}
+                    title={item.title}
+                    category={item.category
+                    } />
+                  {/* </Link>  */}
+                </div>
+
+
+
+              ))) : (<div>loading...</div>)
+          }
+
+        </div>
+
+
+
+
+
+
+
+
       </div>
       <div className='alterocio__card--header'>
         <h2>centro</h2>
         <audio src={centro__lamaquina} controls preload="none"></audio>
       </div>
       <div className='post'>
-        {
-          centro.length !== 0 ?
-            (centro.map(item => (
 
-              <div className="post__card">
-                {/* <Link to={`/roxanne/${item.id}`} key={item.id}> */}
-                <Card
-                  images={item.imageLinks}
-                  title={item.title}
-                  category={item.category
-                  } />
-                {/* </Link>  */}
-              </div>
-
-            ))) : (<div>loading...</div>)
-        }
       </div>
       <div className='alterocio__card--header'>
         <h2>norte</h2>
-        <audio src={norte} controls autoplay loop preload="none"></audio>
+        <audio src={norte_lj} controls autoplay loop preload="none"></audio>
       </div>
       <div className='post'>
-        {
-          norte.length !== 0 ?
-            (norte.map(item => (
 
-              <div className="post__card">
-                {/* <Link to={`/roxanne/${item.id}`} key={item.id}> */}
-                <Card
-                  images={item.imageLinks}
-                  title={item.title}
-                  category={item.category
-                  } />
-                {/* </Link>  */}
-              </div>
-
-            ))) : (<div>loading...</div>)
-        }
       </div>
     </details>
   )

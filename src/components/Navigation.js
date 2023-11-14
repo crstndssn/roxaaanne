@@ -12,6 +12,7 @@ import { CogIcon, PlusCircleIcon, DocumentAddIcon } from '@heroicons/react/outli
 
 import logo from '../resources/logo.svg'
 import lock from '../resources/lock-forestando.svg'
+import lock_kam from '../resources/lock-kam.svg'
 
 import { auth } from '../firebase';
 
@@ -86,6 +87,12 @@ const Navigation = () => {
                 <div className='lock-forestando'>
                   <span class="forest">forest</span><span class="ando">ando</span>
                   <div><img src={lock} /></div>
+                </div></Link>
+              </li>
+              <li><Link to="#" onClick={hideMenu} className='navigation__links--kam'>
+                <div className='lock-forestando'>
+                  <span class="kam">kam</span>
+                  <div><img class="#dad421" src={lock_kam} /></div>
                 </div></Link>
               </li>
               {/* <li><Link to="/projects" onClick={hideMenu} className='navigation__links--projects'>projects</Link></li> */}

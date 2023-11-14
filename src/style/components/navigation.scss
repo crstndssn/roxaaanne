@@ -93,7 +93,6 @@
   &__links {
 
     position: block !important;
-
     margin: 1rem 0;
 
     @include media("tablet") {
@@ -111,6 +110,10 @@
 
     &--roxanne {
       color: $red;
+    }
+
+    &--kam {
+      color: #dad421;
     }
 
     &--projects {
@@ -135,7 +138,7 @@
     width: 35px;
     height: 50px;
     cursor: pointer;
-    margin: 20px 16px 0;
+    margin: 23px 16px 0;
     left: 0;
   
     @include media("tablet") {
@@ -291,7 +294,7 @@
   width: 35px;
   height: 50px;
   cursor: pointer;
-  margin: 20px 16px 0;
+  margin: 23px 16px 0;
   left: 0;
 
   @include media("tablet") {
@@ -428,8 +431,11 @@
 }
 
 .ando {
-  color: #36723E;
   color: #86A54F;
+}
+
+.kam {
+  color: #EEC428;
 }
 
 

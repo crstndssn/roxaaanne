@@ -1,12 +1,12 @@
 import React, { useEffect, useState } from "react";
 // Import Swiper React components
-import { Pagination } from 'swiper'
-import { Swiper, SwiperSlide } from 'swiper/react/swiper-react'
+// import { Pagination } from 'swiper'
+// import { Swiper, SwiperSlide } from 'swiper/react/swiper-react'
 
 
 
-import 'swiper/swiper.min.css'
-import 'swiper/modules/pagination/pagination.min.css'
+// import 'swiper/swiper.min.css'
+// import 'swiper/modules/pagination/pagination.min.css'
 
 
 const Card = (props) => {
