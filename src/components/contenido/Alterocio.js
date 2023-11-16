@@ -35,21 +35,21 @@ const Roxanne = () => {
 
         {/* <Genesis /> */}
 
-        {/* <div className="lock genesis">
+        <div className="lock genesis">
           <p className="lock__title">génesis</p>
           <div className="lock__button">
             <a>suscribete <img src={lock}/></a>
           </div>
-        </div> */}
+        </div>
 
-        <Genesis/>
-{/* 
+        {/* <Genesis/> */}
+
         <div className="lock mercurio">
           <p className="lock__title">mercurio</p>
           <div className="lock__button">
             <a>suscribete <img src={lock}/></a>
           </div>
-        </div> */}
+        </div>
 
         {/* <Mercurio /> */}
 

@@ -76,25 +76,31 @@ const Genesis = () => {
                     } />
                   {/* </Link>  */}
                 </div>
+              ))) : (<div>loading...</div>)
+          }
+        </div>
+      </div>
+      <div className='alterocio__card--header'>
+        <h2>centro</h2>
+        <audio src={centro__lamaquina} controls preload="none"></audio>
+        {
+            centro.length !== 0 ?
+              (centro.map(item => (
+
+                <div className="post__card">
+                  {/* <Link to={`/roxanne/${item.id}`} key={item.id}> */}
+                  <Card
+                    images={item.imageLinks}
+                    title={item.title}
+                    category={item.category
+                    } />
+                  {/* </Link>  */}
+                </div>
 
 
 
               ))) : (<div>loading...</div>)
           }
-
-        </div>
-
-
-
-
-
-
-
-
-      </div>
-      <div className='alterocio__card--header'>
-        <h2>centro</h2>
-        <audio src={centro__lamaquina} controls preload="none"></audio>
       </div>
       <div className='post'>
 
