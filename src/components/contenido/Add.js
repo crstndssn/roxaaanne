@@ -105,9 +105,6 @@ const Add = () => {
     <>
       <form className='add' onSubmit={addPost}>
 
-    
-
-
         <div className='add__image'>
           {
             imageLinks.map((image, key) => {

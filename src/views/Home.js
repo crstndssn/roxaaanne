@@ -36,7 +36,7 @@ export default class Store extends Component {
           </div>
           <a class="pricing__button" target="_blank" href='https://www.mercadopago.com.co/subscriptions/checkout?preapproval_plan_id=2c9380848b62d290018b82fa82971861'>suscribirse</a>
         </div> */}
-
+ 
         <div className="footer">
           <p>by <a target='_blank' href='https://cristiandussan.com/'>crstndssn</a> © 2023</p>
         </div>

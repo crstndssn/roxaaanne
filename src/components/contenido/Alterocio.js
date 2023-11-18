@@ -10,22 +10,52 @@ import lock from '../../resources/lock.svg'
 
 import Card from './Card'
 
+import { auth } from '../../firebase';
+
 const Roxanne = () => {
 
-  const [post, setPost] = useState('')
+  const [user, setUsuario] = useState(null)
+  const [admin, setAdmin] = useState(null)
+  const [userEmail, setUserEmail] = useState(null)
+  const [userSub, setUserSub] = useState(false)
 
-  const [imageSlider, setImageSlider] = useState([])
-  const [textPost, setTextPost] = useState('')
-
+  const [allSubs, setAllSubs] = useState('')
+  
   useEffect(() => {
-    const getPost = async () => {
-      const { docs } = await store.collection('new').get()
-      const newArray = docs.map(item => ({ id: item.id, ...item.data() }))
-      setPost(newArray)
-    }
-    getPost()
-  }, [])
+    auth.onAuthStateChanged((user) => {
+      if (user) {
+        setUsuario(true)
+        if (user.email === 'dussan29@gmail.com') {
+          setAdmin(true)
+          setUserSub(true)
+          setUserEmail(user.email)
+          alert('hola Cristian!')
+        } else {
+          setAdmin(false)
+          setUserSub(false)
+          setUserEmail(user.email)
+        }
+      } else {
+        setUsuario(false)
+        setAdmin(false)
+      }
+    })
 
+    const getSubs = async () => {
+      const subsList = store.collection('sub').where('email', 'in', [userEmail]).get()
+      subsList.then(snapshot => {
+        snapshot.docs.forEach(doc => {
+          if (doc.id === '') {
+            console.log(doc.id)
+            setUserSub(false)
+          } else {
+            setUserSub(true)
+          }
+        })
+      })
+    }
+    getSubs()
+  }, [])
 
   return (
     <div>
@@ -33,14 +63,21 @@ const Roxanne = () => {
 
       <div className='alterocio'>
 
-        {/* <Genesis /> */}
-
-        <div className="lock genesis">
-          <p className="lock__title">génesis</p>
-          <div className="lock__button">
-            <a>suscribete <img src={lock}/></a>
-          </div>
-        </div>
+        {/* G E N E S I S */}
+        {
+          userSub == true ? (
+              <Genesis />
+            ) 
+            : 
+            ( 
+              <div className="lock genesis">
+                <p className="lock__title">génesis</p>
+                  <div className="lock__button">
+                  <a>suscribete <img src={lock}/></a>
+                  </div>
+              </div>
+            )
+        }
 
         {/* <Genesis/> */}
 

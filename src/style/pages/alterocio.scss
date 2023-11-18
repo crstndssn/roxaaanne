@@ -1,24 +1,24 @@
 .alterocio {
   margin: 1rem 1rem;
+
   @include media('tablet') {
     margin: 0 2rem;
   }
 
-  summary {
-    font-size: 50px;
-    font-weight: 400;
+  &__summary {
+    font-weight: 300;
     list-style: none;
-    padding:0;
+    padding: 0;
     cursor: pointer;
-    margin-bottom: 1rem;
+    margin-bottom: 0;
 
     @include media('tablet') {
       margin-bottom: 2rem;
-      padding: 1rem 0;
+      padding: 0.3rem 0;
     }
   }
 
-  details[open] summary~* {
+  &__details[open] summary~* {
     animation: open 0.3s ease-in-out;
   }
 
@@ -32,19 +32,19 @@
     }
   }
 
-  details summary::-webkit-details-marker {
+  &__details &__summary::-webkit-details-marker {
     display: none;
   }
 
-  details summary:after {
+  &__details &__summary:after {
     content: "+";
     position: absolute;
     font-weight: 300;
-    font-size: 90px;
-    right: 10px;
-    top: 30px;
+    font-size: 50px;
+    right: 20px;
     transform-origin: center;
     transition: 200ms linear;
+
     @include media('tablet') {
       font-size: 70px;
       right: 40px;
@@ -52,7 +52,7 @@
     }
   }
 
-  details[open] summary:after {
+  &__details[open] summary:after {
     transform: rotate(45deg);
   }
 
@@ -60,16 +60,34 @@
     display: flex;
     justify-content: center;
 
+    &--border {
+      border-bottom: 1px solid white;
+    }
+
     &--genesis {
       color: #bd1616;
+      margin: 0;
+      font-size: 40px;
+      padding-bottom: 4px;
+      letter-spacing: -3px;
+      font-weight: 300;
 
-      summary {
-        border-bottom: 2px solid #bb0909;
+      @include media("tablet") {
+        font-size: 50px;
       }
+    }
 
-      summary:after {
-        color: #bb0909;
-      }
+    &--summary {
+      border-bottom: 2px solid #bb0909;
+        // list-style: unit($number: 0);
+    }
+
+    &--summary:after {
+      color: #bb0909;
+    }
+
+    &--header:after {
+      color: #bb0909;
     }
 
     &--mercurio {
@@ -108,7 +126,6 @@
       }
     }
 
-
     &--semillas {
       color: #36723E;
 
@@ -121,37 +138,28 @@
       }
     }
 
-    // &--viento {
-    //   border: 2px solid rgb(79, 159, 209);
-    //   summary:after {
-    //     color: rgb(79, 159, 209);
-    //   }
+    &--viento {
+      border: 2px solid rgb(79, 159, 209);
 
+      summary:after {
+        color: rgb(79, 159, 209);
+      }
+    }
 
-    // }
     &--header {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      margin-bottom: 1rem;
+      margin-bottom: 0;
       flex-direction: column;
-
-      h2 {
-        font-size: 80px;
-        color: white;
-        font-weight: 400;
-        margin: 0;
-        line-height: 80px;
-        margin-bottom: 1rem;
-      }
-
-      @include media('tablet') {
-        flex-direction: row;
-
-        h2 {
-          font-size: 40px;
-        }
-      }
+      list-style-type: square;
+      font-size: 33px;
+      color: white;
+      font-weight: 400;
+      margin: 0;
+      line-height: 33px;
+      list-style: revert;
+      padding: .5rem 0;
+    }
+    &--header::marker {
+      font-size: 22px;
     }
 
   }
@@ -165,6 +173,55 @@
     }
   }
 
+}
 
 
+.genesis__section {
+
+  .swiper {
+    width: 100%;
+    height: 100%;
+    min-height: 460px;
+  }
+
+  .swiper-slide {
+    text-align: center;
+    font-size: 18px;
+    background: black;
+
+    /* Center slide text vertically */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .swiper-slide img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    max-height: 420px;
+    object-fit: cover;
+  }
+
+  .card__content-image {
+    min-height: 420px !important;
+    width: 100% !important;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: black;
+  }
+
+}
+
+.swiper-pagination-bullet-active {
+  background-color: white !important;
+}
+
+.swiper-pagination-bullet {
+  background-color: white !important;
+}
+
+.swiper-pagination-bullet-active-next .swiper-pagination-bullet-active-prev {
+  background-color: white !important;
 }

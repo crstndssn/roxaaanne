@@ -4,10 +4,11 @@ import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 import Navigation from './components/Navigation';  
 
 import Login from './components/auth/Login';
-// import Signup from './components/auth/Signup';
-// import Reset from './components/auth/Reset';
+import Signup from './components/auth/Signup';
+import Reset from './components/auth/Reset';
 
 import Admin from './components/admin/Admin'
+import Users from './components/admin/Users'
 
 import Home from './views/Home';
 
@@ -34,9 +35,9 @@ export default class App extends Component {
             {/* <Route exact path="/test" component={Test} /> */}
 
             {/* auth */}
-            <Route path="/login" component={Login} />
-            {/* <Route path="/reset" component={Reset} />
-            <Route path="/signup" component={Signup} /> */}
+            <Route path="/ingreso" component={Login} />
+            <Route path="/contraseña" component={Reset} />
+            <Route path="/registro" component={Signup} /> 
 
             <Route exact path="/edit" component={AdminBlog} />
 
@@ -59,6 +60,7 @@ export default class App extends Component {
             <Route path="/add" component={AddPost} />
             <Route exact path="/edit" component={AdminBlog} />
             <Route path="/edit/:id" component={EditPost}/>
+            <Route path="/users" component={Users}/>
 
 
           </Switch>

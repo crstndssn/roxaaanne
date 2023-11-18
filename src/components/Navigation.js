@@ -13,6 +13,9 @@ import { CogIcon, PlusCircleIcon, DocumentAddIcon } from '@heroicons/react/outli
 import logo from '../resources/logo.svg'
 import lock from '../resources/lock-forestando.svg'
 import lock_kam from '../resources/lock-kam.svg'
+import cart from '../resources/cart.svg'
+import login from '../resources/login.svg'
+import logout from '../resources/logout.svg'
 
 import { auth } from '../firebase';
 
@@ -33,7 +36,6 @@ const Navigation = () => {
         setUsuario(true)
         setPhoto(user.photoURL)
         if (user.email === 'dussan29@gmail.com') {
-
           setAdmin(true)
         } else {
           setAdmin(false)
@@ -47,7 +49,8 @@ const Navigation = () => {
 
   const logOut = () => {
     auth.signOut()
-    setUsuario(null)
+    setUsuario(false)
+    setAdmin(false)
     history.push('/')
   }
 
@@ -73,6 +76,17 @@ const Navigation = () => {
         <div id="menu">
 
           <div className='menu-bar-contanier'>
+
+            <img className="navigation__icons navigation__icons--block" src={cart} />
+
+
+            {user == true ? (
+              <img onClick={logOut} className="navigation__icons" src={logout} />
+            ) : (<Link to="/ingreso"><img className="navigation__icons" src={login} /></Link>)}
+
+
+
+
             <div id="menu-bar" onClick={handlerMenu}>
               <div id="bar1" class="bar"></div>
               <div id="bar2" class="bar"></div>
@@ -102,9 +116,6 @@ const Navigation = () => {
 
         <div class="menu-bg" id="menu-bg"></div>
       </div>
-
-
-
     </div>
   )
 }

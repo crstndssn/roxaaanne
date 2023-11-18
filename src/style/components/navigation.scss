@@ -1,24 +1,38 @@
 .navigation {
   display: flex;
-  align-items: center;
+  align-items: baseline;
   margin-top: 0;
   height: 8vh;
   @include media("tablet") {
-    height: 13vh;
+    height: 10vh;
   }
 
+  &__icons {
+    width: 30px;
+    height: 30px;
+    @include media("tablet") {
+      width: 40px;
+      height: 40px;
+    }
+  }
+  &__icons--block {
+    opacity: 0.5;
+  }
   &__logo {
-    z-index: 8;
-    width: 60px;
-    height: 40px;
+    width: 50%;
+    height: 100%;
+    display: contents;
     img {
+      margin-top: 9px;
       height: 400%;
       width: 400%;
       vertical-align: middle;
-      transform: scale(0.25);
+      transform: scale(0.17);
       transform-origin: 0 0;
+      z-index: 888;
       @include media("tablet") {
         width: 400%;
+        transform-origin: -85px 20px;
       }
     }
     @include media("tablet") {
@@ -124,6 +138,7 @@
   
   #menu {
     z-index: 2;
+
   }
   .menu-bar-contanier{
     width: 100%;
@@ -131,6 +146,7 @@
     justify-content: flex-end;
     @include media('tablet') {
       height: 13vh;
+      
     }
   }
   
@@ -211,6 +227,8 @@
     width: 100%;
     position: absolute;
   }
+
+
   
   .menu-bg {
     z-index: 1;
@@ -252,7 +270,7 @@
   }
   
   .change #bar3 {
-    transform: translateY(-5px) rotateZ(45deg);
+    transform: translateY(-6px) rotateZ(45deg);
   }
   
   .change-bg {
@@ -288,18 +306,25 @@
   width: 100%;
   display: flex;
   justify-content: flex-end;
+  margin-top: 11px;
+  margin-left: -15px;
+  gap: 1rem;
+  @include media('tablet') {
+    margin-top: 2rem;
+    margin-left: -45px;
+    gap: 1.5rem;
+  }
 }
 
 #menu-bar {
-  width: 35px;
-  height: 50px;
+  width: 30px;
+  height: 40px;
   cursor: pointer;
-  margin: 23px 16px 0;
-  left: 0;
-
+  margin-top: 8px;
   @include media("tablet") {
+    margin-top: 11px;
     width: 40px;
-    margin: 45px 2rem;    
+    height: 40px;
   }
 }
 

@@ -1,13 +1,72 @@
 .edit {
-
-  padding-top: 3rem;
-  margin: auto 2rem;
+  padding-top: 1rem;
+  margin: auto 1rem;
   display: grid;
   grid-template-columns: 1fr;
   gap: 1rem;
   @include media("tablet") {
     grid-template-columns: 1fr 1fr 1fr;
     grid-template-rows: 1fr;
+    padding-top: 2rem;
+    margin: auto 2rem;
+  }
+  
+  &__add {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 2px $white solid;
+    border-radius: 10px;
+    min-height: 150px;
+    &--icon {
+      width: 25px;
+      height: 25px;
+      margin-right: 5px;
+    }
+    &--text {
+     font-size: 20px;
+     margin: 0;
+    }
+  }
+
+  &__add:hover {
+    border: 3px $white solid;
+  }
+
+  &__item {
+    border: 2px $white solid;
+    border-radius: 10px;
+  }
+
+  &__controls {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 .7rem .3rem .7rem;
+    h2 {
+      font-size: 20px;
+      font-weight: 400;
+      margin: 0;
+    }
+    &--icons {
+      display: flex;
+      align-items: center;
+    }
+    &--icons img {
+     cursor: pointer;
+     border-radius: 100%;
+      padding: 4px;
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+    }
+    &--icons img:hover {
+     background-color: #ffffff38;
+     border-radius: 100%;
+    }
+    &--icons img:first-child {
+      margin-right: 7px;
+    }
   }
 
   &__content-image {
@@ -18,18 +77,14 @@
   &__image {
     aspect-ratio: 3/2;
     object-fit: cover;
+    border-radius: 7px 7px 0 0;
   }
 
   &__icon {
-    width: 30px;
-    height: 30px;
+    width: 25px;
+    height: 25px;
   }
 
-  &__add {
-    border: 1px $white solid;
-  }
 
-  &__item {
-    border: 1px $white solid;
-  }
+
 }

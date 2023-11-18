@@ -49,7 +49,7 @@ const HomeRoxanne = () => {
                     </div>
                     <h2 className="card__title">{item.title}</h2>
                   </div>
-                </Link>
+                </Link> 
               </SwiperSlide>
             ))) : (<div></div>)
         }
