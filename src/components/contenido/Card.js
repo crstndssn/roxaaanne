@@ -11,8 +11,6 @@ import React, { useEffect, useState } from "react";
 
 const Card = (props) => {
 
-
-
   const imageLinks = useState(props.images)
 
   // const [imageLinks, setimageLinks] = useState(props.images)
@@ -21,10 +19,7 @@ const Card = (props) => {
   const title = useState(props.title)
   const description = useState(props.text)
 
-
   // console.log(imageLinks)  
-
-
 
   // const addText = (text) => {
   //   const contetPost = text
@@ -34,7 +29,7 @@ const Card = (props) => {
 
   return (
     <div className="card">
-      <div className="card__content-image">
+      <div className="">
         <img className="card__image" src={imageLinks[0][0]} loading="lazy" />
       </div>
       {/* <h2 className="card__title">{title}</h2> */}

@@ -79,7 +79,7 @@ const NavigationForestando = () => {
 
           <nav class="nav" id="nav">
             <ul>
-              <li><Link to="/alterocio" onClick={hideMenu} className='navigation__links--roxanne'>alterocio</Link></li>
+              <li><Link to="/alterocio" onClick={hideMenu} className='navigation__links--roxanne'>alter-ocio</Link></li>
               <li><Link to="/forestando" onClick={hideMenu} className='navigation__links--forestando'>
                 <span class="forest">forest</span><span class="ando">ando</span></Link>
                 </li>

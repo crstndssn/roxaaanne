@@ -1,0 +1,53 @@
+@font-face {
+  font-family: 'New York';
+  src: url('../../resources/NewYork.otf');
+}
+
+.kam {
+  font-family: 'New York', sans-serif;
+  color: #FECD27;
+  background-color: #f6f2e6;
+  min-height: 50vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.kam__title {
+  font-size: 30vh;
+  font-weight: 500;
+}
+
+.kam__oro {
+  width: 100%;
+  background-color: #D4F3D5;
+  color: #8E58FF;
+
+  h2 {
+    font-size: 10vh;
+    margin: 10px;
+  }
+}
+
+.kam__mar {
+  width: 100%;
+  background-color: #84D6D1 ;
+  color: #FBE7F8;
+
+  h2 {
+    font-size: 10vh;
+    margin: 10px;
+  }
+}
+
+.kam__trapos {
+  width: 100%;
+  background-color: #000000;
+  color: #FAD691;
+
+  h2 {
+    font-size: 10vh;
+    margin: 10px;
+  }
+}

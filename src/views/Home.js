@@ -16,7 +16,7 @@ export default class Store extends Component {
           <img src={sunset} alt="sunset" />
         </div>
 
-        {/* <div className="pricing">
+        <div className="pricing">
           <div>
             <p>$20.000</p>
             <span></span>
@@ -35,7 +35,7 @@ export default class Store extends Component {
             <h3>contenido especial</h3>
           </div>
           <a class="pricing__button" target="_blank" href='https://www.mercadopago.com.co/subscriptions/checkout?preapproval_plan_id=2c9380848b62d290018b82fa82971861'>suscribirse</a>
-        </div> */}
+        </div>
  
         <div className="footer">
           <p>by <a target='_blank' href='https://cristiandussan.com/'>crstndssn</a> © 2023</p>

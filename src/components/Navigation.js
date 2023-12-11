@@ -79,13 +79,9 @@ const Navigation = () => {
 
             <img className="navigation__icons navigation__icons--block" src={cart} />
 
-
             {user == true ? (
               <img onClick={logOut} className="navigation__icons" src={logout} />
             ) : (<Link to="/ingreso"><img className="navigation__icons" src={login} /></Link>)}
-
-
-
 
             <div id="menu-bar" onClick={handlerMenu}>
               <div id="bar1" class="bar"></div>
@@ -96,20 +92,22 @@ const Navigation = () => {
 
           <nav class="nav" id="nav">
             <ul>
-              <li><Link to="/alterocio" onClick={hideMenu} className='navigation__links--roxanne'>alterocio</Link></li>
-              <li><Link to="#" onClick={hideMenu} className='navigation__links--forestando'>
+              <li><Link to="/alterocio" onClick={hideMenu} className='navigation__links--roxanne'>alter-ocio</Link></li>
+              <li><Link to="/forestando" onClick={hideMenu} className='navigation__links--forestando'>
                 <div className='lock-forestando'>
                   <span class="forest">forest</span><span class="ando">ando</span>
-                  <div><img src={lock} /></div>
                 </div></Link>
               </li>
-              <li><Link to="#" onClick={hideMenu} className='navigation__links--kam'>
+              <li><Link to="/kam" onClick={hideMenu} className='navigation__links--kam'>
                 <div className='lock-forestando'>
-                  <span class="kam">kam</span>
-                  <div><img class="#dad421" src={lock_kam} /></div>
+                  <span class="kam-menu">kam</span>
                 </div></Link>
               </li>
-              {/* <li><Link to="/projects" onClick={hideMenu} className='navigation__links--projects'>projects</Link></li> */}
+              <li><Link to="/roxy" onClick={hideMenu} className='navigation__links--kam'>
+                <div className='lock-forestando'>
+                  <span class="roxy-menu">roxy</span>
+                </div></Link>
+              </li>
             </ul>
           </nav>
         </div>

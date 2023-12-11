@@ -1,0 +1,54 @@
+@font-face {
+  font-family: 'Phosphate';
+  src: url('../../resources/PhosphatePro-Inline.otf');
+}
+
+.roxy {
+  font-family: 'Phosphate', sans-serif;
+  background-color: #FFE6F9;
+  min-height: 20vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.roxy__title {
+  color: #ED0000;
+  font-size: 20vh;
+  font-weight: 500;
+  margin: 0;
+}
+
+.roxy__oro {
+  width: 100%;
+  background-color: #D4F3D5;
+  color: #8E58FF;
+
+  h2 {
+    font-size: 10vh;
+    margin: 10px;
+  }
+}
+
+.roxy__mar {
+  width: 100%;
+  background-color: #84D6D1 ;
+  color: #FBE7F8;
+
+  h2 {
+    font-size: 10vh;
+    margin: 10px;
+  }
+}
+
+.roxy__trapos {
+  width: 100%;
+  background-color: #000000;
+  color: #FAD691;
+
+  h2 {
+    font-size: 10vh;
+    margin: 10px;
+  }
+}
