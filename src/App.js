@@ -20,9 +20,20 @@ import AdminBlog from './components/contenido/AdminBlog'
 
 // pages
 import Alterocio from './components/subscription/alterocio/alterocio'
+import AllAlterocio from './components/subscription/alterocio/edit'
+import AddAlterocio from './components/subscription/alterocio/add'
+
 import Forestando from './components/subscription/forestando/forestando'
+import AllForestando from './components/subscription/forestando/edit'
+import AddForestando from './components/subscription/forestando/add'
+
 import Kam from './components/subscription/kam/kam'
+import AllKam from './components/subscription/kam/edit'
+import AddKam from './components/subscription/kam/add'
+
 import Roxy from './components/subscription/roxy/roxy'
+import AllRoxy from './components/subscription/roxy/edit'
+import AddRoxy from './components/subscription/roxy/add'
 
 
 export default class App extends Component {
@@ -31,44 +42,41 @@ export default class App extends Component {
       <div className="w-full z-10">
         <Router>
           <Switch>
-            {/* auth */}
+            {/* P U B L I C */}
+            <Route exact path="/" component={Home} />
+            <Route path="/blog" component={Blog} /> 
             <Route path="/login" component={Login} />
             <Route path="/reset" component={Reset} />
             <Route path="/singup" component={Signup} /> 
 
-            {/* blog */}
-            <Route path="/blog" component={Blog} /> 
-           
-            {/* public */}
-            <Route exact path="/" component={Home} />
-
-            {/* <Route path="/forestando" component={Forestando} /> */}
-            <Route path="/alterocio" component={Alterocio} />
-            <Route path="/kam" component={Kam} />
-            <Route path="/roxy" component={Roxy} />
-
             {/* <Route path="/forestando/:id" component={Post}/>
             <Route path="/alterocio/:id" component={Post}/> */}
 
-            {/* private */}
+            {/* P R I V A T E */}
             <Route exact path="/admin" component={Admin} />
-            <Route path="/users" component={Users}/>
+            <Route exact path="/users" component={Users}/>
 
-            {/* alter-ocio */}
-            <Route path="/alterocio/add" component={AddPost} />
-            <Route exact path="/alterocio/edit" component={AdminBlog} />
+            {/* A L T E R - O C I O */}
+            <Route exact path="/alterocio" component={Alterocio} />
+            <Route exact path="/alterocio/add" component={AddAlterocio} />
+            <Route exact path="/alterocio/all" component={AllAlterocio} />
+
             
-            {/* forestando */}
-            <Route path="/forestando/add" component={AddPost} />
-            <Route exact path="/forestando/edit" component={AdminBlog} />
+            {/* F O R E S T A N D O */}
+            <Route exact path="/forestando" component={Forestando} />
+            <Route exact path="/forestando/add" component={AddForestando} />
+            <Route exact path="/forestando/all" component={AllForestando} />
 
-            {/* kam */}
-            <Route path="/kam/add" component={AddPost} />
-            <Route exact path="/kam/edit" component={AdminBlog} />
+            {/* K A M */}
+            <Route exact path="/kam" component={Kam} />
+            <Route exact path="/kam/add" component={AddKam} />
+            <Route exact path="/kam/all" component={AllKam} />
 
-            {/* roxy */}
-            <Route path="/roxy/add" component={AddPost} />
-            <Route exact path="/roxy/edit" component={AdminBlog} />
+            {/* R O X Y */}
+            <Route exact path="/roxy" component={Roxy} />
+            <Route exact path="/roxy/add" component={AddRoxy} />
+            <Route exact path="/roxy/all" component={AllRoxy} />
+
           </Switch>
         </Router>
       </div>

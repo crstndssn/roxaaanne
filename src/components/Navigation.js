@@ -93,11 +93,11 @@ const Navigation = () => {
           <nav class="nav" id="nav">
             <ul>
               <li><Link to="/alterocio" onClick={hideMenu} className='navigation__links--roxanne'>alter-ocio</Link></li>
-              <li><Link to="/forestando" onClick={hideMenu} className='navigation__links--forestando'>
+              {/* <li><Link to="/forestando" onClick={hideMenu} className='navigation__links--forestando'>
                 <div className='lock-forestando'>
                   <span class="forest">forest</span><span class="ando">ando</span>
                 </div></Link>
-              </li>
+              </li> */}
               <li><Link to="/kam" onClick={hideMenu} className='navigation__links--kam'>
                 <div className='lock-forestando'>
                   <span class="kam-menu">kam</span>
