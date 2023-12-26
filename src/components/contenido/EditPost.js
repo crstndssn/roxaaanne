@@ -30,9 +30,6 @@ const EditPost = () => {
   const [notification, setNotification] = useState('');
 
   useEffect(async () => {
-
-    
-
     await store.collection('new').doc(id)
       .get()
       .then((doc) => {

@@ -20,7 +20,8 @@ import AdminBlog from './components/contenido/AdminBlog'
 
 // pages
 import Alterocio from './components/subscription/alterocio/alterocio'
-import AllAlterocio from './components/subscription/alterocio/edit'
+import AllAlterocio from './components/subscription/alterocio/all'
+import EditAlterocio from './components/subscription/alterocio/edit'
 import AddAlterocio from './components/subscription/alterocio/add'
 
 import Forestando from './components/subscription/forestando/forestando'
@@ -38,6 +39,7 @@ import AddRoxy from './components/subscription/roxy/add'
 import Bejuco from './components/subscription/bejuco/bejuco'
 import AllBejuco from './components/subscription/bejuco/edit'
 import AddBejuco from './components/subscription/bejuco/add'
+
 
 
 export default class App extends Component {
@@ -63,8 +65,8 @@ export default class App extends Component {
             {/* A L T E R - O C I O */}
             <Route exact path="/alterocio" component={Alterocio} />
             <Route exact path="/alterocio/add" component={AddAlterocio} />
+            <Route exact path="/alterocio/edit" component={EditAlterocio} />
             <Route exact path="/alterocio/all" component={AllAlterocio} />
-
             
             {/* F O R E S T A N D O */}
             <Route exact path="/forestando" component={Forestando} />

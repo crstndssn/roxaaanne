@@ -145,7 +145,7 @@ const AddProduct = () => {
           }
           {
             loadImg <= 100 ? (
-              <p className="text-brand">cargando {Math.round(loadImg)}%</p>
+              <p className="load">cargando {Math.round(loadImg)}%</p>
             ) : (
               <span></span>
             )
@@ -180,7 +180,6 @@ const AddProduct = () => {
             </textarea>
    
           <div className="forestando__add--text-boxes">
-
             <div className="box">
               <div className="box__icon">
                 <img className="xs:w-16 md:w-16 md:my-0 xs:my-4" src={sun} alt="figure" />
@@ -217,17 +216,18 @@ const AddProduct = () => {
           </div>
 
           <button action="submit" class="forestando__add--publish">Publicar</button>
+
         </div>
         {
           error ?
             (
               <div>
-                <p className="bg-red-100 text-red-700 p-2 mt-4 rounded">{error}</p>
+                <p className="forestando__add--text-error">{error}</p>
               </div>
             )
             :
             (
-              <span></span>
+              <span>success</span>
             )
         }
       </form>

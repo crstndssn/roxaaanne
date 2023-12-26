@@ -15,18 +15,6 @@ const Biblioteca = () => {
         </div>
         <h3 className='forestando__blog--title'>antirio</h3>
       </div>
-      <div className='forestando__blog--card'>
-        <div className='forestando__blog--container-img'>
-          <img src={imgtest} alt="" />
-        </div>
-        <h3 className='forestando__blog--title'>buganbilia</h3>
-      </div>
-      <div className='forestando__blog--card'>
-        <div className='forestando__blog--container-img'>
-          <img src={imgtest} alt="test" />
-        </div>
-        <h3 className='forestando__blog--title'>agua</h3>
-      </div>
     </div>
 
   </div>

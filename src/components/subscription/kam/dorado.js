@@ -31,59 +31,26 @@ const Dorado = () => {
     dorado()
   }, [])
 
-
   return (
     <details className='genesis__section alterocio__card alterocio__card--genesis alterocio__details'>
 
       <summary className='alterocio__card--summary alterocio__summary'>dorado</summary>
 
-      {/* D O R A D O */}
-      <details className='alterocio__card--border'>
-        <summary className='alterocio__card--header'>
-          dorado
-        </summary>
-        <audio src={dorado} controls preload="none"></audio>
-        {/* <Swiper
-          slidesPerView={1}
-          autoplay={{
-            delay: 4000,
-            disableOnInteraction: true,
-          }}
-          pagination={{
-            dynamicBullets: true,
-          }}
-          loop={false}
-          modules={[Pagination, Autoplay]}
-          className="mySwiper"
-        >
-          {
-            sur.length !== 0 ?
-              (sur.map(item => (
-                <SwiperSlide>
-                  <Card
-                    images={item.imageLinks}
-                    title={item.title}
-                    category={item.category
-                    } />
-                </SwiperSlide>
-              ))) : (<div>loading...</div>)
-          }
-        </Swiper> */}
-        <div className='alterocio__card--grid'>
+      <audio src={dorado} controls preload="none"></audio>
+      <div className='alterocio__card--grid'>
         {
           dorado.length !== 0 ?
             (dorado.map(item => (
-    
-                <Card
-                  images={item.imageLinks}
-                  title={item.title}
-                  category={item.category
-                  } />
-        
+
+              <Card
+                images={item.imageLinks}
+                title={item.title}
+                category={item.category
+                } />
+
             ))) : (<div>loading...</div>)
-          }
-        </div>
-      </details>
+        }
+      </div>
     </details>
   )
 }
