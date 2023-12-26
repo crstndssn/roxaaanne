@@ -6,7 +6,7 @@ import imgtest from '../../../resources/sunset.jpg'
 
 const Biblioteca = () => {
   return (
-    <div className='forestando__blog'>
+    <div className='forestando__biblioteca'>
     <h2>Biblioteca</h2>
     <div className='forestando__blog--container'>
       <div className='forestando__blog--card'>

@@ -7,15 +7,18 @@ import Navigation from '../../Navigation';
 
 // R E S O U R C E S
 // import sunflower1 from '../../sunflower-1.svg'
-// import sunflower2 from '../../sunflower-2.svg'
+import bejuco1 from '../../../resources/bejuco/bejuco1.jpg'
+import bejuco6 from '../../../resources/bejuco/bejuco6.jpg'
+import bejuco7 from '../../../resources/bejuco/bejuco7.jpg'
+import bejuco10 from '../../../resources/bejuco/bejuco10.jpg'
 
 // C O N T E N I D O
-import Dorado from './dorado'
+// import Dorado from './dorado'
 // import lila from '../subscription/lila'
 // import trapos_nuevos from '../subscription/lila'
 
 
-const Kam = () => {
+const Bejuco = () => {
 
     const [user, setUsuario] = useState(null)
     const [admin, setAdmin] = useState(null)
@@ -60,30 +63,40 @@ const Kam = () => {
     }, [])
 
     return (
-      <div>
+      <>
         <Navigation/>
 
-        <div className='kam'>
+        <div className='bejuco'>
 
-          <h1 className="kam__title">kam</h1>
 
-          <div className='kam__oro'>
-            <h2>dorado</h2>
+ 
+        
+
+          {/* t i t l e */}
+          <h1 className="bejuco__title">Bejuco es una pregunta por las cosas para las que no tenemos palabras</h1>
+
+
+          {/* s l i d e */}
+          <div className='bejuco__slide'>
+            <div className="bejuco__blur">
+              <img src={bejuco1} />
+            </div>
+            
+            <div className="bejuco__slide--content">
+              <img src={bejuco6} />
+            <img src={bejuco7} />
+            <img src={bejuco10} />
+            </div>
           </div>
 
-          <Dorado/>
+          {/* d e s c r i p t i o n */} 
+          <p className='bejuco__description'>El cortometraje: "Bejuco o Cuando las piedras sangran". Es una experiecnia audiovisual en la que recorremos los paisajes andinos y tropicales inmersos en los simbolos místicos de la cultura popular. Asì que materializar esta vision necesita juntar muchos esfuerzos. </p>
 
-          <div className='kam__mar'>
-            <h2>mar y luna</h2>
           </div>
-
-          <div className='kam__trapos'>
-            <h2>nuevos trapos</h2>
-          </div>
-        </div>
-      </div>
+  
+      </>
     )
 
 }
 
-export default Kam
+export default Bejuco

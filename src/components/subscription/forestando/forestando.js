@@ -15,7 +15,7 @@ import Biblioteca from './biblioteca'
 import { Pagination } from 'swiper'
 import { Swiper, SwiperSlide } from 'swiper/react/swiper-react'
 
-import Navigation from '../../Navigation';  
+import Navigation from '../../Navigation';
 
 import 'swiper/swiper.min.css'
 import 'swiper/modules/pagination/pagination.min.css'
@@ -38,51 +38,39 @@ const Forestando = () => {
     getPost()
   }, [])
 
-
-  // const imagesSlider = (post) => {
-
-  //   setImageSlider(post)
-
-  // }
-
   return (
-    <div>
-    <Navigation/>
-    <div className='forestando'>
+    <>
+      <Navigation />
+      <div className='forestando'>
+        {/* H E A D E R */}
+        <div className="forestando__header">
+          <div className="forestando__header--interior">
+            <img src={img1} alt="interior" />
+            <img src={img2} alt="interior" />
+          </div>
+          <div className="forestando__header--orquideas">
+            <img src={img3} className="max-h-screen" alt="orquídeas" />
+          </div>
 
-      {/* header */}
-      <div className="forestando__header">
-        <div className="forestando__header--interior">
-          <img src={img1} alt="interior" />
-          <img src={img2} alt="interior" />
-        </div>
-        <div className="forestando__header--orquideas">
-          <img src={img3} className="max-h-screen" alt="orquídeas" />
+          <div className="forestando__header--text">
+            <h1 className="forestando__header--text-h1"><span className="text-nature">forest</span><span className="text-ando">ando</span></h1>
+            <p className="forestando__header--text-p">siembra vida y aprende de la naturaleza</p>
+            <Link to="/blog" className="forestando__header--text-btn">Yo planto</Link>
+          </div>
         </div>
 
-        <div className="forestando__header--text">
-          <h1 className="forestando__header--text-h1"><span className="text-nature">forest</span><span className="text-ando">ando</span></h1>
-          <p className="forestando__header--text-p">siembra vida y aprende de la naturaleza</p>
-          <Link to="/blog" className="forestando__header--text-btn">Yo planto</Link>
+        <Blog />
+        <Biblioteca />
+
+        {/* F O O T E R */}
+        <div className='forestando__footer'>
+          <div>
+            <p>instagram</p>
+          </div>
+          <p>by crstndssn</p>
         </div>
       </div>
-
-      {/* blog */}
-      <Blog/>
-
-      {/* products */}
-      <Biblioteca/>
-
-      {/* footer */}
-      <div className='forestando__footer'>
-        <div>
-          <p>instagram</p>
-        </div>
-        <p>by crstndssn</p>
-      </div>
-
-    </div>
-  </div>
+    </>
   )
 }
 

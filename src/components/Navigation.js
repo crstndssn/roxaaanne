@@ -11,8 +11,7 @@ import { LogoutIcon } from '@heroicons/react/outline'
 import { CogIcon, PlusCircleIcon, DocumentAddIcon } from '@heroicons/react/outline'
 
 import logo from '../resources/logo.svg'
-import lock from '../resources/lock-forestando.svg'
-import lock_kam from '../resources/lock-kam.svg'
+import lock from '../resources/lock-bejuco.svg'
 import cart from '../resources/cart.svg'
 import login from '../resources/login.svg'
 import logout from '../resources/logout.svg'
@@ -81,7 +80,7 @@ const Navigation = () => {
 
             {user == true ? (
               <img onClick={logOut} className="navigation__icons" src={logout} />
-            ) : (<Link to="/ingreso"><img className="navigation__icons" src={login} /></Link>)}
+            ) : (<Link to="/login"><img className="navigation__icons" src={login} /></Link>)}
 
             <div id="menu-bar" onClick={handlerMenu}>
               <div id="bar1" class="bar"></div>
@@ -93,11 +92,11 @@ const Navigation = () => {
           <nav class="nav" id="nav">
             <ul>
               <li><Link to="/alterocio" onClick={hideMenu} className='navigation__links--roxanne'>alter-ocio</Link></li>
-              {/* <li><Link to="/forestando" onClick={hideMenu} className='navigation__links--forestando'>
+              <li><Link to="/forestando" onClick={hideMenu} className='navigation__links--forestando'>
                 <div className='lock-forestando'>
                   <span class="forest">forest</span><span class="ando">ando</span>
                 </div></Link>
-              </li> */}
+              </li>
               <li><Link to="/kam" onClick={hideMenu} className='navigation__links--kam'>
                 <div className='lock-forestando'>
                   <span class="kam-menu">kam</span>
@@ -107,6 +106,10 @@ const Navigation = () => {
                 <div className='lock-forestando'>
                   <span class="roxy-menu">roxy</span>
                 </div></Link>
+              </li>
+              <li><Link to="/" onClick={hideMenu} className='navigation__links--kam'>
+                <span class="bejuco-menu">bejuco<img src={lock} /></span>
+              </Link>
               </li>
             </ul>
           </nav>

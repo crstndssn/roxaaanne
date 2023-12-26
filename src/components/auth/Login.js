@@ -113,8 +113,8 @@ const Login = () => {
           </form>
 
           <div className="login__options">
-            <Link to="/registro">regístrate</Link>
-            <Link to="/contraseña" id="forget-password">
+            <Link to="/signup">regístrate</Link>
+            <Link to="/reset" id="forget-password">
               olvidé mi contraseña
             </Link>
           </div>

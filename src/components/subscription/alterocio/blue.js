@@ -4,135 +4,106 @@ import { Link } from 'react-router-dom'
 
 import Card from '../../contenido/Card'
 
-import antes_de_morir from '../../resources/antes_de_morir.mp3'
-import entre_las_luces from '../../resources/entre_las_luces.mp3'
-import no_soy_un_extraño from '../../resources/no_soy_un_extraño.mp3'
-import shiva from '../../resources/shiva.mp3'
+import antes_de_morir from '../../../resources/antes_de_morir.mp3'
+import entre_las_luces from '../../../resources/entre_las_luces.mp3'
+import no_soy_un_extraño from '../../../resources/no_soy_un_extraño.mp3'
+import shiva_song from '../../../resources/shiva.mp3'
 
 
 const Blue = () => {
 
-  const [sur, setSur] = useState('')
-  const [norte, setNorte] = useState('')
-  const [centro, setCentro] = useState('')
+  const [inmune, setInmune] = useState('')
+  const [qlees, setQlees] = useState('')
+  const [wywh, setWywh] = useState('')
 
   const [imageSlider, setImageSlider] = useState([])
   const [textPost, setTextPost] = useState('')
 
   useEffect(() => {
-    const sur = async () => {
-      const { docs } = await store.collection('new').where('title', '==', "sur").get()
+    const inmune = async () => {
+      const { docs } = await store.collection('new').where('title', '==', "inmune").get()
       const newArray = docs.map(item => ({ id: item.id, ...item.data() }))
-      setSur(newArray)
+      setInmune(newArray)
     }
-    sur()
-    const norte = async () => {
-      const { docs } = await store.collection('new').where('title', '==', "norte").get()
+    inmune()
+    const qlees = async () => {
+      const { docs } = await store.collection('new').where('title', '==', "qlees").get()
       const newArray = docs.map(item => ({ id: item.id, ...item.data() }))
-      setNorte(newArray)
+      setQlees(newArray)
     }
-    norte()
-    const centro = async () => {
-      const { docs } = await store.collection('new').where('title', '==', "centro").get()
+    qlees()
+    const wywh = async () => {
+      const { docs } = await store.collection('new').where('title', '==', "wywh").get()
       const newArray = docs.map(item => ({ id: item.id, ...item.data() }))
-      setCentro(newArray)
+      setWywh(newArray)
     }
-    centro()
+    wywh()
   }, [])
 
 
   return (
-    <details className='alterocio__card alterocio__card--genesis'>
-      <summary>mercurio</summary>
+    <details className='genesis__section alterocio__card alterocio__card--blue alterocio__details'>
 
-      <div className='alterocio__card--header'>
-        <h2>antes de morir</h2>
-        <audio src={antes_de_morir} controls  preload="none"></audio>
-      </div>
-      <div className='post'>
-        {
-          sur.length !== 0 ?
-            (sur.map(item => (
+      <summary className='alterocio__card--summary alterocio__summary'>blue</summary>
 
-              <div className="post__card">
-                {/* <Link to={`/roxanne/${item.id}`} key={item.id}> */}
+      {/*  I N M U N E */}
+      <details className='alterocio__card--border'>
+        <summary className='alterocio__card--header'>inmune</summary>
+        <audio src={antes_de_morir} controls preload="none"></audio>
+        <div className='alterocio__card--grid'>
+          {
+            inmune.length !== 0 ?
+              (inmune.map(item => (
+
                 <Card
                   images={item.imageLinks}
                   title={item.title}
                   category={item.category
                   } />
-                {/* </Link>  */}
-              </div>
 
-            ))) : (<div>loading...</div>)
-        }
-      </div>
-      <div className='alterocio__card--header'>
-        <h2>entre las luces</h2>
+              ))) : (<div>loading...</div>)
+          }
+        </div>
+      </details>
+
+      {/* Q L I N D O E S E L S O L */}
+      <details className='alterocio__card--border'>
+        <summary className='alterocio__card--header'>que lindo es el sol</summary>
         <audio src={entre_las_luces} controls preload="none"></audio>
-      </div>
-      <div className='post'>
-        {
-          centro.length !== 0 ?
-            (centro.map(item => (
+        <div className='alterocio__card--grid'>
+          {
+            qlees.length !== 0 ?
+              (qlees.map(item => (
 
-              <div className="post__card">
-                {/* <Link to={`/roxanne/${item.id}`} key={item.id}> */}
                 <Card
                   images={item.imageLinks}
                   title={item.title}
                   category={item.category
                   } />
-                {/* </Link>  */}
-              </div>
 
-            ))) : (<div>loading...</div>)
-        }
-      </div>
-      <div className='alterocio__card--header'>
-        <h2>no soy un extraño</h2>
-        <audio src={no_soy_un_extraño} controls autoplay loop preload="none"></audio>
-      </div>
-      <div className='post'>
-        {
-          norte.length !== 0 ?
-            (norte.map(item => (
+              ))) : (<div>loading...</div>)
+          }
+        </div>
+      </details>
 
-              <div className="post__card">
-                {/* <Link to={`/roxanne/${item.id}`} key={item.id}> */}
+      {/* W I S H Y O U W E R E H E R E */}
+      <details className='alterocio__card--border'>
+        <summary className='alterocio__card--header'>wish you where here</summary>
+        <audio src={no_soy_un_extraño} controls preload="none"></audio>
+        <div className='alterocio__card--grid'>
+          {
+            wywh.length !== 0 ?
+              (wywh.map(item => (
                 <Card
                   images={item.imageLinks}
                   title={item.title}
                   category={item.category
                   } />
-                {/* </Link>  */}
-              </div>
 
-            ))) : (<div>loading...</div>)
-        }
-      </div>
-      <div className='alterocio__card--header'>
-        <h2>shiva</h2>
-        <audio src={shiva} controls autoplay loop preload="none"></audio>
-      </div>
-      <div className='post'>
-        {
-          norte.length !== 0 ?
-            (norte.map(item => (
-
-              <div className="post__card">
-                {/* <Link to={`/roxanne/${item.id}`} key={item.id}> */}
-                <Card
-                  images={item.imageLinks}
-                  title={item.title}
-                  category={item.category
-                  } />
-                {/* </Link>  */}
-              </div>
-
-            ))) : (<div>loading...</div>)
-        }
-      </div>
+              ))) : (<div>loading...</div>)
+          }
+        </div>
+      </details>
     </details>
   )
 }

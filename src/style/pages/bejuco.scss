@@ -1,0 +1,52 @@
+@font-face {
+  font-family: 'Helvetica';
+  src: url('../../resources/HelveticaNeueLTProEx.otf');
+}
+
+.bejuco {
+  color: #000;
+  background-color: #184112;
+  font-family: 'Helvetica', sans-serif;
+  color: #ff8f00;
+
+  &__title {
+    font-size: 80px;
+    line-height: 80px;
+    padding-top: 3rem;
+  }
+
+  &__description {
+    font-weight: 200;
+    font-size: 40px;
+    line-height: 40px;
+    margin: 0;
+    padding-top: 2rem;
+  }
+
+  &__blur {
+    position: absolute;
+    z-index: 0;
+
+    img {
+      filter: blur(3px);
+    }
+  }
+
+  &__slide {
+    position: relative;
+    min-height: 80vh;
+    display: flex;
+    align-items: center;
+
+    &--content {
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr;
+      gap: 1rem;
+      margin: 0 2rem;
+    }
+
+    img {
+      z-index: 1;
+    }
+  }
+}

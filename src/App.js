@@ -35,6 +35,10 @@ import Roxy from './components/subscription/roxy/roxy'
 import AllRoxy from './components/subscription/roxy/edit'
 import AddRoxy from './components/subscription/roxy/add'
 
+import Bejuco from './components/subscription/bejuco/bejuco'
+import AllBejuco from './components/subscription/bejuco/edit'
+import AddBejuco from './components/subscription/bejuco/add'
+
 
 export default class App extends Component {
   render() {
@@ -76,6 +80,11 @@ export default class App extends Component {
             <Route exact path="/roxy" component={Roxy} />
             <Route exact path="/roxy/add" component={AddRoxy} />
             <Route exact path="/roxy/all" component={AllRoxy} />
+
+            {/* B E J U C O */}
+            <Route exact path="/bejuco" component={Bejuco} />
+            <Route exact path="/bejuco/add" component={AddBejuco} />
+            <Route exact path="/bejuco/all" component={AllBejuco} />
 
           </Switch>
         </Router>

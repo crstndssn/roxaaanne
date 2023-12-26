@@ -33,58 +33,31 @@ const Circe = () => {
 
 
   return (
-    <details className='genesis__section alterocio__card alterocio__card--genesis alterocio__details'>
-
-      <summary className='alterocio__card--summary alterocio__summary'>circe</summary>
-
-      {/* A S T R A */}
-      <details className='alterocio__card--border'>
-        <summary className='alterocio__card--header'>
+    <>
+      {/* C I R C E */}
+      <details className='roxy__card--border'>
+        <summary className='roxy__card--header'>
           circe
         </summary>
         <audio src={circe_sound} controls preload="none"></audio>
-        {/* <Swiper
-          slidesPerView={1}
-          autoplay={{
-            delay: 4000,
-            disableOnInteraction: true,
-          }}
-          pagination={{
-            dynamicBullets: true,
-          }}
-          loop={false}
-          modules={[Pagination, Autoplay]}
-          className="mySwiper"
-        >
+        <h2 className='roxy__card--description'>vivo en mi isla, hija del sol y amiga de la luna, oceánica de naturaleza, te convertiré en animal salvaje si no cumples mi voluntad, sólo entrarás a mi imperio con flores mágicas, ser puente y serpiente</h2>
+        <div className='roxy__card--grid'>
           {
-            sur.length !== 0 ?
-              (sur.map(item => (
-                <SwiperSlide>
-                  <Card
-                    images={item.imageLinks}
-                    title={item.title}
-                    category={item.category
-                    } />
-                </SwiperSlide>
-              ))) : (<div>loading...</div>)
-          }
-        </Swiper> */}
-        <div className='alterocio__card--grid'>
-        {
-          circe.length !== 0 ?
-            (circe.map(item => (
-    
+            circe.length !== 0 ?
+              (circe.map(item => (
+
                 <Card
                   images={item.imageLinks}
                   title={item.title}
                   category={item.category
                   } />
-        
-            ))) : (<div>loading...</div>)
+
+              ))) : (<div>loading...</div>)
           }
         </div>
       </details>
-    </details>
+    </>
+
   )
 }
 

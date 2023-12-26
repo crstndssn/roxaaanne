@@ -33,58 +33,30 @@ const Astra = () => {
 
 
   return (
-    <details className='genesis__section alterocio__card alterocio__card--genesis alterocio__details'>
-
-      <summary className='alterocio__card--summary alterocio__summary'>astra</summary>
-
+    <>
       {/* A S T R A */}
-      <details className='alterocio__card--border'>
-        <summary className='alterocio__card--header'>
+      <details className='roxy__card--border'>
+        <summary className='roxy__card--header'>
           astra
         </summary>
         <audio src={astra} controls preload="none"></audio>
-        {/* <Swiper
-          slidesPerView={1}
-          autoplay={{
-            delay: 4000,
-            disableOnInteraction: true,
-          }}
-          pagination={{
-            dynamicBullets: true,
-          }}
-          loop={false}
-          modules={[Pagination, Autoplay]}
-          className="mySwiper"
-        >
+        <h2 className='roxy__card--description'>fuerza sobrenatural que utilizamos los dioses para protegernos de nuestros enemigos, como un hechizo funcionamos en nuestro propósito, vengo con el viento</h2>
+        <div className='roxy__card--grid'>
           {
-            sur.length !== 0 ?
-              (sur.map(item => (
-                <SwiperSlide>
-                  <Card
-                    images={item.imageLinks}
-                    title={item.title}
-                    category={item.category
-                    } />
-                </SwiperSlide>
-              ))) : (<div>loading...</div>)
-          }
-        </Swiper> */}
-        <div className='alterocio__card--grid'>
-        {
-          astra.length !== 0 ?
-            (astra.map(item => (
-    
+            astra.length !== 0 ?
+              (astra.map(item => (
+
                 <Card
                   images={item.imageLinks}
                   title={item.title}
                   category={item.category
                   } />
-        
-            ))) : (<div>loading...</div>)
+
+              ))) : (<div>loading...</div>)
           }
         </div>
       </details>
-    </details>
+    </>
   )
 }
 

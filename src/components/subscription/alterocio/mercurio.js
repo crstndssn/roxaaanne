@@ -7,132 +7,131 @@ import Card from '../../contenido/Card'
 import antes_de_morir from '../../../resources/antes_de_morir.mp3'
 import entre_las_luces from '../../../resources/entre_las_luces.mp3'
 import no_soy_un_extraño from '../../../resources/no_soy_un_extraño.mp3'
-import shiva from '../../../resources/shiva.mp3'
+import shiva_song from '../../../resources/shiva.mp3'
 
 
 const Mercurio = () => {
 
-  const [sur, setSur] = useState('')
-  const [norte, setNorte] = useState('')
-  const [centro, setCentro] = useState('')
+  const [adm, setAdm] = useState('')
+  const [ell, setEll] = useState('')
+  const [nsue, setNsue] = useState('')
+  const [shiva, setShiva] = useState('')
 
   const [imageSlider, setImageSlider] = useState([])
   const [textPost, setTextPost] = useState('')
 
   useEffect(() => {
-    const sur = async () => {
-      const { docs } = await store.collection('new').where('title', '==', "sur").get()
+    const adm = async () => {
+      const { docs } = await store.collection('new').where('title', '==', "adm").get()
       const newArray = docs.map(item => ({ id: item.id, ...item.data() }))
-      setSur(newArray)
+      setAdm(newArray)
     }
-    sur()
-    const norte = async () => {
-      const { docs } = await store.collection('new').where('title', '==', "norte").get()
+    adm()
+    const ell = async () => {
+      const { docs } = await store.collection('new').where('title', '==', "ell").get()
       const newArray = docs.map(item => ({ id: item.id, ...item.data() }))
-      setNorte(newArray)
+      setEll(newArray)
     }
-    norte()
-    const centro = async () => {
-      const { docs } = await store.collection('new').where('title', '==', "centro").get()
+    ell()
+    const nsue = async () => {
+      const { docs } = await store.collection('new').where('title', '==', "nsue").get()
       const newArray = docs.map(item => ({ id: item.id, ...item.data() }))
-      setCentro(newArray)
+      setNsue(newArray)
     }
-    centro()
+    nsue()
+    const shiva = async () => {
+      const { docs } = await store.collection('new').where('title', '==', "shiva").get()
+      const newArray = docs.map(item => ({ id: item.id, ...item.data() }))
+      setShiva(newArray)
+    }
+    shiva()
   }, [])
 
 
   return (
-    <details className='alterocio__card alterocio__card--genesis'>
-      <summary>mercurio</summary>
+    <details className='genesis__section alterocio__card alterocio__card--mercurio alterocio__details'>
+      
+      <summary className='alterocio__card--summary alterocio__summary'>mercurio</summary>
 
-      <div className='alterocio__card--header'>
-        <h2>antes de morir</h2>
-        <audio src={antes_de_morir} controls  preload="none"></audio>
-      </div>
-      <div className='post'>
-        {
-          sur.length !== 0 ?
-            (sur.map(item => (
+      {/* A D M */}
+      <details className='alterocio__card--border'>
+        <summary className='alterocio__card--header'>antes de morir     </summary>
+        <audio src={antes_de_morir} controls preload="none"></audio>
+        <div className='alterocio__card--grid'>
+          {
+            adm.length !== 0 ?
+              (adm.map(item => (
 
-              <div className="post__card">
-                {/* <Link to={`/roxanne/${item.id}`} key={item.id}> */}
                 <Card
                   images={item.imageLinks}
                   title={item.title}
                   category={item.category
                   } />
-                {/* </Link>  */}
-              </div>
 
-            ))) : (<div>loading...</div>)
-        }
-      </div>
-      <div className='alterocio__card--header'>
-        <h2>entre las luces</h2>
+              ))) : (<div>loading...</div>)
+          }
+        </div>
+      </details>
+
+      {/* E N T R E   L A S   L U C E S */}
+      <details className='alterocio__card--border'>
+        <summary className='alterocio__card--header'>entre las luces     </summary>
         <audio src={entre_las_luces} controls preload="none"></audio>
-      </div>
-      <div className='post'>
-        {
-          centro.length !== 0 ?
-            (centro.map(item => (
+        <div className='alterocio__card--grid'>
+          {
+            ell.length !== 0 ?
+              (ell.map(item => (
 
-              <div className="post__card">
-                {/* <Link to={`/roxanne/${item.id}`} key={item.id}> */}
                 <Card
                   images={item.imageLinks}
                   title={item.title}
                   category={item.category
                   } />
-                {/* </Link>  */}
-              </div>
 
-            ))) : (<div>loading...</div>)
-        }
-      </div>
-      <div className='alterocio__card--header'>
-        <h2>no soy un extraño</h2>
-        <audio src={no_soy_un_extraño} controls autoplay loop preload="none"></audio>
-      </div>
-      <div className='post'>
-        {
-          norte.length !== 0 ?
-            (norte.map(item => (
+              ))) : (<div>loading...</div>)
+          }
+        </div>
+      </details>
 
-              <div className="post__card">
-                {/* <Link to={`/roxanne/${item.id}`} key={item.id}> */}
+      {/* N O  S O Y   U N   E X T R A Ñ O */}
+      <details className='alterocio__card--border'>
+        <summary className='alterocio__card--header'>no soy un extraño  </summary>
+        <audio src={no_soy_un_extraño} controls preload="none"></audio>
+        <div className='alterocio__card--grid'>
+          {
+            nsue.length !== 0 ?
+              (nsue.map(item => (
+
                 <Card
                   images={item.imageLinks}
                   title={item.title}
                   category={item.category
                   } />
-                {/* </Link>  */}
-              </div>
 
-            ))) : (<div>loading...</div>)
-        }
-      </div>
-      <div className='alterocio__card--header'>
-        <h2>shiva</h2>
-        <audio src={shiva} controls autoplay loop preload="none"></audio>
-      </div>
-      <div className='post'>
-        {
-          norte.length !== 0 ?
-            (norte.map(item => (
+              ))) : (<div>loading...</div>)
+          }
+        </div>
+      </details>
 
-              <div className="post__card">
-                {/* <Link to={`/roxanne/${item.id}`} key={item.id}> */}
+      {/* S H I V A */}
+      <details className='alterocio__card--border'>
+        <summary className='alterocio__card--header'>shiva     </summary>
+        <audio src={shiva_song} controls preload="none"></audio>
+        <div className='alterocio__card--grid'>
+          {
+            shiva.length !== 0 ?
+              (shiva.map(item => (
+
                 <Card
                   images={item.imageLinks}
                   title={item.title}
                   category={item.category
                   } />
-                {/* </Link>  */}
-              </div>
 
-            ))) : (<div>loading...</div>)
-        }
-      </div>
+              ))) : (<div>loading...</div>)
+          }
+        </div>
+      </details>
     </details>
   )
 }

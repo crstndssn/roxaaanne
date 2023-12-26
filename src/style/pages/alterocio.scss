@@ -13,7 +13,7 @@
     margin-bottom: 0;
 
     @include media('tablet') {
-      margin-bottom: 2rem;
+      margin-bottom: 0.5rem;
       padding: 0.3rem 0;
     }
   }
@@ -41,7 +41,7 @@
     position: absolute;
     font-weight: 300;
     font-size: 50px;
-    right: 20px;
+    right: 25px;
     transform-origin: center;
     transition: 200ms linear;
 
@@ -75,42 +75,106 @@
       @include media("tablet") {
         font-size: 50px;
       }
-    }
 
-    &--summary {
-      border-bottom: 2px solid #bb0909;
-        // list-style: unit($number: 0);
-    }
+      .alterocio__card--summary:first-child {
+        border-bottom: 2px solid #bb0909;
+      }
 
-    &--summary:after {
-      color: #bb0909;
-    }
+      .alterocio__card--summary:after {
+        color: #bb0909;
+      }
 
-    &--header:after {
-      color: #bb0909;
+      .alterocio__card--header::after {
+        color: #bb0909;
+      }
+
+      .alterocio__card--header:hover {
+        color: #bb0909;
+        cursor: pointer;
+      }
     }
 
     &--mercurio {
       color: rgb(142, 79, 209);
+      margin: 0;
+      font-size: 40px;
+      padding-bottom: 4px;
+      letter-spacing: -3px;
+      font-weight: 300;
+      @include media("tablet") {
+        font-size: 50px;
+      }
 
-      summary {
+      .alterocio__card--summary:first-child {
         border-bottom: 2px solid rgb(142, 79, 209);
       }
 
-      summary:after {
+      .alterocio__card--summary:after {
         color: rgb(142, 79, 209);
+      }
+
+      .alterocio__card--header::after {
+        color: rgb(142, 79, 209);
+      }
+      .alterocio__card--header:hover {
+        color: rgb(142, 79, 209);
+        cursor: pointer;
       }
     }
 
     &--blue {
       color: rgb(59, 100, 188);
+      margin: 0;
+      font-size: 40px;
+      padding-bottom: 4px;
+      letter-spacing: -3px;
+      font-weight: 300;
+      @include media("tablet") {
+        font-size: 50px;
+      }
 
-      summary {
+      .alterocio__card--summary:first-child {
         border-bottom: 2px solid rgb(59, 100, 188);
       }
 
-      summary:after {
+      .alterocio__card--summary:after {
         color: rgb(59, 100, 188);
+      }
+
+      .alterocio__card--header::after {
+        color: rgb(59, 100, 188);
+      }
+      .alterocio__card--header:hover {
+        color: rgb(59, 100, 188);
+        cursor: pointer;
+      }
+    }
+
+    &--semillas {
+      color: #86A54F;
+      margin: 0;
+      font-size: 40px;
+      padding-bottom: 4px;
+      letter-spacing: -3px;
+      font-weight: 300;
+      @include media("tablet") {
+        font-size: 50px;
+      }
+
+      .alterocio__card--summary:first-child {
+        border-bottom: 2px solid #86A54F;
+      }
+
+      .alterocio__card--summary:after {
+        color: #86A54F;
+      }
+
+      .alterocio__card--header::after {
+        color: #86A54F;
+      }
+      .alterocio__card--header:hover {
+        color: #86A54F;
+        cursor: pointer;
       }
     }
 
@@ -123,18 +187,6 @@
 
       summary:after {
         color: rgb(223, 189, 64);
-      }
-    }
-
-    &--semillas {
-      color: #36723E;
-
-      summary {
-        border-bottom: 2px solid #36723E;
-      }
-
-      summary:after {
-        color: #36723E;
       }
     }
 
@@ -160,11 +212,6 @@
     }
     &--header::marker {
       font-size: 22px;
-    }
-
-    &--header:hover {
-      color: #bb0909;
-      cursor: pointer;
     }
 
     &--grid {

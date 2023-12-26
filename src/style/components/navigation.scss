@@ -11,8 +11,8 @@
     width: 30px;
     height: 30px;
     @include media("tablet") {
-      width: 40px;
-      height: 40px;
+      width: 33px;
+      height: 33px;
     }
   }
   &__icons--block {
@@ -27,12 +27,12 @@
       height: 400%;
       width: 400%;
       vertical-align: middle;
-      transform: scale(0.17);
+      transform: scale(0.13);
       transform-origin: 0 0;
       z-index: 888;
       @include media("tablet") {
         width: 400%;
-        transform-origin: -85px 20px;
+        transform-origin: -50px 20px;
       }
     }
     @include media("tablet") {
@@ -43,9 +43,7 @@
   }
 
   &__links {
-
     position: block !important;
-
     margin: 1rem 0;
 
     @include media("tablet") {
@@ -91,7 +89,7 @@
       height: 400%;
       width: 400%;
       vertical-align: middle;
-      transform: scale(0.25);
+      transform: scale(0.13);
       transform-origin: 0 0;
       @include media("tablet") {
         width: 400%;
@@ -325,9 +323,9 @@
   cursor: pointer;
   margin-top: 8px;
   @include media("tablet") {
-    margin-top: 11px;
-    width: 40px;
-    height: 40px;
+    margin-top: 10px;
+    width: 37px;
+    height: 37px;
   }
 }
 
@@ -341,7 +339,7 @@
   transition: 0.3s ease;
   @include media('tablet') {
     height: 3px;
-    margin-bottom: 4px;
+    margin-bottom: 3px;
   }
 }
 
@@ -384,8 +382,10 @@
   text-decoration: none;
   transition: 1s ease;
   letter-spacing: -3px;
+  line-height: 69px;
   @include media("tablet"){
     font-size: 70px;
+    line-height: 88px;
   }
 }
 
@@ -468,6 +468,19 @@
 
 .roxy-menu {
   color: #FFE6F9;
+}
+
+.bejuco-menu {
+  color: #ff8f00;
+  opacity: 0.5;
+  display: flex;
+  align-items: center;
+  img {
+    width: 18px;    
+    height: 18px;
+    margin-left: 5px;
+    margin-top: 7px;
+  }
 }
 
 

@@ -3,8 +3,12 @@ import { store } from '../../../firebase'
 import { Link } from 'react-router-dom'
 
 import Navigation from '../../Navigation';
+
 import Genesis from './genesis';
 import Mercurio from './mercurio';
+import Blue from './blue';
+import Semillas from './semillas'
+
 import lock from '../../../resources/lock.svg'
 
 import Card from '../../contenido/Card'
@@ -18,8 +22,10 @@ const Roxanne = () => {
   const [userEmail, setUserEmail] = useState(null)
   const [userSub, setUserSub] = useState(false)
 
+  const [detail, setDetail] = useState(null)
+
   const [allSubs, setAllSubs] = useState('')
-  
+
   useEffect(() => {
     auth.onAuthStateChanged((user) => {
       if (user) {
@@ -53,6 +59,25 @@ const Roxanne = () => {
       })
     }
     getSubs()
+
+    const closeTabs = () => {
+      // Fetch all the details elements
+      const details = document.querySelectorAll('.detail');
+      // Add onclick listeners
+      details.forEach((targetDetail) => {
+        targetDetail.addEventListener("click", () => {
+          // Close all details that are not targetDetail
+          details.forEach((detail) => {
+            if (detail !== targetDetail) {
+              detail.removeAttribute("open");
+            }
+          });
+        });
+      });
+
+    }
+    closeTabs()
+
   }, [])
 
   return (
@@ -60,59 +85,60 @@ const Roxanne = () => {
       <Navigation />
 
       <div className='alterocio'>
-
-        {/* G E N E S I S */}
         {
           userSub == true ? (
+            <div>
               <Genesis />
-            ) 
-            : 
-            ( 
-              <div className="lock genesis">
-                <p className="lock__title">génesis</p>
+              <Mercurio />
+              <Blue />
+              <Semillas />
+            </div>
+          )
+            :
+            (
+              <div>
+                <div className="lock genesis">
+                  <p className="lock__title">génesis</p>
                   <div className="lock__button">
-                  <a>suscribete <img src={lock}/></a>
+                    <a>lock <img src={lock} /></a>
                   </div>
+                </div>
+
+                <div className="lock mercurio">
+                  <p className="lock__title">mercurio</p>
+                  <div className="lock__button">
+                    <a>lock <img src={lock} /></a>
+                  </div>
+                </div>
+
+                <div className="lock blue">
+                  <p className="lock__title">blue</p>
+                  <div className="lock__button">
+                    <a>lock <img src={lock} /></a>
+                  </div>
+                </div>
+
+                <div className="lock semillas">
+                  <p className="lock__title">semillas</p>
+                  <div className="lock__button">
+                    <a>lock <img src={lock} /></a>
+                  </div>
+                </div>
               </div>
             )
         }
 
-        {/* <Genesis/> */}
-
-        <div className="lock mercurio">
-          <p className="lock__title">mercurio</p>
-          <div className="lock__button">
-            <a>suscribete <img src={lock}/></a>
-          </div>
-        </div>
-
-        {/* <Mercurio /> */}
-
-        <div className="lock blue">
-          <p className="lock__title">blue</p>
-          <div className="lock__button">
-            <a>suscribete <img src={lock}/></a>
-          </div>
-        </div>
-
-        <div className="lock semillas">
-          <p className="lock__title">semillas</p>
-          <div className="lock__button">
-            <a>suscribete <img src={lock}/></a>
-          </div>
-        </div>
-
         <div className="lock florecer">
           <p className="lock__title">florecer</p>
           <div className="lock__button">
-            <a>suscribete <img src={lock}/></a>
+            <a>lock <img src={lock} /></a>
           </div>
         </div>
 
         <div className="lock viento">
           <p className="lock__title">viento</p>
           <div className="lock__button">
-            <a>suscribete <img src={lock}/></a>
+            <a>lock <img src={lock} /></a>
           </div>
         </div>
 

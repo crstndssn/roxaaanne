@@ -56,121 +56,70 @@ const Genesis = () => {
       <summary className='alterocio__card--summary alterocio__summary'>génesis</summary>
 
       {/* S U R */}
-      <details className='alterocio__card--border'>
+      <details className='detail alterocio__card--border'>
         <summary className='alterocio__card--header'>
           sur
         </summary>
         <audio src={sulky} controls preload="none"></audio>
-        {/* <Swiper
-          slidesPerView={1}
-          autoplay={{
-            delay: 4000,
-            disableOnInteraction: true,
-          }}
-          pagination={{
-            dynamicBullets: true,
-          }}
-          loop={false}
-          modules={[Pagination, Autoplay]}
-          className="mySwiper"
-        >
+        <div className='alterocio__card--grid'>
           {
             sur.length !== 0 ?
               (sur.map(item => (
-                <SwiperSlide>
-                  <Card
-                    images={item.imageLinks}
-                    title={item.title}
-                    category={item.category
-                    } />
-                </SwiperSlide>
-              ))) : (<div>loading...</div>)
-          }
-        </Swiper> */}
-        <div className='alterocio__card--grid'>
-        {
-          sur.length !== 0 ?
-            (sur.map(item => (
-    
                 <Card
                   images={item.imageLinks}
                   title={item.title}
                   category={item.category
                   } />
-        
-            ))) : (<div>loading...</div>)
+
+              ))) : (<div>loading...</div>)
           }
         </div>
       </details>
 
 
       {/* C E N T R O */}
-      <details className='alterocio__card--border'>
+      <details className='detail alterocio__card--border'>
         <summary className='alterocio__card--header'>
           centro
         </summary>
         <audio src={centro__lamaquina} controls preload="none"></audio>
-        <Swiper
-          slidesPerView={1}
-          autoplay={{
-            delay: 4000,
-            disableOnInteraction: true,
-          }}
-          pagination={{
-            dynamicBullets: true,
-          }}
-          loop={false}
-          modules={[Pagination, Autoplay]}
-          className="mySwiper"
-        >
+        <div className='alterocio__card--grid'>
           {
             centro.length !== 0 ?
               (centro.map(item => (
-                <SwiperSlide>
-                  <Card
-                    images={item.imageLinks}
-                    title={item.title}
-                    category={item.category
-                    } />
-                </SwiperSlide>
+
+                <Card
+                  images={item.imageLinks}
+                  title={item.title}
+                  category={item.category
+                  } />
+
               ))) : (<div>loading...</div>)
           }
-        </Swiper>
+        </div>
       </details>
 
 
       {/* N O R T E */}
-      <details className='alterocio__card--border'>
+      <details className='detail alterocio__card--border'>
         <summary className='alterocio__card--header'>
           norte
         </summary>
         <audio src={norte_lj} controls preload="none"></audio>
-        <Swiper
-          slidesPerView={1}
-          autoplay={{
-            delay: 4000,
-            disableOnInteraction: true,
-          }}
-          pagination={{
-            dynamicBullets: true,
-          }}
-          loop={false}
-          modules={[Pagination, Autoplay]}
-          className="mySwiper"
-        >
+        <div className='alterocio__card--grid'>
           {
             norte.length !== 0 ?
               (norte.map(item => (
-                <SwiperSlide>
-                  <Card
-                    images={item.imageLinks}
-                    title={item.title}
-                    category={item.category
-                    } />
-                </SwiperSlide>
+
+                <Card
+                  images={item.imageLinks}
+                  title={item.title}
+                  category={item.category
+                  } />
+
               ))) : (<div>loading...</div>)
           }
-        </Swiper>
+        </div>
       </details>
 
 
