@@ -1,7 +1,7 @@
 import React, { useEffect, useState, Fragment } from 'react'
 import { Link, useHistory } from 'react-router-dom';
 
-import check from '../resources/check.svg';
+import check from '../resources/vectors/check.svg';
 
 import { auth } from '../firebase';
 

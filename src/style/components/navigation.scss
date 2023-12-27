@@ -23,23 +23,40 @@
     height: 100%;
     display: contents;
     img {
-      margin-top: 9px;
-      height: 400%;
-      width: 400%;
-      vertical-align: middle;
-      transform: scale(0.13);
-      transform-origin: 0 0;
+      // margin-top: 9px;
+      // height: 400%;
+      // width: 400%;
+      // vertical-align: middle;
+      // transform: scale(0.13);
+      // transform-origin: 0 0;
+      // z-index: 888;
+      // @include media("tablet") {
+      //   width: 400%;
+      //   transform-origin: -50px 20px;
+      // }
+
+      height: auto;
       z-index: 888;
-      @include media("tablet") {
-        width: 400%;
-        transform-origin: -50px 20px;
+      margin-left: 20px;
+      margin-top: 20px;
+      width: 32px;
+      height: auto;
+      z-index: 888;
+      margin-left: 20px;
+      margin-top: 7px;
+      @include media('tablet') {
+        width: 37px;
+        margin-top: 20px;
+        margin-left: 20px;
       }
     }
     @include media("tablet") {
       margin-left: 2rem;
       width: 40px;
       height: 50px;
+
     }
+    
   }
 
   &__links {
@@ -56,11 +73,11 @@
     }
 
     &--forestando {
-      color: $green;
+      color: $brand;
     }
 
     &--roxanne {
-      color: $red;
+      color: $velvet;
     }
 
     &--projects {
@@ -70,235 +87,6 @@
   }
 }
 
-.navigation-forestando {
-  display: flex;
-  align-items: center;
-  margin-top: 0;
-  height: 8vh;
-  background-color: $organic;
-  @include media("tablet") {
-    height: 13vh;
-  }
-
-
-  &__logo {
-    z-index: 8;
-    width: 60px;
-    height: 40px;
-    img {
-      height: 400%;
-      width: 400%;
-      vertical-align: middle;
-      transform: scale(0.13);
-      transform-origin: 0 0;
-      @include media("tablet") {
-        width: 400%;
-      }
-    }
-    @include media("tablet") {
-      margin-left: 2rem;
-      width: 40px;
-      height: 50px;
-      line-height: 70px;
-    }
-  }
-
-  &__links {
-
-    position: block !important;
-    margin: 1rem 0;
-
-    @include media("tablet") {
-      margin: 0;
-    }
-
-    a {
-      transition: all ease 0.3s;
-      border-radius: 20px;
-    }
-
-    &--forestando {
-      color: $green;
-    }
-
-    &--roxanne {
-      color: $red;
-    }
-
-    &--kam {
-      color: #dad421;
-    }
-
-    &--projects {
-      color: $blue;
-
-    }
-  }
-  
-  #menu {
-    z-index: 2;
-
-  }
-  .menu-bar-contanier{
-    width: 100%;
-    display: flex;
-    justify-content: flex-end;
-    @include media('tablet') {
-      height: 13vh;
-      
-    }
-  }
-  
-  #menu-bar {
-    width: 35px;
-    height: 50px;
-    cursor: pointer;
-    margin: 23px 16px 0;
-    left: 0;
-  
-    @include media("tablet") {
-      width: 40px;
-      margin: 45px 2rem;
-    }
-  }
-  
-  .bar {
-    height: 3px;
-    margin-bottom: 3px;
-    width: 100%;
-    background-color: $brand;
-    display: block;
-    border-radius: 10px;
-    transition: 0.3s ease;
-    @include media('tablet') {
-      height: 3px;
-      margin-bottom: 4px;
-    }
-  }
-  
-  #bar1 {
-    transform: translateY(-4px);
-  }
-  
-  #bar3 {
-    transform: translateY(4px);
-  }
-  
-  .nav {
-    transition: 0.3s ease;
-    display: none;
-    height: 70vh;
-    transition: visibility 0s, opacity 0.5s linear;
-  }
-  
-  .nav ul {
-    padding: 0 1rem;
-    @include media('tablet') {
-      padding: 0 2rem;
-    }
-    margin: 0;
-    height: 92vh;
-    display: flex;
-    justify-content: center;
-    flex-direction: column;
-    transition: 1s ease;
-    background: $leave;
-  }
-  
-  .nav li {
-    list-style: none;
-    transition: 1s ease;
-  }
-  
-  .nav li a {
-    font-size: 50px;
-    line-height: 70px;
-    text-decoration: none;
-    transition: 1s ease;
-    letter-spacing: -3px;
-    @include media("tablet"){
-      font-size: 70px;
-      line-height: 80px;
-    }
-  }
-  
-  .menu-bg, #menu {
-    top: 0;
-    right: 0;
-    width: 100%;
-    position: absolute;
-  }
-
-
-  
-  .menu-bg {
-    z-index: 1;
-    width: 0;
-    height: 0;
-    background: $leave;
-  }
-  
-  .change {
-    display: block;
-    transition: visibility 0s, opacity 0.5s linear;
-  }
-  
-  // .change > ul {
-  //   visibility: hidden;
-  //   opacity: 0;
-  //   transition: visibility 0s, opacity 0.5s linear;
-  // }
-  
-  // .change:hover > ul {
-  //   visibility: visible;
-  //   opacity: 1;
-  // }
-  
-  .change + .nav {
-    transition: .3s ease;
-  }
-  
-  .change .bar {
-    background-color: $brand;
-  }
-  
-  .change #bar1 {
-    transform: translateY(7px) rotateZ(-45deg);
-  }
-  
-  .change #bar2 {
-    opacity: 0;
-  }
-  
-  .change #bar3 {
-    transform: translateY(-6px) rotateZ(45deg);
-  }
-  
-  .change-bg {
-    width: 100%;
-    height: 100vh;
-  }
-  
-  .admin {
-  
-    img {
-        width: 100%;
-    max-width: 200px;
-    height: auto;
-    }
-  
-  }
-  
-  .forest {
-    color: #36723E;
-  }
-  
-  .ando {
-    color: #36723E;
-    color: #86A54F;
-  }
-  
-}
 
 #menu {
   z-index: 2;
@@ -452,6 +240,18 @@
   height: auto;
   }
 
+}
+
+.forestando-lock {
+  opacity: 0.5;
+  display: flex;
+  align-items: center;
+  img {
+    width: 20px;    
+    height: 20px;
+    margin-left: 5px;
+    margin-top: 7px;
+  }
 }
 
 .forest {

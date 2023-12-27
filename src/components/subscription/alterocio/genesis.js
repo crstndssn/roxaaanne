@@ -4,9 +4,9 @@ import { Link } from 'react-router-dom'
 
 import Card from '../../contenido/Card'
 
-import sulky from '../../../resources/sulky.mp3'
-import centro__lamaquina from '../../../resources/centro.mp3'
-import norte_lj from '../../../resources/norte.mp3'
+import sulky from '../../../resources/songs/sulky.mp3'
+import centro__lamaquina from '../../../resources/songs/centro.mp3'
+import norte_lj from '../../../resources/songs/norte.mp3'
 
 // Import Swiper React components
 import { Pagination, Autoplay, FreeMode } from 'swiper'
@@ -20,7 +20,7 @@ import 'swiper/modules/free-mode/free-mode.min.css';
 const Genesis = () => {
 
   const [sur, setSur] = useState('')
-  const [norte, setNorte] = useState('')
+  const [norte, setNorte] = useState('') 
   const [centro, setCentro] = useState('')
 
   const [imageSlider, setImageSlider] = useState([])

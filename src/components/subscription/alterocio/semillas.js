@@ -4,14 +4,14 @@ import { Link } from 'react-router-dom'
 
 import Card from '../../contenido/Card'
 
-import antes_de_morir from '../../../resources/antes_de_morir.mp3'
-import entre_las_luces from '../../../resources/entre_las_luces.mp3'
-import no_soy_un_extraño from '../../../resources/no_soy_un_extraño.mp3'
-import shiva_song from '../../../resources/shiva.mp3'
+import antes_de_morir from '../../../resources/songs/antes_de_morir.mp3'
+import entre_las_luces from '../../../resources/songs/entre_las_luces.mp3'
+import no_soy_un_extraño from '../../../resources/songs/no_soy_un_extraño.mp3'
+import shiva_song from '../../../resources/songs/shiva.mp3'
 
 
 const Semillas = () => {
-  const [bnr, setBnr] = useState('')
+  const [bnr, setBnr] = useState('') 
   const [ea, setEa] = useState('')
   const [mar, setMar] = useState('')
   const [qoy, setQoy] = useState('')

@@ -1,45 +1,138 @@
 @font-face {
   font-family: 'New York';
-  src: url('../../resources/NewYork.otf');
+  src: url('../../resources/typo/NewYork.otf');
+}
+
+
+@import url('https://fonts.googleapis.com/css2?family=Gayathri:wght@100;400;700&display=swap');
+
+
+.bg__kam {
+  background-color: #f6f2e6;
 }
 
 .kam {
-  font-family: 'New York', sans-serif;
-  color: #FECD27;
+  font-family: 'Gayathri', sans-serif;
+  color: $florecer;
   background-color: #f6f2e6;
   min-height: 50vh;
   display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: column;
-}
 
-.kam__title {
-  font-size: 30vh;
-  font-weight: 500;
-}
-
-.kam__oro {
-  width: 100%;
-  background-color: #D4F3D5;
-  color: #8E58FF;
-
-  h2 {
-    font-size: 10vh;
-    margin: 10px;
+  // T I T L E
+  &__title {
+    font-size: 20vh;
+    font-weight: 500;
   }
-}
 
-.kam__mar {
-  width: 100%;
-  background-color: #84D6D1 ;
-  color: #FBE7F8;
-
-  h2 {
-    font-size: 10vh;
-    margin: 10px;
+  // G R I D 
+  &__card {
+    &--grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+    }
   }
+
+  // O R O
+  &__oro {
+    width: 100%;
+    background-color: #D4F3D5;
+    color: #8E58FF;
+
+    summary {
+      font-family: 'Gayathri', sans-serif;
+      font-size: 10vh;
+      margin: 10px;
+      font-weight: bold;
+      list-style: none;
+      cursor: pointer;
+    }
+
+    details[open] summary~* {
+      animation: open 0.3s ease-in-out;
+    }
+
+
+    @keyframes open {
+      0% {
+        opacity: 0;
+      }
+
+      100% {
+        opacity: 1;
+      }
+    }
+
+    details summary::-webkit-details-marker {
+      display: none;
+    }
+
+    details summary:after {
+      content: "+";
+      position: absolute;
+      font-weight: 300;
+      font-size: 50px;
+      right: 25px;
+      transform-origin: center;
+      transition: 200ms linear;
+
+      @include media('tablet') {
+        font-size: 70px;
+        right: 40px;
+        top: auto;
+      }
+    }
+
+    details[open] summary:after {
+      transform: rotate(45deg);
+    }
+  }
+
+  // V E L V E T
+  &__mar {
+    width: 100%;
+    background-color: $velvet;
+    color: $white;
+
+    h2 {
+      font-size: 10vh;
+      margin: 10px;
+    }
+  }
+
+
+  // M A R
+  &__mar {
+    width: 100%;
+    background-color: #84D6D1;
+    color: #FBE7F8;
+
+    h2 {
+      font-size: 10vh;
+      margin: 10px;
+    }
+  }
+
+  // T R A P O S
+  &__trapos {
+    width: 100%;
+    background-color: #000000;
+    color: #FAD691;
+
+    h2 {
+      font-size: 10vh;
+      margin: 10px;
+    }
+  }
+
+
+
 }
+
+
+.kam__mar {}
 
 .kam__trapos {
   width: 100%;
@@ -54,7 +147,7 @@
 
 .kam-add {
   background: #000;
-  color: #FECD27;
+  color: $florecer;
   padding: 1rem;
 
   @include media('tablet') {
@@ -65,13 +158,13 @@
     width: 100%;
     height: auto;
     min-height: 50vh;
-    border: 1px solid #FECD27;
+    border: 1px solid $florecer;
   }
 
   &__percentage {
     width: 100%;
     height: 20px;
-    border: 1px solid #FECD27;
+    border: 1px solid $florecer;
     margin-top: 15px;
     margin-bottom: 10px;
     display: flex;
@@ -94,7 +187,7 @@
 
   &__images {
     input {
-      border: #FECD27;
+      border: $florecer;
       background: $black;
       color: $white;
       width: 100%;
@@ -109,7 +202,7 @@
       font-size: 25px;
       background-color: #000;
       outline: none;
-      border: solid 1px #FECD27;
+      border: solid 1px $florecer;
       padding: 10px;
       color: $white;
       margin-top: 15px;
@@ -132,7 +225,7 @@
       background-repeat: no-repeat;
       background-position-x: 99%;
       background-position-y: 50%;
-      border: 1px solid #FECD27;
+      border: 1px solid $florecer;
       border-radius: 2px;
       outline: none;
       cursor: pointer;
@@ -155,7 +248,7 @@
   }
 
   .custom-file-upload {
-    border: 1px solid #FECD27;
+    border: 1px solid $florecer;
     display: inline-block;
     padding: 6px 12px;
     cursor: pointer;

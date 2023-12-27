@@ -4,10 +4,9 @@ import { Link } from 'react-router-dom'
 
 import Card from '../../contenido/Card'
 
-import antes_de_morir from '../../../resources/antes_de_morir.mp3'
-import entre_las_luces from '../../../resources/entre_las_luces.mp3'
-import no_soy_un_extraño from '../../../resources/no_soy_un_extraño.mp3'
-import shiva_song from '../../../resources/shiva.mp3'
+import inmune_n from '../../../resources/songs/inmune.mp3'
+import q_lindo_es_el_sol from '../../../resources/songs/que_lindo_es_el_sol.mp3'
+import wish_you_were_here from '../../../resources/songs/wish_you_were_here.mp3'
 
 
 const Blue = () => {
@@ -49,7 +48,7 @@ const Blue = () => {
       {/*  I N M U N E */}
       <details className='alterocio__card--border'>
         <summary className='alterocio__card--header'>inmune</summary>
-        <audio src={antes_de_morir} controls preload="none"></audio>
+        <audio src={inmune_n} controls preload="none"></audio>
         <div className='alterocio__card--grid'>
           {
             inmune.length !== 0 ?
@@ -69,7 +68,7 @@ const Blue = () => {
       {/* Q L I N D O E S E L S O L */}
       <details className='alterocio__card--border'>
         <summary className='alterocio__card--header'>que lindo es el sol</summary>
-        <audio src={entre_las_luces} controls preload="none"></audio>
+        <audio src={q_lindo_es_el_sol} controls preload="none"></audio>
         <div className='alterocio__card--grid'>
           {
             qlees.length !== 0 ?
@@ -89,7 +88,7 @@ const Blue = () => {
       {/* W I S H Y O U W E R E H E R E */}
       <details className='alterocio__card--border'>
         <summary className='alterocio__card--header'>wish you where here</summary>
-        <audio src={no_soy_un_extraño} controls preload="none"></audio>
+        <audio src={wish_you_were_here} controls preload="none"></audio>
         <div className='alterocio__card--grid'>
           {
             wywh.length !== 0 ?

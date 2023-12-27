@@ -1,8 +1,6 @@
 import React, { Component } from 'react'
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 
-import Navigation from './components/Navigation';  
-
 import Login from './components/auth/Login';
 import Signup from './components/auth/Signup';
 import Reset from './components/auth/Reset';
@@ -11,12 +9,7 @@ import Admin from './components/admin/Admin'
 import Users from './components/admin/Users'
 
 import Home from './views/Home';
-
-import Post from './components/contenido/Post';
-import AddPost from './components/contenido/Add';
-import EditPost from './components/contenido/EditPost';
 import Blog from './components/contenido/Blog';
-import AdminBlog from './components/contenido/AdminBlog'
 
 // pages
 import Alterocio from './components/subscription/alterocio/alterocio'
@@ -25,8 +18,9 @@ import EditAlterocio from './components/subscription/alterocio/edit'
 import AddAlterocio from './components/subscription/alterocio/add'
 
 import Forestando from './components/subscription/forestando/forestando'
-import AllForestando from './components/subscription/forestando/edit'
+import AllForestando from './components/subscription/forestando/all'
 import AddForestando from './components/subscription/forestando/add'
+import EditForestando from './components/subscription/forestando/add'
 
 import Kam from './components/subscription/kam/kam'
 import AllKam from './components/subscription/kam/edit'
@@ -72,6 +66,7 @@ export default class App extends Component {
             <Route exact path="/forestando" component={Forestando} />
             <Route exact path="/forestando/add" component={AddForestando} />
             <Route exact path="/forestando/all" component={AllForestando} />
+            <Route exact path="/forestando/edit" component={EditForestando} />
 
             {/* K A M */}
             <Route exact path="/kam" component={Kam} />

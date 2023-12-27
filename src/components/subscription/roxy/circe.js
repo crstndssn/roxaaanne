@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom'
 
 // R E S O U R C E S
 import Card from '../../contenido/Card'
-import circe_sound from '../../../resources/sulky.mp3'
+import circe_sound from '../../../resources/songs/sulky.mp3'
 
 // S W I P E R
 import { Pagination, Autoplay, FreeMode } from 'swiper'

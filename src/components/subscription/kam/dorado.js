@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom'
 
 // R E S O U R C E S
 import Card from '../../contenido/Card'
-import dorado from '../../../resources/sulky.mp3'
+import dorado_song from '../../../resources/songs/tu_vida_mi_vida.mp3'
 
 // S W I P E R
 import { Pagination, Autoplay, FreeMode } from 'swiper'
@@ -32,12 +32,12 @@ const Dorado = () => {
   }, [])
 
   return (
-    <details className='genesis__section alterocio__card alterocio__card--genesis alterocio__details'>
+    <details className='kam__oro'>
 
-      <summary className='alterocio__card--summary alterocio__summary'>dorado</summary>
+      <summary className='kam__oro--summary'>DORADO</summary>
 
-      <audio src={dorado} controls preload="none"></audio>
-      <div className='alterocio__card--grid'>
+      <audio src={dorado_song} controls preload="none"></audio>
+      <div className='kam__card--grid'>
         {
           dorado.length !== 0 ?
             (dorado.map(item => (

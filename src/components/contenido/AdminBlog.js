@@ -7,13 +7,13 @@ import { doc, deleteDoc } from "firebase/firestore";
 
 
 
-import eye from '../../resources/view-product.svg'
-import edit from '../../resources/edit-product.svg'
-import del from '../../resources/delete-product.svg'
+import eye from '../../resources/vectors/view-product.svg'
+import edit from '../../resources/vectors/edit-product.svg'
+import del from '../../resources/vectors/delete-product.svg'
 
-import add_post from '../../resources/add-post.svg'
-import edit_post from '../../resources/edit-post.svg'
-import delete_post from '../../resources/delete-post.svg'
+import add_post from '../../resources/vectors/add-post.svg'
+import edit_post from '../../resources/vectors/edit-post.svg'
+import delete_post from '../../resources/vectors/delete-post.svg'
 
 import Navigation from '../Navigation';
 

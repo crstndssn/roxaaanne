@@ -2,7 +2,7 @@ import React, { useEffect, useState } from 'react'
 import { store } from '../../../firebase'
 import { Link } from 'react-router-dom'
 
-import imgtest from '../../../resources/sunset.jpg'
+import imgtest from '../../../resources/photos/sunset.jpg'
 
 const Biblioteca = () => {
   return (
@@ -13,9 +13,11 @@ const Biblioteca = () => {
         <div className='forestando__blog--container-img'>
           <img src={imgtest} alt="" />
         </div>
-        <h3 className='forestando__blog--title'>antirio</h3>
+        <h3 className='forestando__blog--title'>anturio</h3>
       </div>
     </div>
+
+    
 
   </div>
   )

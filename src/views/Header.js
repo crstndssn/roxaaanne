@@ -1,8 +1,8 @@
 import React, { useEffect, useState, Fragment } from 'react'
 import { Link, useHistory } from 'react-router-dom';
 
-import luces from '../resources/luces.jpg';
-import sunset from '../resources/sunset.jpg';
+import luces from '../resources/photos/luces.jpg';
+import sunset from '../resources/photos/sunset.jpg';
 
 import { auth } from '../firebase';
 

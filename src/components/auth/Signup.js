@@ -4,7 +4,7 @@ import { app, auth, googleProvider, store } from '../../firebase';
 
 import Navigation from '../Navigation';
 
-import google from '../../resources/google.svg'
+import google from '../../resources/vectors/google.svg'
 
 const Signup = () => {
 

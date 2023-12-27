@@ -11,8 +11,8 @@ import Navigation from '../../Navigation';
 
 // C O N T E N I D O
 import Dorado from './dorado'
-// import lila from '../subscription/lila'
-// import trapos_nuevos from '../subscription/lila'
+import Mar from './mar'
+import Trapos from './trapos'
 
 
 const Kam = () => {
@@ -60,26 +60,13 @@ const Kam = () => {
     }, [])
 
     return (
-      <div>
-        <Navigation/>
-
+      <div class="bg__kam">
+        <Navigation bg={'#FECD27'} bg_name={'kam'} />
         <div className='kam'>
-
           <h1 className="kam__title">kam</h1>
-
-          <div className='kam__oro'>
-            <h2>dorado</h2>
-          </div>
-
           <Dorado/>
-
-          <div className='kam__mar'>
-            <h2>mar y luna</h2>
-          </div>
-
-          <div className='kam__trapos'>
-            <h2>nuevos trapos</h2>
-          </div>
+          <Mar/>
+          <Trapos/>
         </div>
       </div>
     )

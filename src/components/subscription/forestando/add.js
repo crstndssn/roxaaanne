@@ -3,9 +3,9 @@ import { auth, store, storage } from '../../../firebase'
 
 import Navigation from '../../Navigation';
 
-import sun from '../../../resources/sun.svg'
-import water from '../../../resources/water.svg'
-import wheater from '../../../resources/wheater.svg'
+import sun from '../../../resources/vectors/sun.svg'
+import water from '../../../resources/vectors/water.svg'
+import wheater from '../../../resources/vectors/wheater.svg'
 
 
 const AddProduct = () => {

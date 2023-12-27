@@ -20,6 +20,8 @@ const Roxy = () => {
   const [userEmail, setUserEmail] = useState(null)
   const [userSub, setUserSub] = useState(false)
 
+  const [bg, setBg] = useState('#ED0000')
+
   const [allSubs, setAllSubs] = useState('')
 
   useEffect(() => {
@@ -58,8 +60,8 @@ const Roxy = () => {
   }, [])
 
   return (
-    <div>
-      <Navigation />
+    <div className='bg__roxy'>
+      <Navigation bg={'#ED0000'} bg_name={'roxy'} />
       <div className='roxy'>
         <h1 className="roxy__title">roxy</h1>
         <Astra />

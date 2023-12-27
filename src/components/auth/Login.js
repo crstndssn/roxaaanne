@@ -4,7 +4,7 @@ import { app, auth, googleProvider, store } from '../../firebase';
 
 import Navigation from '../Navigation';
 
-import google from '../../resources/google.svg'
+import google from '../../resources/vectors/google.svg'
 
 const Login = () => {
 
@@ -92,7 +92,7 @@ const Login = () => {
     <div>
       <Navigation />
       <div className="login">
-        <h3 class="login__title">roxaaanne</h3>
+        <h3 class="login__title">Log in</h3>
 
         <div className="login__form">
 

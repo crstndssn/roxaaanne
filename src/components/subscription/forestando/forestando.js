@@ -3,10 +3,10 @@ import { store } from '../../../firebase'
 import { Link } from 'react-router-dom'
 
 // R E C U R S O S
-import img1 from '../../../resources/planta-2.png'
-import img2 from '../../../resources/planta-1.png'
-import img3 from '../../../resources/planta-mobile.png'
-import imgtest from '../../../resources/sunset.jpg'
+import img1 from '../../../resources/photos/planta-2.png'
+import img2 from '../../../resources/photos/planta-1.png'
+import img3 from '../../../resources/photos/planta-mobile.png'
+import imgtest from '../../../resources/photos/sunset.jpg'
 
 // C O N T E N I D O 
 import Blog from './blog'

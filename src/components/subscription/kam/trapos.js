@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom'
 
 // R E S O U R C E S
 import Card from '../../contenido/Card'
-import dorado from '../../../resources/sulky.mp3'
+import trapos_song from '../../../resources/songs/ingobernable.mp3'
 
 // S W I P E R
 import { Pagination, Autoplay, FreeMode } from 'swiper'
@@ -28,7 +28,7 @@ const Trapos = () => {
       const newArray = docs.map(item => ({ id: item.id, ...item.data() }))
       setTrapos(newArray)
     }
-    mar()
+    trapos()
   }, [])
 
   return (
@@ -36,7 +36,7 @@ const Trapos = () => {
 
       <summary className='alterocio__card--summary alterocio__summary'>trapos</summary>
 
-      <audio src={trapos} controls preload="none"></audio>
+      <audio src={trapos_song} controls preload="none"></audio>
       <div className='alterocio__card--grid'>
         {
           trapos.length !== 0 ?

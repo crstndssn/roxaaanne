@@ -1,18 +1,26 @@
 @font-face {
   font-family: 'Phosphate';
-  src: url('../../resources/PhosphatePro-Inline.otf');
+  src: url('../../resources/typo/PhosphatePro-Inline.otf');
 }
 
 @import url('https://fonts.googleapis.com/css2?family=Marcellus&display=swap');
 
+
+.bg__roxy {
+  background-color: #FFE6F9;
+}
+
 .roxy {
   font-family: 'Phosphate', sans-serif;
   background-color: #FFE6F9;
-  min-height: 80vh;
+  min-height: 95vh;
   display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: column;
+  @include media('tablet') {
+    min-height: 90vh;
+  }
 }
 
 .roxy__title {

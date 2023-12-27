@@ -1,20 +1,28 @@
-import React, { useEffect, useState, Fragment } from 'react'
+import React, { useEffect, useState } from 'react'
 import { Link, useHistory } from 'react-router-dom';
 
-import { Menu, Transition } from '@headlessui/react'
-import { ChevronDownIcon } from '@heroicons/react/solid'
 
-import { UserIcon } from '@heroicons/react/outline'
-import { BookOpenIcon } from '@heroicons/react/outline'
-import { LibraryIcon } from '@heroicons/react/outline'
-import { LogoutIcon } from '@heroicons/react/outline'
-import { CogIcon, PlusCircleIcon, DocumentAddIcon } from '@heroicons/react/outline'
+import lock from '../resources/vectors/lock-bejuco.svg'
+import lock_f from '../resources/vectors/lock-forestando.svg'
+import cart from '../resources/vectors/cart.svg'
 
-import logo from '../resources/logo.svg'
-import lock from '../resources/lock-bejuco.svg'
-import cart from '../resources/cart.svg'
-import login from '../resources/login.svg'
-import logout from '../resources/logout.svg'
+import login from '../resources/vectors/login.svg'
+import login__forestando from '../resources/vectors/user__forestando.svg'
+import login__kam from '../resources/vectors/user__kam.svg'
+import login__roxy from '../resources/vectors/user__roxy.svg'
+import login__bejuco from '../resources/vectors/user__bejuco.svg'
+
+import logo from '../resources/photos/logo.png'
+import logo__forestando from '../resources/photos/logo__forestando.png'
+import logo__kam from '../resources/photos/logo__kam.png'
+import logo__roxy from '../resources/photos/logo__roxy.png'
+import logo__bejuco from '../resources/photos/logo__bejuco.png'
+
+import logout from '../resources/vectors/logout.svg'
+import logout__forestando from '../resources/vectors/logout__forestando.svg'
+import logout__kam from '../resources/vectors/logout__kam.svg'
+import logout__roxy from '../resources/vectors/logout__roxy.svg'
+import logout__bejuco from '../resources/vectors/logout__bejuco.svg'
 
 import { auth } from '../firebase';
 
@@ -22,7 +30,9 @@ function classNames(...classes) {
   return classes.filter(Boolean).join(' ')
 }
 
-const Navigation = () => {
+const Navigation = (props) => {
+
+  const { bg, bg_name } = props
 
   const history = useHistory();
   const [user, setUsuario] = useState(null)
@@ -67,7 +77,13 @@ const Navigation = () => {
 
   return (
     <div className="navigation">
-      <Link to="/" className='navigation__logo'><img src={logo} /></Link>
+      <>
+        {bg_name == null ? (<Link to="/" className='navigation__logo'><img src={logo} /></Link>) : (<></>)}
+        {bg_name == 'roxy' ? (<Link to="/" className='navigation__logo'><img src={logo__roxy} /></Link>) : (<></>)}
+        {bg_name == 'forestando' ? (<Link to="/" className='navigation__logo'><img src={logo__forestando} /></Link>) : (<></>)}
+        {bg_name == 'kam' ? (<Link to="/" className='navigation__logo'><img src={logo__kam} /></Link>) : (<></>)}
+        {bg_name == 'bejuco' ? (<Link to="/" className='navigation__logo'><img src={logo__bejuco} /></Link>) : (<></>)}
+      </>
       {/* <div className='test-safari'><img src={logo}/></div> */}
 
       {/* new navigation */}
@@ -76,25 +92,46 @@ const Navigation = () => {
 
           <div className='menu-bar-contanier'>
 
-            <img className="navigation__icons navigation__icons--block" src={cart} />
+            {/* <img className="navigation__icons navigation__icons--block" src={cart} /> */}
 
             {user == true ? (
-              <img onClick={logOut} className="navigation__icons" src={logout} />
-            ) : (<Link to="/login"><img className="navigation__icons" src={login} /></Link>)}
+              <>
+                {bg_name == null ? (<img onClick={logOut} className="navigation__icons" src={logout} />) : (<></>)}
+                {bg_name == 'roxy' ? (<img onClick={logOut} className="navigation__icons" src={logout__roxy} />) : (<></>)}
+                {bg_name == 'forestando' ? (<img onClick={logOut} className="navigation__icons" src={logout__forestando} />) : (<></>)}
+                {bg_name == 'kam' ? (<img onClick={logOut} className="navigation__icons" src={logout__kam} />) : (<></>)}
+                {bg_name == 'bejuco' ? (<img onClick={logOut} className="navigation__icons" src={logout__bejuco} />) : (<></>)}
+              </>
+
+            ) : (
+              <>
+                {bg_name == null ? (<Link to="/login"><img className="navigation__icons" src={login} /></Link>) : (<></>)}
+                {bg_name == 'roxy' ? (<Link to="/login"><img className="navigation__icons" src={login__roxy} /></Link>) : (<></>)}
+                {bg_name == 'forestando' ? (<Link to="/login"><img className="navigation__icons" src={login__forestando} /></Link>) : (<></>)}
+                {bg_name == 'kam' ? (<Link to="/login"><img className="navigation__icons" src={login__kam} /></Link>) : (<></>)}
+                {bg_name == 'bejuco' ? (<Link to="/login"><img className="navigation__icons" src={login__bejuco} /></Link>) : (<></>)}
+              </>
+            )}
 
             <div id="menu-bar" onClick={handlerMenu}>
-              <div id="bar1" class="bar"></div>
-              <div id="bar2" class="bar"></div>
-              <div id="bar3" class="bar"></div>
+              <div id="bar1" class="bar" style={{
+                backgroundColor: bg
+              }}></div>
+              <div id="bar2" class="bar" style={{
+                backgroundColor: bg
+              }}></div>
+              <div id="bar3" class="bar" style={{
+                backgroundColor: bg
+              }}></div>
             </div>
           </div>
 
           <nav class="nav" id="nav">
             <ul>
               <li><Link to="/alterocio" onClick={hideMenu} className='navigation__links--roxanne'>alter-ocio</Link></li>
-              <li><Link to="/forestando" onClick={hideMenu} className='navigation__links--forestando'>
-                <div className='lock-forestando'>
-                  <span class="forest">forest</span><span class="ando">ando</span>
+              <li><Link to="/" onClick={hideMenu} className='navigation__links--forestando'>
+                <div className='forestando-lock'>
+                  <span class="forest">forest</span><span class="ando">ando</span><img src={lock_f} />
                 </div></Link>
               </li>
               <li><Link to="/kam" onClick={hideMenu} className='navigation__links--kam'>

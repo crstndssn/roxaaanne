@@ -9,7 +9,7 @@ import Mercurio from './mercurio';
 import Blue from './blue';
 import Semillas from './semillas'
 
-import lock from '../../../resources/lock.svg'
+import lock from '../../../resources/vectors/lock.svg'
 
 import Card from '../../contenido/Card'
 

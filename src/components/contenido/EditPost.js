@@ -8,9 +8,6 @@ const EditPost = () => {
 
   const { id } = useParams();
 
-  console.log(id)
-  console.log('here comes the sun')
-
   const history = useHistory();
 
   const [post, setPost] = useState([])
@@ -24,7 +21,6 @@ const EditPost = () => {
   const [autor, setAutor] = useState('');
   const [date, setDate] = useState('');
   const [loadImg, setLoadImg] = useState('');
-
 
   const [error, setError] = useState('');
   const [notification, setNotification] = useState('');

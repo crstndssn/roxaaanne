@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom'
 
 // R E S O U R C E S
 import Card from '../../contenido/Card'
-import dorado from '../../../resources/sulky.mp3'
+import en_el_mar from '../../../resources/songs/en_el_mar.mp3'
 
 // S W I P E R
 import { Pagination, Autoplay, FreeMode } from 'swiper'
@@ -36,7 +36,7 @@ const Mar = () => {
 
       <summary className='alterocio__card--summary alterocio__summary'>mar</summary>
 
-      <audio src={mar_song} controls preload="none"></audio>
+      <audio src={en_el_mar} controls preload="none"></audio>
       <div className='alterocio__card--grid'>
         {
           mar.length !== 0 ?

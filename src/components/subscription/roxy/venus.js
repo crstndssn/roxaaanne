@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom'
 
 // R E S O U R C E S
 import Card from '../../contenido/Card'
-import venus_song from '../../../resources/sulky.mp3'
+import venus_song from '../../../resources/songs/sulky.mp3'
 
 // S W I P E R
 import { Pagination, Autoplay, FreeMode } from 'swiper'

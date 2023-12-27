@@ -12,7 +12,7 @@
     cursor: pointer;
     margin-bottom: 0;
 
-    @include media('tablet') {
+    @include media('tablet') { 
       margin-bottom: 0.5rem;
       padding: 0.3rem 0;
     }
@@ -65,7 +65,7 @@
     }
 
     &--genesis {
-      color: #bd1616;
+      color: $genesis;
       margin: 0;
       font-size: 40px;
       padding-bottom: 4px;
@@ -77,25 +77,25 @@
       }
 
       .alterocio__card--summary:first-child {
-        border-bottom: 2px solid #bb0909;
+        border-bottom: 2px solid $genesis;
       }
 
       .alterocio__card--summary:after {
-        color: #bb0909;
+        color: $genesis;
       }
 
       .alterocio__card--header::after {
-        color: #bb0909;
+        color: $genesis;
       }
 
       .alterocio__card--header:hover {
-        color: #bb0909;
+        color: $genesis;
         cursor: pointer;
       }
     }
 
     &--mercurio {
-      color: rgb(142, 79, 209);
+      color: $mercurio;
       margin: 0;
       font-size: 40px;
       padding-bottom: 4px;
@@ -106,24 +106,24 @@
       }
 
       .alterocio__card--summary:first-child {
-        border-bottom: 2px solid rgb(142, 79, 209);
+        border-bottom: 2px solid $mercurio;
       }
 
       .alterocio__card--summary:after {
-        color: rgb(142, 79, 209);
+        color: $mercurio;
       }
 
       .alterocio__card--header::after {
-        color: rgb(142, 79, 209);
+        color: $mercurio;
       }
       .alterocio__card--header:hover {
-        color: rgb(142, 79, 209);
+        color: $mercurio;
         cursor: pointer;
       }
     }
 
     &--blue {
-      color: rgb(59, 100, 188);
+      color: $blue;
       margin: 0;
       font-size: 40px;
       padding-bottom: 4px;
@@ -134,24 +134,24 @@
       }
 
       .alterocio__card--summary:first-child {
-        border-bottom: 2px solid rgb(59, 100, 188);
+        border-bottom: 2px solid $blue;
       }
 
       .alterocio__card--summary:after {
-        color: rgb(59, 100, 188);
+        color: $blue;
       }
 
       .alterocio__card--header::after {
-        color: rgb(59, 100, 188);
+        color: $blue;
       }
       .alterocio__card--header:hover {
-        color: rgb(59, 100, 188);
+        color: $blue;
         cursor: pointer;
       }
     }
 
     &--semillas {
-      color: #86A54F;
+      color: $semillas;
       margin: 0;
       font-size: 40px;
       padding-bottom: 4px;
@@ -162,39 +162,39 @@
       }
 
       .alterocio__card--summary:first-child {
-        border-bottom: 2px solid #86A54F;
+        border-bottom: 2px solid $semillas;
       }
 
       .alterocio__card--summary:after {
-        color: #86A54F;
+        color: $semillas;
       }
 
       .alterocio__card--header::after {
-        color: #86A54F;
+        color: $semillas;
       }
       .alterocio__card--header:hover {
-        color: #86A54F;
+        color: $semillas;
         cursor: pointer;
       }
     }
 
     &--florecer {
-      color: rgb(223, 189, 64);
+      color: $florecer;
 
       summary {
-        border-bottom: 2px solid rgb(223, 189, 64);
+        border-bottom: 2px solid $florecer;
       }
 
       summary:after {
-        color: rgb(223, 189, 64);
+        color: $florecer;
       }
     }
 
     &--viento {
-      border: 2px solid rgb(79, 159, 209);
+      border: 2px solid $viento;
 
       summary:after {
-        color: rgb(79, 159, 209);
+        color: $viento;
       }
     }
 

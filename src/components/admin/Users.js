@@ -3,9 +3,9 @@ import { store, storage } from '../../firebase'
 import { useEffect } from 'react'
 import { Link } from 'react-router-dom'
 
-import add_post from '../../resources/add-post.svg'
-import edit_post from '../../resources/edit-post.svg'
-import delete_post from '../../resources/delete-post.svg'
+import add_post from '../../resources/vectors/add-post.svg'
+import edit_post from '../../resources/vectors/edit-post.svg'
+import delete_post from '../../resources/vectors/delete-post.svg'
 
 const Subs = () => {
 

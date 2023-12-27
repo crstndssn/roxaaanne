@@ -2,7 +2,7 @@ import React, { useEffect, useState } from 'react'
 import { store } from '../../../firebase'
 import { Link } from 'react-router-dom'
 
-import imgtest from '../../../resources/sunset.jpg'
+import imgtest from '../../../resources/photos/sunset.jpg'
 
 const Blog = () => {
   return (
