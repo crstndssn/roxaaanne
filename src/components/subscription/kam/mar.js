@@ -24,7 +24,7 @@ const Mar = () => {
 
   useEffect(() => {
     const mar = async () => {
-      const { docs } = await store.collection('new').where('title', '==', "dorado").get()
+      const { docs } = await store.collection('new').where('title', '==', "mar").get()
       const newArray = docs.map(item => ({ id: item.id, ...item.data() }))
       setMar(newArray)
     }

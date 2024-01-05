@@ -32,7 +32,7 @@ const Dorado = () => {
   }, [])
 
   return (
-    <details className='kam__oro'>
+    <details className='kam__oro kam__oro--details'>
 
       <summary className='kam__oro--summary'>DORADO</summary>
 

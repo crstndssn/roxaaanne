@@ -13,7 +13,7 @@ import login__roxy from '../resources/vectors/user__roxy.svg'
 import login__bejuco from '../resources/vectors/user__bejuco.svg'
 
 import logo from '../resources/photos/logo.png'
-import logo__forestando from '../resources/photos/logo__forestando.png'
+import logo__forestando from '../resources/vectors/logo__forestando.svg'
 import logo__kam from '../resources/photos/logo__kam.png'
 import logo__roxy from '../resources/photos/logo__roxy.png'
 import logo__bejuco from '../resources/photos/logo__bejuco.png'

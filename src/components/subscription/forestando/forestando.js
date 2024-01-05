@@ -39,8 +39,8 @@ const Forestando = () => {
   }, [])
 
   return (
-    <>
-      <Navigation />
+    <div className='bg__forestando'>
+      <Navigation bg={'#36723E'} bg_name={'forestando'}  />
       <div className='forestando'>
         {/* H E A D E R */}
         <div className="forestando__header">
@@ -70,7 +70,7 @@ const Forestando = () => {
           <p>by crstndssn</p>
         </div>
       </div>
-    </>
+    </div>
   )
 }
 
