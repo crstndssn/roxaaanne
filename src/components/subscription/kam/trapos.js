@@ -32,12 +32,12 @@ const Trapos = () => {
   }, [])
 
   return (
-    <details className='genesis__section alterocio__card alterocio__card--genesis alterocio__details'>
+    <details className='kam__trapos kam__trapos--details'>
 
-      <summary className='alterocio__card--summary alterocio__summary'>trapos</summary>
+      <summary className='kam__trapos--summsary'>trapos</summary>
 
       <audio src={trapos_song} controls preload="none"></audio>
-      <div className='alterocio__card--grid'>
+      <div className='kam__card--grid'>
         {
           trapos.length !== 0 ?
             (trapos.map(item => (

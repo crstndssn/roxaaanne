@@ -31,6 +31,7 @@ import AllRoxy from './components/subscription/roxy/edit'
 import AddRoxy from './components/subscription/roxy/add'
 
 import Bejuco from './components/subscription/bejuco/bejuco'
+import BejucoAdd from './components/subscription/bejuco/add'
 import BejucoArgumento from './components/subscription/bejuco/argumento'
 import BejucoTropicos from './components/subscription/bejuco/tropicos'
 import BejucoEncuentros from './components/subscription/bejuco/encuentros'
@@ -53,7 +54,7 @@ export default class App extends Component {
             <Route path="/blog" component={Blog} /> 
             <Route path="/login" component={Login} />
             <Route path="/reset" component={Reset} />
-            <Route path="/singup" component={Signup} /> 
+            <Route path="/signup" component={Signup} /> 
 
             {/* <Route path="/forestando/:id" component={Post}/>
             <Route path="/alterocio/:id" component={Post}/> */}
@@ -86,6 +87,7 @@ export default class App extends Component {
 
             {/* B E J U C O */}
             <Route exact path="/bejuco" component={Bejuco} />
+            <Route exact path="/bejuco/add" component={BejucoAdd} />
             <Route exact path="/bejuco/argumento" component={BejucoArgumento} />
             <Route exact path="/bejuco/tropicos" component={BejucoTropicos} />
             <Route exact path="/bejuco/encuentros" component={BejucoEncuentros} />

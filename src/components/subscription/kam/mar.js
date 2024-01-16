@@ -32,12 +32,12 @@ const Mar = () => {
   }, [])
 
   return (
-    <details className='genesis__section alterocio__card alterocio__card--genesis alterocio__details'>
+    <details className='kam__mar kam__mar--details'>
 
-      <summary className='alterocio__card--summary alterocio__summary'>mar</summary>
+      <summary className='kam__mar--summary'>mar</summary>
 
       <audio src={en_el_mar} controls preload="none"></audio>
-      <div className='alterocio__card--grid'>
+      <div className='kam__card--grid'>
         {
           mar.length !== 0 ?
             (mar.map(item => (

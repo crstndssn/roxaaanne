@@ -34,7 +34,7 @@ const Dorado = () => {
   return (
     <details className='kam__oro kam__oro--details'>
 
-      <summary className='kam__oro--summary'>DORADO</summary>
+      <summary className='kam__oro--summary'>dorado</summary>
 
       <audio src={dorado_song} controls preload="none"></audio>
       <div className='kam__card--grid'>

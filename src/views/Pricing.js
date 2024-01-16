@@ -34,10 +34,10 @@ const Pricing = () => {
       {user == false ? (
         <div className="pricing">
           <div>
-            <p>$20.000</p>
+            <p>$30.000</p>
             <span></span>
           </div>
-          <p className="pricing__less">por 3 meses</p>
+          <p className="pricing__less">por 1 año</p>
           <div className='pricing__feature'>
             <img src={check} />
             <h3>acceso a todo el contenido</h3>

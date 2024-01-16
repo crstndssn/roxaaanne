@@ -123,8 +123,8 @@ const Signup = () => {
           </form>
 
           <div className="login__options">
-            <Link to="/ingreso">tienes una cuenta?</Link>
-            <Link to="/contraseña" id="forget-password">
+            <Link to="/login">tienes una cuenta?</Link>
+            <Link to="/reset" id="forget-password">
               mi contraseña
             </Link>
           </div>

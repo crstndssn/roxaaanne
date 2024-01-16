@@ -5,6 +5,8 @@ import { auth } from '../../../firebase';
 
 import Navigation from '../../Navigation';
 
+import lock from '../../../resources/vectors/lock-red.svg'
+
 // R E S O U R C E S
 // import sunflower1 from '../../sunflower-1.svg'
 // import sunflower2 from '../../sunflower-2.svg'
@@ -64,9 +66,40 @@ const Roxy = () => {
       <Navigation bg={'#ED0000'} bg_name={'roxy'} />
       <div className='roxy'>
         <h1 className="roxy__title">roxy</h1>
-        <Astra />
-        <Venus />
-        <Circe />
+        {
+          userSub == true ? (
+            <>
+              <Astra />
+              <Venus />
+              <Circe />
+            </>
+          )
+            :
+            (
+              <div class="roxy__lock">
+                <div className="roxy__lock--content">
+                  <p>astra</p>
+                  <div className="lock__button">
+                    <a>lock <img src={lock} /></a>
+                  </div>
+                </div>
+
+                <div className="roxy__lock--content">
+                  <p>venus</p>
+                  <div className="lock__button">
+                    <a>lock <img src={lock} /></a>
+                  </div>
+                </div>
+
+                <div className="roxy__lock--content">
+                  <p>circe</p>
+                  <div className="lock__button">
+                    <a>lock <img src={lock} /></a>
+                  </div>
+                </div>
+              </div>
+            )
+        }
       </div>
     </div>
   )

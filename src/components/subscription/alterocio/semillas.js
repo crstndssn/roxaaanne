@@ -93,7 +93,7 @@ const Semillas = () => {
       </details>
 
       {/* M A R */}
-      <details className='alterocio__card--border'>
+      {/* <details className='alterocio__card--border'>
         <summary className='alterocio__card--header'>mar</summary>
         <audio src={no_soy_un_extraño} controls preload="none"></audio>
         <div className='alterocio__card--grid'>
@@ -110,10 +110,10 @@ const Semillas = () => {
               ))) : (<div>loading...</div>)
           }
         </div>
-      </details>
+      </details> */}
 
       {/* Q O Y */}
-      <details className='alterocio__card--border'>
+      {/* <details className='alterocio__card--border'>
         <summary className='alterocio__card--header'>quedándote o yéndote</summary>
         <audio src={shiva_song} controls preload="none"></audio>
         <div className='alterocio__card--grid'>
@@ -130,7 +130,7 @@ const Semillas = () => {
               ))) : (<div>loading...</div>)
           }
         </div>
-      </details>
+      </details> */}
     </details>
   )
 }

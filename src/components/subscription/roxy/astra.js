@@ -40,7 +40,7 @@ const Astra = () => {
           astra
         </summary>
         <audio src={astra} controls preload="none"></audio>
-        <h2 className='roxy__card--description'>fuerza sobrenatural que utilizamos los dioses para protegernos de nuestros enemigos, como un hechizo funcionamos en nuestro propósito, vengo con el viento</h2>
+        <h2 className='roxy__card--description'>fuerza sobrenatural para protegernos de nuestros enemigos, como un hechizo funcionamos en nuestro propósito, vengo con el viento</h2>
         <div className='roxy__card--grid'>
           {
             astra.length !== 0 ?

@@ -3,15 +3,15 @@ import { store } from '../../../firebase'
 import { Link } from 'react-router-dom'
 import { auth } from '../../../firebase';
 
-import { Swiper, SwiperSlide } from 'swiper/react/swiper-react';
-
 // import Navigation from '../../Navigation';
 
-import { FreeMode, Navigation, Thumbs } from 'swiper';
-
+// S W I P E R
+import { Swiper, SwiperSlide } from 'swiper/react/swiper-react';
+import { FreeMode, Mousewheel, Navigation, Pagination, Thumbs } from 'swiper';
 import "swiper/swiper.min.css";
 import 'swiper/modules/free-mode/free-mode.min.css';
 import 'swiper/modules/thumbs/thumbs.min.css';
+import 'swiper/modules/pagination/pagination.min.css';
 
 
 // R E S O U R C E S
@@ -76,35 +76,21 @@ const Bejuco = () => {
   return (
     <>
       <div className='bejuco'>
-
         <div className='bejuco__bejucote'>
           <h1 className="bejuco__title">Bejuco</h1>
           <h2 className='bejuco__title--small'>o Cuando las piedras sangran</h2>
         </div>
-
-        <div className='bejucos__bejucos'>
-          <swiper>
-
-          </swiper>
-        </div>
-        <div className='bejucos__bejuquitos'>
-
-        </div>
-
-
-
-
-        {/* s w i p e r  */}
         <Swiper
           style={{
             '--swiper-navigation-color': '#fff',
             '--swiper-pagination-color': '#fff',
           }}
+          direction={'vertical'}
           spaceBetween={10}
-          navigation={true}
+          mousewheel={true}
           thumbs={{ swiper: thumbsSwiper }}
-          modules={[FreeMode, Navigation, Thumbs]}
-          className="mySwiper2"
+          modules={[Thumbs, Mousewheel, Pagination]}
+          className="mySwiper2 bejuco__bejucos"
         >
           <SwiperSlide>
             <img src="https://swiperjs.com/demos/images/nature-1.jpg" />
@@ -137,7 +123,6 @@ const Bejuco = () => {
             <img src="https://swiperjs.com/demos/images/nature-10.jpg" />
           </SwiperSlide>
         </Swiper>
-
         <Swiper
           onSwiper={setThumbsSwiper}
           spaceBetween={10}
@@ -145,83 +130,30 @@ const Bejuco = () => {
           freeMode={true}
           watchSlidesProgress={true}
           modules={[FreeMode, Navigation, Thumbs]}
-          className="mySwiper"
+          className="mySwiper bejuco__bejuquitos"
         >
           <SwiperSlide>
-            <img src="https://swiperjs.com/demos/images/nature-1.jpg" />
+            <Link to="/bejuco/argumentos" className='bejuco__bejuquitos--item'>
+              argumentos
+            </Link>
           </SwiperSlide>
           <SwiperSlide>
-            <img src="https://swiperjs.com/demos/images/nature-2.jpg" />
+            <Link to="/bejuco/tropicos" className='bejuco__bejuquitos--item'>
+              trópicos
+            </Link>
           </SwiperSlide>
+          {/* <SwiperSlide>
+            <Link to="/bejuco/encuentros" className='bejuco__bejuquitos--item'>
+              encuentros
+            </Link>
+          </SwiperSlide> */}
           <SwiperSlide>
-            <img src="https://swiperjs.com/demos/images/nature-3.jpg" />
-          </SwiperSlide>
-          <SwiperSlide>
-            <img src="https://swiperjs.com/demos/images/nature-4.jpg" />
-          </SwiperSlide>
-          <SwiperSlide>
-            <img src="https://swiperjs.com/demos/images/nature-5.jpg" />
-          </SwiperSlide>
-          <SwiperSlide>
-            <img src="https://swiperjs.com/demos/images/nature-6.jpg" />
-          </SwiperSlide>
-          <SwiperSlide>
-            <img src="https://swiperjs.com/demos/images/nature-7.jpg" />
-          </SwiperSlide>
-          <SwiperSlide>
-            <img src="https://swiperjs.com/demos/images/nature-8.jpg" />
-          </SwiperSlide>
-          <SwiperSlide>
-            <img src="https://swiperjs.com/demos/images/nature-9.jpg" />
-          </SwiperSlide>
-          <SwiperSlide>
-            <img src="https://swiperjs.com/demos/images/nature-10.jpg" />
+            <Link to="/bejuco/lucas" className='bejuco__bejuquitos--item'>
+              lucas
+            </Link>
           </SwiperSlide>
         </Swiper>
-
-        {/* t i t l e */}
-        {/* <div className='bejuco__header'>
-          <h1 className="bejuco__title">Bejuco</h1>
-          <h2 className='bejuco__title--small'>o Cuando las piedras sangran</h2>
-        </div> */}
-
-        {/* s l i d e */}
-        {/* <div className='bejuco__slide'> */}
-        {/* <div className="bejuco__blur">
-              <img src={bejuco1} />
-            </div> */}
-
-        {/* <div className="bejuco__slide--content">
-              <img src={bejuco6} />
-            <img src={bejuco7} />
-            <img src={bejuco10} />
-            </div>
-          </div> */}
-
-
-        {/* s u b t i t l e */}
-        {/* <h2 className="bejuco__description">Bejuco es una pregunta por las cosas para las que no tenemos palabras</h2> */}
-
-
-
-        {/* d e s c r i p t i o n */}
-        {/* <p className='bejuco__description'>El cortometraje: "Bejuco o Cuando las piedras sangran". Es una experiecnia audiovisual en la que recorremos los paisajes andinos y tropicales inmersos en los simbolos místicos de la cultura popular. Asì que materializar esta vision necesita juntar muchos esfuerzos. </p> */}
-
-        <div>
-
-          {/* <div>
-            <h1></h3>
-          </div> */}
-
-          {/* s w i p e r */}
-          {/* <div>
-
-          </div> */}
-
-        </div>
-
       </div>
-
     </>
   )
 

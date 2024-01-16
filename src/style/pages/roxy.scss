@@ -18,8 +18,46 @@
   justify-content: center;
   align-items: center;
   flex-direction: column;
+
   @include media('tablet') {
     min-height: 90vh;
+  }
+
+  &__lock {
+    width: 100%;
+    font-family: 'Marcellus', serif;
+
+    .lock__button {
+      margin-top: 0;
+      border: 1px solid #ED0000;
+
+      a {
+       color: #ED0000 !important; 
+      }
+  
+    }
+
+    &--content {
+      border-bottom: 1px solid #ED0000;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 0 1rem;
+
+      p {
+        color: #ED0000;
+        font-size: 2rem;
+        line-height: 2rem;
+        margin-top: .8rem;
+        margin-bottom: 1rem;
+
+      }
+    }
+
+    &--content:first-child {
+      border-top: 1px solid #ED0000;
+    }
+
   }
 }
 
@@ -31,38 +69,7 @@
   padding-bottom: 5rem;
 }
 
-.roxy__oro {
-  width: 100%;
-  background-color: #D4F3D5;
-  color: #8E58FF;
 
-  h2 {
-    font-size: 10vh;
-    margin: 10px;
-  }
-}
-
-.roxy__mar {
-  width: 100%;
-  background-color: #84D6D1 ;
-  color: #FBE7F8;
-
-  h2 {
-    font-size: 10vh;
-    margin: 10px;
-  }
-}
-
-.roxy__trapos {
-  width: 100%;
-  background-color: #000000;
-  color: #FAD691;
-
-  h2 {
-    font-size: 10vh;
-    margin: 10px;
-  }
-}
 
 .roxy-add {
   background: #000;

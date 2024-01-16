@@ -144,8 +144,8 @@ const Navigation = (props) => {
                   <span class="roxy-menu">roxy</span>
                 </div></Link>
               </li>
-              <li><Link to="/" onClick={hideMenu} className='navigation__links--kam'>
-                <span class="bejuco-menu">bejuco<img src={lock} /></span>
+              <li><Link to="/bejuco" onClick={hideMenu} className='navigation__links--kam'>
+                <span class="bejuco-menu">bejuco</span>
               </Link>
               </li>
             </ul>
