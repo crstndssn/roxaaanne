@@ -68,7 +68,7 @@ const Navigation = (props) => {
     document.getElementById("nav").classList.toggle("change");
     document.getElementById("menu-bg").classList.toggle("change-bg");
   }
-
+ 
   function hideMenu() {
     document.getElementById("menu-bar").classList.remove("change");
     document.getElementById("nav").classList.remove("change");

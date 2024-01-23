@@ -119,7 +119,7 @@ const Signup = () => {
               className=""
               placeholder="contraseña" />
             <button type="submit"
-              className="">regístrate</button>
+              className="">registrarme</button>
           </form>
 
           <div className="login__options">
@@ -131,7 +131,7 @@ const Signup = () => {
 
           <div className="login__google">
             <button onClick={loginGoogle} className="">
-              <img src={google} alt="google" />oogle</button>
+              <img src={google} alt="google" />ingresar con Google</button>
           </div>
 
             {

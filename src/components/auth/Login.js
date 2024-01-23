@@ -92,7 +92,7 @@ const Login = () => {
     <div>
       <Navigation />
       <div className="login">
-        <h3 class="login__title">Log in</h3>
+        <h3 class="login__title">ingresar</h3>
 
         <div className="login__form">
 
@@ -109,19 +109,19 @@ const Login = () => {
               className=""
               placeholder="contraseña" />
             <button type="submit"
-              className="">ingresar</button>
+              className="">entrar</button>
           </form>
 
           <div className="login__options">
             <Link to="/signup">regístrate</Link>
             <Link to="/reset" id="forget-password">
-              olvidé mi contraseña
+              mi contraseña
             </Link>
           </div>
 
           <div className="login__google">
             <button onClick={loginGoogle} className="">
-              <img src={google} alt="google" />oogle</button>
+              <img src={google} alt="google" /> ingresar con Google</button>
           </div>
 
 

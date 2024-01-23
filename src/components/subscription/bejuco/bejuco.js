@@ -3,7 +3,7 @@ import { store } from '../../../firebase'
 import { Link } from 'react-router-dom'
 import { auth } from '../../../firebase';
 
-// import Navigation from '../../Navigation';
+import NavigationRoxanne from '../../Navigation';
 
 // S W I P E R
 import { Swiper, SwiperSlide } from 'swiper/react/swiper-react';
@@ -35,6 +35,8 @@ const Bejuco = () => {
   const [admin, setAdmin] = useState(null)
   const [userEmail, setUserEmail] = useState(null)
   const [userSub, setUserSub] = useState(false)
+
+  const [bejucoImages, setBejucoImages] = useState('')
 
   const [allSubs, setAllSubs] = useState('')
 
@@ -71,16 +73,25 @@ const Bejuco = () => {
       })
     }
     getSubs()
+
+    const getImages = async () => {
+      const { docs } = await store.collection('new').where('title', '==', 'trópicos').get()
+      const newArray = docs.map(item => ({ id: item.id, ...item.data() }))
+      setBejucoImages(newArray)
+    }
+    getImages()
   }, [])
 
   return (
-    <>
+    <div class="bg__bejuco">
+      <NavigationRoxanne bg={'#957d4f'} bg_name={'bejuco'} />
       <div className='bejuco'>
         <div className='bejuco__bejucote'>
           <h1 className="bejuco__title">Bejuco</h1>
-          <h2 className='bejuco__title--small'>o Cuando las piedras sangran</h2>
+          <h2 className='bejuco__title--small'>o cuando las piedras sangran</h2>
         </div>
-        <Swiper
+
+        {/* <Swiper
           style={{
             '--swiper-navigation-color': '#fff',
             '--swiper-pagination-color': '#fff',
@@ -92,38 +103,23 @@ const Bejuco = () => {
           modules={[Thumbs, Mousewheel, Pagination]}
           className="mySwiper2 bejuco__bejucos"
         >
-          <SwiperSlide>
-            <img src="https://swiperjs.com/demos/images/nature-1.jpg" />
-          </SwiperSlide>
-          <SwiperSlide>
-            <img src="https://swiperjs.com/demos/images/nature-2.jpg" />
-          </SwiperSlide>
-          <SwiperSlide>
-            <img src="https://swiperjs.com/demos/images/nature-3.jpg" />
-          </SwiperSlide>
-          <SwiperSlide>
-            <img src="https://swiperjs.com/demos/images/nature-4.jpg" />
-          </SwiperSlide>
-          <SwiperSlide>
-            <img src="https://swiperjs.com/demos/images/nature-5.jpg" />
-          </SwiperSlide>
-          <SwiperSlide>
-            <img src="https://swiperjs.com/demos/images/nature-6.jpg" />
-          </SwiperSlide>
-          <SwiperSlide>
-            <img src="https://swiperjs.com/demos/images/nature-7.jpg" />
-          </SwiperSlide>
-          <SwiperSlide>
-            <img src="https://swiperjs.com/demos/images/nature-8.jpg" />
-          </SwiperSlide>
-          <SwiperSlide>
-            <img src="https://swiperjs.com/demos/images/nature-9.jpg" />
-          </SwiperSlide>
-          <SwiperSlide>
-            <img src="https://swiperjs.com/demos/images/nature-10.jpg" />
-          </SwiperSlide>
-        </Swiper>
-        <Swiper
+          {
+            bejucoImages.length !== 0 ?
+              (bejucoImages.map(item => (
+
+                <SwiperSlide>
+
+                  <img src={item.imageLinks} />
+                </SwiperSlide>
+              )))
+
+              :
+
+              (<>no hay imágenes</>)
+          }
+        </Swiper> */}
+
+        {/* <Swiper
           onSwiper={setThumbsSwiper}
           spaceBetween={10}
           slidesPerView={4}
@@ -133,7 +129,7 @@ const Bejuco = () => {
           className="mySwiper bejuco__bejuquitos"
         >
           <SwiperSlide>
-            <Link to="/bejuco/argumentos" className='bejuco__bejuquitos--item'>
+            <Link to="/bejuco/argumento" className='bejuco__bejuquitos--item'>
               argumentos
             </Link>
           </SwiperSlide>
@@ -142,21 +138,28 @@ const Bejuco = () => {
               trópicos
             </Link>
           </SwiperSlide>
-          {/* <SwiperSlide>
-            <Link to="/bejuco/encuentros" className='bejuco__bejuquitos--item'>
-              encuentros
-            </Link>
-          </SwiperSlide> */}
           <SwiperSlide>
             <Link to="/bejuco/lucas" className='bejuco__bejuquitos--item'>
               lucas
             </Link>
           </SwiperSlide>
-        </Swiper>
-      </div>
-    </>
-  )
+        </Swiper> */}
 
+        {/* N A V I G A T I O N */}
+        <div className='bejuco__navigation'>
+          <Link to="/bejuco/argumento" className='bejuco__bejuquitos--item-a'>
+            argumentos
+          </Link>
+          <Link to="/bejuco/tropicos" className='bejuco__bejuquitos--item-a'>
+            trópicos
+          </Link>
+          <Link to="/bejuco/lucas" className='bejuco__bejuquitos--item-a'>
+            lucas
+          </Link>
+        </div>
+      </div>
+    </div >
+  )
 }
 
 export default Bejuco
