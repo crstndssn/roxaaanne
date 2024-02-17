@@ -15,6 +15,7 @@ import 'swiper/modules/thumbs/thumbs.min.css';
 import 'swiper/modules/pagination/pagination.min.css';
 
 import qr__bejuco from '../../../resources/bejuco/qr-cristian.png'
+import qr__daviplata from '../../../resources/bejuco/daviplata-bejuco.png'
 
 const Lucas = () => {
   const [thumbsSwiper, setThumbsSwiper] = useState(null);
@@ -48,7 +49,7 @@ const Lucas = () => {
           <details>
             <summary>DAVIPLATA</summary>
             <div>
-              <img src={qr__bejuco} />
+              <img src={qr__daviplata} />
             </div>
           </details>
 

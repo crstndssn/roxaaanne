@@ -65,7 +65,7 @@ const Kam = () => {
     <div class="bg__kam">
       <Navigation bg={'#FECD27'} bg_name={'kam'} />
       <div className='kam'>
-        <h1 className="kam__title">kam</h1>
+        <h1 className="kam__title">KAM</h1>
         {
           userSub == true ? (
             <>
@@ -80,21 +80,28 @@ const Kam = () => {
                 <div className="kam__lock--oro">
                   <p>dorado</p>
                   <div className="lock__button">
-                    <a>lock <img src={lock} /></a>
+                    <Link to="/subscription">entrar <img src={lock} /></Link>
                   </div>
                 </div>
 
                 <div className="kam__lock--mar">
                   <p>mar</p>
                   <div className="lock__button">
-                    <a>lock <img src={lock} /></a>
+                    <Link to="/subscription">entrar <img src={lock} /></Link>
                   </div>
                 </div>
 
                 <div className="kam__lock--trapos">
                   <p>trapos</p>
                   <div className="lock__button">
-                    <a>lock <img src={lock} /></a>
+                    <Link to="/subscription">entrar <img src={lock} /></Link>
+                  </div>
+                </div>
+                
+                <div className="kam__lock--velvet">
+                  <p>velvet</p>
+                  <div className="lock__button">
+                    <Link to="/subscription">entrar <img src={lock} /></Link>
                   </div>
                 </div>
               </div>

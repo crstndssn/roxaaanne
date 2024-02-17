@@ -50,47 +50,48 @@ const AllAlterocio = () => {
 
   return (
     <>
-    <Navigation/>
+      <Navigation />
 
-        <div className="edit">
+      <div className="edit">
 
-      <Link to="/add" className="edit__add">
-        <img className="edit__add--icon" src={add_post} />
-        <p className="edit__add--text">add</p>
-      </Link>
+        <Link to="/add" className="edit__add">
+          <img className="edit__add--icon" src={add_post} />
+          <p className="edit__add--text">add</p>
+        </Link>
 
-      {
-        postUser.length !== 0 ? (
-          postUser.map(item => (
-            <div to={`/post/${item.id}`} key={item.id} className="edit__item">
+        {
+          postUser.length !== 0 ? (
+            postUser.map(item => (
 
-              <div className="edit__content-image">
-                <img className="edit__image" src={item.imageLinks[0]} />
-              </div>
+              <div to={`/post/${item.id}`} key={item.id} className="edit__item">
 
-              <div className="edit__controls">
-                <h2 className="font-serif font-medium text-3xl leading-none">{item.title}</h2>
-                <div className="edit__controls--icons">
-                  {/* <Link to={`/post/${item.id}`}><img src={eye} className="w-10 shadow hover:shadow-lg transition duration-100 rounded-full cursor-pointer" alt="edit" /></Link> */}
-                  <Link to={`/edit/${item.id}`}>
-                    <img src={edit_post} className="edit__icon" alt="edit" />
-                  </Link>
-                  <img onClick={(id) => { deletePost(item.id) }} src={delete_post} className="edit__icon" alt="delete" />
+                <div className="edit__content-image">
+                  <img className="edit__image" src={item.imageLinks[0]} />
                 </div>
+
+                <div className="edit__controls">
+                  <h2 className="font-serif font-medium text-3xl leading-none">{item.title}</h2>
+                  <div className="edit__controls--icons">
+                    {/* <Link to={`/post/${item.id}`}><img src={eye} className="w-10 shadow hover:shadow-lg transition duration-100 rounded-full cursor-pointer" alt="edit" /></Link> */}
+                    <Link to={`/edit/${item.id}`}>
+                      <img src={edit_post} className="edit__icon" alt="edit" />
+                    </Link>
+                    <img onClick={(id) => { deletePost(item.id) }} src={delete_post} className="edit__icon" alt="delete" />
+                  </div>
+                </div>
+
+
               </div>
-
-
-            </div>
-          ))
-        )
-          :
-          (
-            <div>
-              <p>cargando</p>
-            </div>
+            ))
           )
-      }
-    </div>
+            :
+            (
+              <div>
+                <p>cargando</p>
+              </div>
+            )
+        }
+      </div>
     </>
 
   )

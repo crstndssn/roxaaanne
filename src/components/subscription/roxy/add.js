@@ -79,7 +79,7 @@ const AddRoxy = () => {
   }
 
   // years
-  const years = ['dorado', 'mar', 'trapos']
+  const years = ['astra', 'venus', 'circe']
   const yearChange = (e) => {
     e.preventDefault()
     setYear(e.target.value)

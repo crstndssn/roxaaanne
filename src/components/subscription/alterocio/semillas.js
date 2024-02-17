@@ -4,10 +4,10 @@ import { Link } from 'react-router-dom'
 
 import Card from '../../contenido/Card'
 
-import antes_de_morir from '../../../resources/songs/antes_de_morir.mp3'
-import entre_las_luces from '../../../resources/songs/entre_las_luces.mp3'
-import no_soy_un_extraño from '../../../resources/songs/no_soy_un_extraño.mp3'
-import shiva_song from '../../../resources/songs/shiva.mp3'
+import animal from '../../../resources/songs/animal.mp3'
+import post_crucifixion from '../../../resources/songs/post_crucifixion.mp3'
+import el_mar from '../../../resources/songs/el_mar.mp3'
+import qoy_song from '../../../resources/songs/quedandote-o-yendote.mp3'
 
 
 const Semillas = () => {
@@ -55,7 +55,7 @@ const Semillas = () => {
       {/* B N R */}
       <details className='alterocio__card--border'>
         <summary className='alterocio__card--header'>blue and red</summary>
-        <audio src={antes_de_morir} controls preload="none"></audio>
+        <audio src={post_crucifixion} controls preload="none"></audio>
         <div className='alterocio__card--grid'>
           {
             bnr.length !== 0 ?
@@ -75,7 +75,7 @@ const Semillas = () => {
       {/* E A */}
       <details className='alterocio__card--border'>
         <summary className='alterocio__card--header'>efímero anacrónico</summary>
-        <audio src={entre_las_luces} controls preload="none"></audio>
+        <audio src={animal} controls preload="none"></audio>
         <div className='alterocio__card--grid'>
           {
             ea.length !== 0 ?
@@ -93,9 +93,9 @@ const Semillas = () => {
       </details>
 
       {/* M A R */}
-      {/* <details className='alterocio__card--border'>
+      <details className='alterocio__card--border'>
         <summary className='alterocio__card--header'>mar</summary>
-        <audio src={no_soy_un_extraño} controls preload="none"></audio>
+        <audio src={el_mar} controls preload="none"></audio>
         <div className='alterocio__card--grid'>
           {
             mar.length !== 0 ?
@@ -110,12 +110,12 @@ const Semillas = () => {
               ))) : (<div>loading...</div>)
           }
         </div>
-      </details> */}
+      </details>
 
       {/* Q O Y */}
-      {/* <details className='alterocio__card--border'>
-        <summary className='alterocio__card--header'>quedándote o yéndote</summary>
-        <audio src={shiva_song} controls preload="none"></audio>
+      <details className='alterocio__card--border'>
+        <summary className='alterocio__card--header'>quedándote</summary>
+        <audio src={qoy_song} controls preload="none"></audio>
         <div className='alterocio__card--grid'>
           {
             qoy.length !== 0 ?
@@ -130,7 +130,7 @@ const Semillas = () => {
               ))) : (<div>loading...</div>)
           }
         </div>
-      </details> */}
+      </details>
     </details>
   )
 }

@@ -40,6 +40,11 @@
     }
   }
 
+  &__lock {
+    position: absolute;
+    bottom: 0;
+  }
+
   // O R O
   &__oro {
     width: 100%;
@@ -120,7 +125,85 @@
     }
   }
 
+  // V E L V E T (LOCK)
+  &__lock {
+    width: 100%;
+
+    &--velvet {
+      background-color: #D00303;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 0 1rem;
+
+      .lock__button {
+        margin-top: 0;
+      }
+
+      p {
+        color: #000;
+        font-size: 2rem;
+        line-height: 2rem;
+        margin-top: .8rem;
+        margin-bottom: 1rem;
+
+      }
+
+    }
+  }
+
   // V E L V E T
+  &__velvet {
+    width: 100%;
+    background-color: #D00303;
+    color: #000;
+
+    summary {
+      font-size: 3rem;
+      margin: 10px;
+      list-style: none;
+      cursor: pointer;
+    }
+
+    details[open] summary~* {
+      animation: open 0.3s ease-in-out;
+    }
+
+
+    @keyframes open {
+      0% {
+        opacity: 0;
+      }
+
+      100% {
+        opacity: 1;
+      }
+    }
+
+    &--details summary::-webkit-details-marker {
+      display: none;
+    }
+
+    &--details summary:after {
+      content: "+";
+      position: absolute;
+      font-weight: 300;
+      font-size: 80px;
+      line-height: 60px;
+      right: 15px;
+      transform-origin: center;
+      transition: 200ms linear;
+
+      @include media('tablet') {
+        font-size: 70px;
+        right: 40px;
+      }
+    }
+
+    &--details[open] summary:after {
+      transform: rotate(45deg);
+    }
+  }
 
 
   // M A R

@@ -100,28 +100,28 @@ const Roxanne = () => {
                 <div className="lock genesis">
                   <p className="lock__title">génesis</p>
                   <div className="lock__button">
-                    <a>lock <img src={lock} /></a>
+                    <Link to="/subscription">entrar <img src={lock} /></Link>
                   </div>
                 </div>
 
                 <div className="lock mercurio">
                   <p className="lock__title">mercurio</p>
                   <div className="lock__button">
-                    <a>lock <img src={lock} /></a>
+                    <Link to="/subscription">entrar <img src={lock} /></Link>
                   </div>
                 </div>
 
                 <div className="lock blue">
                   <p className="lock__title">blue</p>
                   <div className="lock__button">
-                    <a>lock <img src={lock} /></a>
+                    <Link to="/subscription">entrar <img src={lock} /></Link>
                   </div>
                 </div>
 
                 <div className="lock semillas">
                   <p className="lock__title">semillas</p>
                   <div className="lock__button">
-                    <a>lock <img src={lock} /></a>
+                    <Link to="/subscription">entrar <img src={lock} /></Link>
                   </div>
                 </div>
               </div>
@@ -131,14 +131,14 @@ const Roxanne = () => {
         <div className="lock florecer">
           <p className="lock__title">florecer</p>
           <div className="lock__button">
-            <a>lock <img src={lock} /></a>
+            <Link to="/subscription">entrar <img src={lock} /></Link>
           </div>
         </div>
 
         <div className="lock viento">
           <p className="lock__title">viento</p>
           <div className="lock__button">
-            <a>lock <img src={lock} /></a>
+            <Link to="/subscription">entrar <img src={lock} /></Link>
           </div>
         </div>
 

@@ -11,6 +11,8 @@ import Users from './components/admin/Users'
 import Home from './views/Home';
 import Blog from './components/contenido/Blog';
 
+import Subscription from './views/Subscription'
+
 // pages
 import Alterocio from './components/subscription/alterocio/alterocio'
 import AllAlterocio from './components/subscription/alterocio/all'
@@ -55,6 +57,7 @@ export default class App extends Component {
             <Route path="/login" component={Login} />
             <Route path="/reset" component={Reset} />
             <Route path="/signup" component={Signup} /> 
+            <Route path="/subscription" component={Subscription} /> 
 
             {/* <Route path="/forestando/:id" component={Post}/>
             <Route path="/alterocio/:id" component={Post}/> */}

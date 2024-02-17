@@ -50,7 +50,7 @@ const Pricing = () => {
             <img src={check} />
             <h3>contenido especial</h3>
           </div>
-          <a class="pricing__button" target="_blank" href='https://www.mercadopago.com.co/subscriptions/checkout?preapproval_plan_id=2c9380848b62d290018b82fa82971861'>suscribirse</a>
+          <Link to="/subscription" class="pricing__button">suscribirse</Link>
         </div>
       ) : ( <div className="pricing">
       <div>

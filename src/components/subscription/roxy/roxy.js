@@ -80,21 +80,21 @@ const Roxy = () => {
                 <div className="roxy__lock--content">
                   <p>astra</p>
                   <div className="lock__button">
-                    <a>lock <img src={lock} /></a>
+                    <Link to="/subscription">entrar <img src={lock} /></Link>
                   </div>
                 </div>
 
                 <div className="roxy__lock--content">
                   <p>venus</p>
                   <div className="lock__button">
-                    <a>lock <img src={lock} /></a>
+                    <Link to="/subscription">entrar <img src={lock} /></Link>
                   </div>
                 </div>
 
                 <div className="roxy__lock--content">
                   <p>circe</p>
                   <div className="lock__button">
-                    <a>lock <img src={lock} /></a>
+                    <Link to="/subscription">entrar <img src={lock} /></Link>
                   </div>
                 </div>
               </div>

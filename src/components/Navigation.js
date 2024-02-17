@@ -48,7 +48,6 @@ const Navigation = (props) => {
           setAdmin(true)
         } else {
           setAdmin(false)
-
         }
       } else {
         setUsuario(false)

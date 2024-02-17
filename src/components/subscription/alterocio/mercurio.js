@@ -75,7 +75,7 @@ const Mercurio = () => {
 
       {/* E N T R E   L A S   L U C E S */}
       <details className='alterocio__card--border'>
-        <summary className='alterocio__card--header'>entre las luces     </summary>
+        <summary className='alterocio__card--header'>entre las luces</summary>
         <audio src={entre_las_luces} controls preload="none"></audio>
         <div className='alterocio__card--grid'>
           {
@@ -95,7 +95,7 @@ const Mercurio = () => {
 
       {/* N O  S O Y   U N   E X T R A Ñ O */}
       <details className='alterocio__card--border'>
-        <summary className='alterocio__card--header'>no soy un extraño  </summary>
+        <summary className='alterocio__card--header'>no soy un extraño</summary>
         <audio src={no_soy_un_extraño} controls preload="none"></audio>
         <div className='alterocio__card--grid'>
           {
@@ -115,7 +115,7 @@ const Mercurio = () => {
 
       {/* S H I V A */}
       <details className='alterocio__card--border'>
-        <summary className='alterocio__card--header'>shiva     </summary>
+        <summary className='alterocio__card--header'>shiva</summary>
         <audio src={shiva_song} controls preload="none"></audio>
         <div className='alterocio__card--grid'>
           {
@@ -136,4 +136,4 @@ const Mercurio = () => {
   )
 }
 
-export default Mercurio 
+export default Mercurio
