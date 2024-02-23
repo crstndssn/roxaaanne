@@ -29,11 +29,11 @@ const Subscription = () => {
           </div>
           <div className="subscription__card subscription__kam">
             <h2>kam</h2>
-            <p>cartas y más de 200 fotos</p>
+            <p>más de 100 fotos</p>
           </div>
           <div className="subscription__card subscription__roxy">
             <h2>roxy</h2>
-            <p>más de 200 fotos</p>
+            <p>más de 100 fotos</p>
           </div>
         </div>
 
@@ -88,7 +88,7 @@ const Subscription = () => {
               {/* C R E D I T / P S E */}
               <details>
                 <summary>
-                  <a target="_blank" href='https://www.mercadopago.com.co/subscriptions/checkout?preapproval_plan_id=2c9380848b62d290018b82fa82971861'>targeta de crédito / PSE</a></summary>
+                  <a target="_blank" href='https://www.mercadopago.com.co/subscriptions/checkout?preapproval_plan_id=2c9380848b62d290018b82fa82971861'>tarjeta de crédito / PSE</a></summary>
                 <div>
                 </div>
               </details>

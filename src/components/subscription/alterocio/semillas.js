@@ -73,7 +73,7 @@ const Semillas = () => {
       </details>
 
       {/* E A */}
-      <details className='alterocio__card--border'>
+      {/* <details className='alterocio__card--border'>
         <summary className='alterocio__card--header'>efímero anacrónico</summary>
         <audio src={animal} controls preload="none"></audio>
         <div className='alterocio__card--grid'>
@@ -90,10 +90,10 @@ const Semillas = () => {
               ))) : (<div>loading...</div>)
           }
         </div>
-      </details>
+      </details> */}
 
       {/* M A R */}
-      <details className='alterocio__card--border'>
+      {/* <details className='alterocio__card--border'>
         <summary className='alterocio__card--header'>mar</summary>
         <audio src={el_mar} controls preload="none"></audio>
         <div className='alterocio__card--grid'>
@@ -110,7 +110,7 @@ const Semillas = () => {
               ))) : (<div>loading...</div>)
           }
         </div>
-      </details>
+      </details> */}
 
       {/* Q O Y */}
       <details className='alterocio__card--border'>

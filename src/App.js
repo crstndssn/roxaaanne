@@ -29,7 +29,7 @@ import AllKam from './components/subscription/kam/edit'
 import AddKam from './components/subscription/kam/add'
 
 import Roxy from './components/subscription/roxy/roxy'
-import AllRoxy from './components/subscription/roxy/edit'
+import AllRoxy from './components/subscription/roxy/all'
 import AddRoxy from './components/subscription/roxy/add'
 
 import Bejuco from './components/subscription/bejuco/bejuco'
@@ -39,11 +39,8 @@ import BejucoTropicos from './components/subscription/bejuco/tropicos'
 import BejucoEncuentros from './components/subscription/bejuco/encuentros'
 import BejucoLucas from './components/subscription/bejuco/lucas'
 
-
 import AllBejuco from './components/subscription/bejuco/edit'
 import AddBejuco from './components/subscription/bejuco/add'
-
-
 
 export default class App extends Component {
   render() {
@@ -95,7 +92,6 @@ export default class App extends Component {
             <Route exact path="/bejuco/tropicos" component={BejucoTropicos} />
             <Route exact path="/bejuco/encuentros" component={BejucoEncuentros} />
             <Route exact path="/bejuco/lucas" component={BejucoLucas} />
-
 
             <Route exact path="/bejuco/add" component={AddBejuco} />
             <Route exact path="/bejuco/all" component={AllBejuco} />

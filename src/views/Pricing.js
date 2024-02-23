@@ -59,7 +59,7 @@ const Pricing = () => {
       <p className="pricing__less">hice algunos cambios</p>
       <div className='pricing__feature'>
         <img src={check} />
-        <h3>mercurio, blue y semillas están actualizadas</h3>
+        <h3>genesis, mercurio, blue están actualizadas</h3>
       </div>
       <div className='pricing__feature'>
         <img src={check} />

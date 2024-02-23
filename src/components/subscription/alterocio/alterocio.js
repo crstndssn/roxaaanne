@@ -91,7 +91,6 @@ const Roxanne = () => {
               <Genesis />
               <Mercurio />
               <Blue />
-              <Semillas />
             </div>
           )
             :
@@ -118,15 +117,22 @@ const Roxanne = () => {
                   </div>
                 </div>
 
-                <div className="lock semillas">
+                {/* <div className="lock semillas">
                   <p className="lock__title">semillas</p>
                   <div className="lock__button">
                     <Link to="/subscription">entrar <img src={lock} /></Link>
                   </div>
-                </div>
+                </div> */}
               </div>
             )
         }
+
+        <div className="lock semillas">
+          <p className="lock__title">semillas</p>
+          <div className="lock__button">
+            <Link to="/subscription">entrar <img src={lock} /></Link>
+          </div>
+        </div>
 
         <div className="lock florecer">
           <p className="lock__title">florecer</p>

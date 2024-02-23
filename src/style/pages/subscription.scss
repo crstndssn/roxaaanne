@@ -61,38 +61,38 @@
     margin: 0;
     padding: 1rem;
     border-radius: 1rem;
-  
+
     @include media("tablet") {
       width: 95%;
     }
-  
+
     div:first-child {
       display: flex;
       justify-content: start;
       align-items: baseline;
     }
-  
+
     p {
       font-size: 50px;
       margin: 0;
       font-weight: 500;
     }
-  
+
     h3 {
       margin: 1rem 0;
       font-weight: 400;
     }
-  
+
     &__less {
       font-size: 18px !important;
       color: rgb(146, 146, 146);
       margin-bottom: 1rem !important;
     }
-  
+
     &__feature {
       display: flex;
       align-items: center;
-  
+
       img {
         width: 18px;
         height: 18px;
@@ -281,13 +281,10 @@
         font-size: 24px;
         text-align: center;
       }
-
     }
-
-
-
   }
 
+  // C O N T A C T
   &__contact {
 
     margin-bottom: 2rem;
@@ -322,8 +319,6 @@
       background: radial-gradient(circle at 30% 107%, #fdf497 0%, #fdf497 5%, #fd5949 45%, #d6249f 60%, #285AEB 90%);
       -webkit-background-clip: text;
       -webkit-text-fill-color: transparent;
-
     }
   }
-
 }

@@ -77,11 +77,11 @@ const Navigation = (props) => {
   return (
     <div className="navigation">
       <>
-        {bg_name == null ? (<Link to="/" className='navigation__logo'><img src={logo} /></Link>) : (<></>)}
-        {bg_name == 'roxy' ? (<Link to="/" className='navigation__logo'><img src={logo__roxy} /></Link>) : (<></>)}
-        {bg_name == 'forestando' ? (<Link to="/" className='navigation__logo'><img src={logo__forestando} /></Link>) : (<></>)}
-        {bg_name == 'kam' ? (<Link to="/" className='navigation__logo'><img src={logo__kam} /></Link>) : (<></>)}
-        {bg_name == 'bejuco' ? (<Link to="/" className='navigation__logo'><img src={logo__bejuco} /></Link>) : (<></>)}
+        {bg_name == null ? (<Link to="/" className='navigation__logo'><img src={logo} alt='roxanne home logo' /></Link>) : (<></>)}
+        {bg_name == 'roxy' ? (<Link to="/" className='navigation__logo'><img src={logo__roxy} alt='roxanne roxy logo' /></Link>) : (<></>)}
+        {bg_name == 'forestando' ? (<Link to="/" className='navigation__logo'><img src={logo__forestando} alt='roxanne forestando logo' /></Link>) : (<></>)}
+        {bg_name == 'kam' ? (<Link to="/" className='navigation__logo'><img src={logo__kam} alt='roxanne kam logo' /></Link>) : (<></>)}
+        {bg_name == 'bejuco' ? (<Link to="/" className='navigation__logo'><img src={logo__bejuco} alt='roxanne bejuco logo' /></Link>) : (<></>)}
       </>
       {/* <div className='test-safari'><img src={logo}/></div> */}
 
