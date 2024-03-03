@@ -3,6 +3,8 @@ import { store, storage } from '../../firebase'
 import { useEffect } from 'react'
 import { Link } from 'react-router-dom'
 
+import Navigation from '../../components/Navigation';
+
 import add_post from '../../resources/vectors/add-post.svg'
 import edit_post from '../../resources/vectors/edit-post.svg'
 import delete_post from '../../resources/vectors/delete-post.svg'
@@ -52,7 +54,8 @@ const Subs = () => {
 
   return (
     <>
-      <div>
+      <Navigation/>
+      <div className='users'>
         <form onSubmit={addSub}>
           <input
             onChange={(e) => setUsername(e.target.value)}

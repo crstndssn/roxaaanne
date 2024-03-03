@@ -30,7 +30,7 @@ const Roxy = () => {
     auth.onAuthStateChanged((user) => {
       if (user) {
         setUsuario(true)
-        if (user.email === 'dussan29@gmail.com') {
+        if (user.email === 'u20171157265@usco.edu.co') {
           setAdmin(true)
           setUserSub(true)
           setUserEmail(user.email)
@@ -46,6 +46,7 @@ const Roxy = () => {
     })
 
     const getSubs = async () => {
+      console.log(userEmail)
       const subsList = store.collection('sub').where('email', 'in', [userEmail]).get()
       subsList.then(snapshot => {
         snapshot.docs.forEach(doc => {
@@ -54,7 +55,9 @@ const Roxy = () => {
             setUserSub(false)
           } else {
             setUserSub(true)
+            console.log(doc.id)
           }
+          debugger
         })
       })
     }

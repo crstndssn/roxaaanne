@@ -12,7 +12,7 @@ export default class Store extends Component {
         <Header />
         <Pricing />
         <div className="footer">
-          <p>by <a target='_blank' href='https://cristiandussan.com/'>crstndssn</a> © 2023</p>
+          <p>by <a target='_blank' rel="noreferrer" href='https://cristiandussan.com/'>crstndssn</a> © 2023</p>
         </div>
       </div>
 

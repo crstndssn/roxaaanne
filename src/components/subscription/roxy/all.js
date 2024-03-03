@@ -5,8 +5,6 @@ import { Link } from 'react-router-dom'
 import firebase from 'firebase/app'
 import { doc, deleteDoc } from "firebase/firestore";
 
-
-
 import eye from '../../../resources/vectors/view-product.svg'
 import edit from '../../../resources/vectors/edit-product.svg'
 import del from '../../../resources/vectors/delete-product.svg'
@@ -16,7 +14,6 @@ import edit_post from '../../../resources/vectors/edit-post.svg'
 import delete_post from '../../../resources/vectors/delete-post.svg'
 
 import Navigation from '../../Navigation';
-
 
 import { DocumentAddIcon } from '@heroicons/react/outline'
 

@@ -1,5 +1,4 @@
-
-import React, { useEffect, useState } from 'react'
+import React from 'react'
 
 import Navigation from '../components/Navigation';
 
@@ -49,15 +48,15 @@ const Subscription = () => {
             </div>
             <p className="pricing__less">por 1 año</p>
             <div className='pricing__feature'>
-              <img src={check} />
+              <img src={check} width="auto" height="auto" alt="subscription page roxanne" />
               <h3>acceso a todo el contenido</h3>
             </div>
             <div className='pricing__feature'>
-              <img src={check} />
+              <img src={check} width="auto" height="auto" alt="subscription page roxanne" />
               <h3>descuento en la tienda</h3>
             </div>
             <div className='pricing__feature'>
-              <img src={check} />
+              <img src={check} width="auto" height="auto" alt="subscription page roxanne" />
               <h3>contenido especial</h3>
             </div>
           </div>
@@ -70,7 +69,7 @@ const Subscription = () => {
               <details>
                 <summary>Nequi</summary>
                 <div className='subscription__payments--qr'>
-                  <img src={qr__bejuco} />
+                  <img src={qr__bejuco}  width="auto" height="auto" alt="subscription page roxanne" />
                   <p>escanéa el código desde Nequi o al 301-676-0223 ingresa el valor $30.000</p>
                 </div>
               </details>
@@ -79,7 +78,7 @@ const Subscription = () => {
               <details>
                 <summary>Daviplata</summary>
                 <div className='subscription__payments--qr'>
-                  <img src={qr__daviplata} />
+                  <img src={qr__daviplata}  width="auto" height="auto" alt="subscription page roxanne" />
                   <p>escanéa el código desde Daviplata o al 301-676-0223 ingresa el valor $30.000</p>
                 </div>
               </details>
@@ -88,7 +87,7 @@ const Subscription = () => {
               {/* C R E D I T / P S E */}
               <details>
                 <summary>
-                  <a target="_blank" href='https://www.mercadopago.com.co/subscriptions/checkout?preapproval_plan_id=2c9380848b62d290018b82fa82971861'>tarjeta de crédito / PSE</a></summary>
+                  <a target="_blank" rel="noreferrer" href='https://www.mercadopago.com.co/subscriptions/checkout?preapproval_plan_id=2c9380848b62d290018b82fa82971861'>tarjeta de crédito / PSE</a></summary>
                 <div>
                 </div>
               </details>
@@ -99,15 +98,12 @@ const Subscription = () => {
             <div className='subscription__contact'>
               <p>si tienes alguna duda me puedes escribir</p>
               <div className='subscription__contact--buttons'>
-                <a target='_blank' href='https://wa.link/9wcq0o' className='subscription__contact--wts'>whatsapp</a>
-                <a target='_blank' href='https://www.instagram.com/roxaaanne___/' className='subscription__contact--ins'>instagram</a>
+                <a target='_blank' rel="noreferrer" href='https://wa.link/9wcq0o' className='subscription__contact--wts'>whatsapp</a>
+                <a target='_blank' rel="noreferrer" href='https://www.instagram.com/roxaaanne___/' className='subscription__contact--ins'>instagram</a>
               </div>
             </div>
           </div>
         </div>
-
-
-
       </div>
     </>
 
