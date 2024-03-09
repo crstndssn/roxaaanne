@@ -126,46 +126,17 @@ const Kam = () => {
 
 
       } else {
-        console.log("state = definitely signed out"); // Log when signed out
+        console.log("state = definitely signed out");
         setUsuario(false);
         setAdmin(false);
         setCurrentEmail(null);
         setUserSub(false);
         setUserEmail('');
       }
-      setLoading(false); // Mark initialization as complete
+      setLoading(false); 
     });
-
-
-
-
-
-
-
-
-  }, []); // Ensure this effect runs only once
-
-  // useEffect(() => {
-  //   store.collection('sub').onSnapshot(snapshot => {
-  //     const userList = [];
-  //     snapshot.forEach(doc => {
-  //       const userData = doc.data();
-  //       userList.push(userData)
-  //       debugger
-  //       if (userData.email === currentEmail) {
-  //         setUserSub(true)
-  //         console.log(currentEmail + ' <- current')
-  //         console.log(userData.email + ' eres premium')
-  //       } else {
-  //         console.log(currentEmail + ' <- current')
-  //         console.log(userData.email + ' no eres premium')
-  //       }
-
-
-  //     });
-  //     setUsers(userList);
-  //   });
-  // }, [])
+  }, []); 
+  
 
   return (
     <div class="bg__kam">
