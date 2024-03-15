@@ -17,66 +17,66 @@ import { auth } from '../../../firebase';
 
 const Roxanne = () => {
 
-  const [user, setUsuario] = useState(null)
-  const [admin, setAdmin] = useState(null)
-  const [userEmail, setUserEmail] = useState(null)
-  const [userSub, setUserSub] = useState(false)
+    // // nueva configuración
+  const [users, setUsers] = useState([]);
+  const [currentUser, setCurrentUser] = useState(null);
+  // const [currentEmail, setCurrentEmail] = useState(null);
+  const [isPremium, setIsPremium] = useState(false);
 
-  const [detail, setDetail] = useState(null)
-
-  const [allSubs, setAllSubs] = useState('')
+  const [usuario, setUsuario] = useState(false);
+  const [admin, setAdmin] = useState(false);
+  const [userSub, setUserSub] = useState(false);
+  const [userEmail, setUserEmail] = useState('');
+  const [currentEmail, setCurrentEmail] = useState(null);
+  const [loading, setLoading] = useState(true); // Add loading state
 
   useEffect(() => {
-    auth.onAuthStateChanged((user) => {
+    console.log("state = unknown (until the callback is invoked)"); // Log initial state
+
+    auth.onAuthStateChanged(user => {
       if (user) {
-        setUsuario(true)
-        if (user.email === 'dussan29@gmail.com') {
-          setAdmin(true)
-          setUserSub(true)
-          setUserEmail(user.email)
+        console.log("state = definitely signed in"); // Log when signed in
+        const userEmailString = user.email || ''; // Ensure user.email is not null
+        setCurrentEmail(userEmailString); // Set current email
+        console.log(userEmailString + ' <- current authhhhhhh');
+        setUsuario(true);
+        if (user.email === 'u20171157265@usco.edu.co') {
+          setAdmin(true);
+          setUserSub(true);
+          setUserEmail(userEmailString);
         } else {
-          setAdmin(false)
-          setUserSub(false)
-          setUserEmail(user.email)
+          setAdmin(false);
+          setUserEmail(userEmailString);
         }
-      } else {
-        setUsuario(false)
-        setAdmin(false)
-      }
-    })
 
-    const getSubs = async () => {
-      const subsList = store.collection('sub').where('email', 'in', [userEmail]).get()
-      subsList.then(snapshot => {
-        snapshot.docs.forEach(doc => {
-          if (doc.id === '') {
-            console.log(doc.id)
-            setUserSub(false)
-          } else {
-            setUserSub(true)
-          }
-        })
-      })
-    }
-    getSubs()
-
-    const closeTabs = () => {
-      // Fetch all the details elements
-      const details = document.querySelectorAll('.detail');
-      // Add onclick listeners
-      details.forEach((targetDetail) => {
-        targetDetail.addEventListener("click", () => {
-          // Close all details that are not targetDetail
-          details.forEach((detail) => {
-            if (detail !== targetDetail) {
-              detail.removeAttribute("open");
+        store.collection('sub').onSnapshot(snapshot => {
+          const userList = [];
+          snapshot.forEach(doc => {
+            const userData = doc.data();
+            userList.push(userData)
+            if (userData.email === userEmailString) {
+              setUserSub(true)
+              console.log(currentEmail + ' <- current')
+              console.log(userData.email + ' eres premium')
+            } else {
+              console.log(currentEmail + ' <- current')
+              console.log(userData.email + ' no eres premium')
             }
           });
+          setUsers(userList);
         });
-      });
 
-    }
-    closeTabs()
+
+      } else {
+        console.log("state = definitely signed out");
+        setUsuario(false);
+        setAdmin(false);
+        setCurrentEmail(null);
+        setUserSub(false);
+        setUserEmail('');
+      }
+      setLoading(false);
+    });
 
   }, [])
 

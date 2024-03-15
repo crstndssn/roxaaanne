@@ -7,75 +7,20 @@ import Navigation from '../../Navigation';
 
 import lock from '../../../resources/vectors/lock.svg'
 
-// R E S O U R C E S
-// import sunflower1 from '../../sunflower-1.svg'
-// import sunflower2 from '../../sunflower-2.svg'
-
 // C O N T E N I D O
 import Dorado from './dorado'
 import Mar from './mar'
 import Trapos from './trapos'
+import Velvet from './velvet'
 
 
 const Kam = () => {
-
-  // const [user, setUsuario] = useState(null)
-  // const [admin, setAdmin] = useState(null)
-  // const [userEmail, setUserEmail] = useState('')
-  // const [userSub, setUserSub] = useState(false)
-  // const [allSubs, setAllSubs] = useState('')
 
   // // nueva configuración
   const [users, setUsers] = useState([]);
   const [currentUser, setCurrentUser] = useState(null);
   // const [currentEmail, setCurrentEmail] = useState(null);
   const [isPremium, setIsPremium] = useState(false);
-
-  // useEffect(() => {
-
-  //   auth.onAuthStateChanged((user) => {
-  //     if (user) {
-  //       let userEmailString = user.email
-  //       setCurrentEmail(userEmailString)
-  //       console.log(currentEmail + ' <- current authhhhhhh')
-  //       setUsuario(true)
-  //       if (user.email === 'u20171157265@usco.edu.co') {
-  //         setAdmin(true)
-  //         setUserSub(true)
-  //         setUserEmail(userEmailString)
-  //       } else {
-  //         setAdmin(false)
-  //         setUserEmail(userEmailString)
-  //       }
-  //     } else {
-  //       setUsuario(false);
-  //       setAdmin(false);
-  //       setCurrentEmail(null);
-  //       setUserSub(false);
-  //       setUserEmail('');
-  //     }      
-  //   },)
-
-  //   store.collection('sub').onSnapshot(snapshot => {
-  //     const userList = [];
-  //     snapshot.forEach(doc => {
-  //       const userData = doc.data();
-  //       userList.push(userData)
-
-  //       if (userData.email === currentEmail) {
-  //         setUserSub(true)
-  //         console.log(currentEmail + ' <- current')
-  //         console.log(userData.email + ' eres premium')
-  //       } else {
-  //         console.log(currentEmail + ' <- current')
-  //         console.log(userData.email + ' no eres premium')
-  //       }
-  //     });
-  //     setUsers(userList);
-  //   }); 
-
-  // }, [])
-
 
   const [usuario, setUsuario] = useState(false);
   const [admin, setAdmin] = useState(false);
@@ -103,13 +48,11 @@ const Kam = () => {
           setUserEmail(userEmailString);
         }
 
-
         store.collection('sub').onSnapshot(snapshot => {
           const userList = [];
           snapshot.forEach(doc => {
             const userData = doc.data();
             userList.push(userData)
-            
             if (userData.email === userEmailString) {
               setUserSub(true)
               console.log(currentEmail + ' <- current')
@@ -118,8 +61,6 @@ const Kam = () => {
               console.log(currentEmail + ' <- current')
               console.log(userData.email + ' no eres premium')
             }
-    
-    
           });
           setUsers(userList);
         });
@@ -133,10 +74,10 @@ const Kam = () => {
         setUserSub(false);
         setUserEmail('');
       }
-      setLoading(false); 
+      setLoading(false);
     });
-  }, []); 
-  
+  }, []);
+
 
   return (
     <div class="bg__kam">
@@ -144,19 +85,17 @@ const Kam = () => {
 
       <div className='kam'>
 
-        <h1 className="kam__title">KAM</h1>
+        <div class="kam__sunflowers">
+          <h1 className="kam__title">KAM</h1>
+        </div>
+
         {
           userSub == true ? (
             <>
               <Dorado />
               <Mar />
               <Trapos />
-              <div className="kam__velvet--soon">
-                  <p>velvet</p>
-                  <div className="lock__button">
-                    <Link>próximamente <img src={lock} /></Link>
-                  </div>
-                </div>
+              <Velvet />
             </>
           )
             :

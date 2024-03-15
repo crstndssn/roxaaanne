@@ -7,61 +7,72 @@ import Navigation from '../../Navigation';
 
 import lock from '../../../resources/vectors/lock-red.svg'
 
-// R E S O U R C E S
-// import sunflower1 from '../../sunflower-1.svg'
-// import sunflower2 from '../../sunflower-2.svg'
-
 // C O N T E N I D O
 import Astra from './astra'
 import Venus from './venus'
 import Circe from './circe'
 
 const Roxy = () => {
-  const [user, setUsuario] = useState(null)
-  const [admin, setAdmin] = useState(null)
-  const [userEmail, setUserEmail] = useState(null)
-  const [userSub, setUserSub] = useState(false)
-
-  const [bg, setBg] = useState('#ED0000')
-
-  const [allSubs, setAllSubs] = useState('')
-
-  useEffect(() => {
-    auth.onAuthStateChanged((user) => {
-      if (user) {
-        setUsuario(true)
-        if (user.email === 'u20171157265@usco.edu.co') {
-          setAdmin(true)
-          setUserSub(true)
-          setUserEmail(user.email)
-        } else {
-          setAdmin(false)
-          setUserSub(false)
-          setUserEmail(user.email)
-        }
-      } else {
-        setUsuario(false)
-        setAdmin(false)
-      }
-    })
-
-    const getSubs = async () => {
-      console.log(userEmail)
-      const subsList = store.collection('sub').where('email', 'in', [userEmail]).get()
-      subsList.then(snapshot => {
-        snapshot.docs.forEach(doc => {
-          if (doc.id === '') {
-            console.log(doc.id)
-            setUserSub(false)
-          } else {
-            setUserSub(true)
-            console.log(doc.id)
-          }
-          debugger
-        })
-      })
-    }
-    getSubs()
+   // // nueva configuración
+	 const [users, setUsers] = useState([]);
+	 const [currentUser, setCurrentUser] = useState(null);
+	 // const [currentEmail, setCurrentEmail] = useState(null);
+	 const [isPremium, setIsPremium] = useState(false);
+ 
+	 const [usuario, setUsuario] = useState(false);
+	 const [admin, setAdmin] = useState(false);
+	 const [userSub, setUserSub] = useState(false);
+	 const [userEmail, setUserEmail] = useState('');
+	 const [currentEmail, setCurrentEmail] = useState(null);
+	 const [loading, setLoading] = useState(true); // Add loading state
+ 
+	 useEffect(() => {
+		 console.log("state = unknown (until the callback is invoked)"); // Log initial state
+ 
+		 auth.onAuthStateChanged(user => {
+			 if (user) {
+				 console.log("state = definitely signed in"); // Log when signed in
+				 const userEmailString = user.email || ''; // Ensure user.email is not null
+				 setCurrentEmail(userEmailString); // Set current email
+				 console.log(userEmailString + ' <- current authhhhhhh');
+				 setUsuario(true);
+				 if (user.email === 'u20171157265@usco.edu.co') {
+					 setAdmin(true);
+					 setUserSub(true);
+					 setUserEmail(userEmailString);
+				 } else {
+					 setAdmin(false);
+					 setUserEmail(userEmailString);
+				 }
+ 
+				 store.collection('sub').onSnapshot(snapshot => {
+					 const userList = [];
+					 snapshot.forEach(doc => {
+						 const userData = doc.data();
+						 userList.push(userData)
+						 if (userData.email === userEmailString) {
+							 setUserSub(true)
+							 console.log(currentEmail + ' <- current')
+							 console.log(userData.email + ' eres premium')
+						 } else {
+							 console.log(currentEmail + ' <- current')
+							 console.log(userData.email + ' no eres premium')
+						 }
+					 });
+					 setUsers(userList);
+				 });
+ 
+ 
+			 } else {
+				 console.log("state = definitely signed out");
+				 setUsuario(false);
+				 setAdmin(false);
+				 setCurrentEmail(null);
+				 setUserSub(false);
+				 setUserEmail('');
+			 }
+			 setLoading(false);
+		 });
   }, [])
 
   return (
